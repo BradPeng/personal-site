@@ -11,8 +11,8 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="" element={<Home />} />
-      <Route path="/spacepewpew" element={<Spacepewpew />} />
+      <Route path="/personal-site" element={<Home />} />
+      <Route path="/personal-site/spacepewpew" element={<Spacepewpew />} />
       </Routes>
     </Router>
   );
