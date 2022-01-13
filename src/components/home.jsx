@@ -40,7 +40,7 @@ function Home() {
                                 <TimelineItem>
                                     <TimelineOppositeContent >
                                         <Typography variant='h6'>
-                                            Sep 2021 - Apr 2022
+                                            September 2021 - April 2022
                                         </Typography>
 
                                     </TimelineOppositeContent>
@@ -86,14 +86,14 @@ function Home() {
                                     </TimelineSeparator>
                                     <TimelineContent>
                                         <Typography variant='h6'>
-                                            Jul 2020 - Aug 2020
+                                            July 2020 - August 2020
                                         </Typography>
                                     </TimelineContent>
                                 </TimelineItem>
                                 <TimelineItem>
                                     <TimelineOppositeContent >
                                         <Typography variant='h6'>
-                                            Jul 2018 - Aug 2018
+                                            July 2018 - August 2018
                                         </Typography>
                                     </TimelineOppositeContent>
                                     <TimelineSeparator>
