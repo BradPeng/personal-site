@@ -31,12 +31,25 @@ function Home() {
     return (
         <div className="App">
             <Container>
+                <div style={{ height: "100vh", flexDirection:"column", display: "flex", justifyContent: "center"}}>
+                    <Typography variant='h3' component='h1'>Brad Peng</Typography>
+                    <Typography variant='h5'>Computer Science, The University of British Columbia (2019 - 2024)</Typography>
+                    <Grid justifyContent="center" container spacing={1}>
+                        <Grid item>
+                            <a target="_blank" href="https://github.com/BradPeng">
+                            <Avatar src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' />
+                            </a>
+                        </Grid>
+                        <Grid item>
+                        <a target="_blank" href="https://www.linkedin.com/in/brad-peng-165206214/">
+                            <Avatar style={{ backgroundColor: 'white' }} src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png' />
+                        </a>
+                        </Grid>
 
-                <Typography variant='h3' component='h1'>Brad Peng</Typography>
-                <Typography variant='h5'>Computer Science, The University of British Columbia (2019 - 2024)</Typography>
+                    </Grid>
 
-
-
+                </div>
+                <div style={{ height: "100vh"}}>
                 <Typography variant='h3' component='h1'>Work History</Typography>
                 <Timeline position="alternate">
                     <TimelineItem>
@@ -118,6 +131,7 @@ function Home() {
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>
+                </div>
 
                 <Typography gutterBottom variant='h3' component='h1'>Personal Projects</Typography>
 
