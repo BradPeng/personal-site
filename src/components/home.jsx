@@ -15,6 +15,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import { makeStyles } from '@mui/styles';
 
 import { styled } from '@mui/material/styles';
 import CardHeader from '@mui/material/CardHeader';
@@ -28,12 +29,56 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { maxWidth } from "@mui/system";
 
+const useStyles = makeStyles({
+    timelineCard: {
+        '&:hover': {
+            transition: "transform .2s ease-in-out",
+
+            transform: "scale(1.05)"
+        }
+    },
+});
 
 const darkTheme = createTheme({
     palette: {
         mode: 'dark',
     },
 });
+
+const workHistoryList = [
+    {
+        title: 'Web Developer (Co-op)',
+        subtitle: 'Bank of Canada',
+        description: 'Worked on maintaining and updating the 5 internal and external sites hosted by the Bank of Canada. Introduced quality of life changes to the PHP component library to allow',
+    },
+    {
+        title: 'Web Developer (Summer Intern)',
+        subtitle: 'Institute of Applied Design and Technology Education Society',
+        description: 'Worked on maintaining and updating the 5 internal and external sites hosted by the Bank of Canada. Introduced quality of life changes to the PHP component library to allow',
+    },
+    {
+        title: 'iOS Developer (Summer Intern)',
+        subtitle: 'Institute of Applied Design and Technology Education Society',
+        description: 'Worked on maintaining and updating the 5 internal and external sites hosted by the Bank of Canada. Introduced quality of life changes to the PHP component library to allow',
+    }
+]
+
+let workHistory = workHistoryList.map((workHistoryList, index) => (
+
+    <CardContent key='{'>
+        <Typography variant="h6">
+            {workHistoryList.title}
+        </Typography>
+        <Typography gutterBottom variant='h8'>
+            {workHistoryList.subtitle}
+        </Typography>
+        <Typography variant="body2">
+            {workHistoryList.description}
+        </Typography>
+    </CardContent>
+
+
+));
 
 const projectList = [
     {
@@ -68,24 +113,23 @@ const projectList = [
     },
 ]
 
-let projects = projectList.map((doc, index) => (
+let projects = projectList.map((projectList, index) => (
     <Grid item xs={12} sm={6} md={4} key={index}>
         <Card sx={{ maxWidth: 345, minWidth: 200 }}>
             <CardHeader
 
 
-                title="Space Pew Pew"
-                subheader="Summer 2021"
+                title={projectList.title}
+                subheader={projectList.subtitle}
             />
             <CardMedia
                 component="img"
                 height="194"
-                image="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
-                alt="Paella dish"
+                image={projectList.image}
             />
             <CardContent >
                 <Typography variant="body2" color="text.secondary">
-                    Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!
+                    {projectList.description}
                 </Typography>
             </CardContent>
 
@@ -93,6 +137,7 @@ let projects = projectList.map((doc, index) => (
     </Grid>));
 
 function Home() {
+    const classes = useStyles();
     return (
         <ThemeProvider theme={darkTheme}>
             <div className="App">
@@ -115,7 +160,7 @@ function Home() {
                         </Grid>
 
                     </div>
-                    <div style={{paddingBottom: '250px' }}>
+                    <div style={{ paddingBottom: '250px' }}>
                         <Typography variant='h3' component='h1'>Work History</Typography>
                         <Timeline position="alternate">
                             <TimelineItem>
@@ -130,34 +175,18 @@ function Home() {
                                     <TimelineConnector />
                                 </TimelineSeparator>
                                 <TimelineContent>
-                                    <Card sx={{ maxWidth: 500 }}>
+                                    <Card sx={{ maxWidth: 500 }} className={classes.timelineCard}>
 
-                                        <CardContent>
-                                            <Typography variant="h6">
-                                                Web Developer (Co-op)
-                                            </Typography>
-                                            <Typography gutterBottom variant='h8'>Bank of Canada</Typography>
-                                            <Typography variant="body2">
-                                                Worked on maintaining and updating the 5 internal and external sites hosted by the Bank of Canada. Introduced quality of life changes to the PHP component library to allow
-                                            </Typography>
-                                        </CardContent>
+                                        {workHistory[0]}
 
                                     </Card>
                                 </TimelineContent>
                             </TimelineItem>
                             <TimelineItem>
                                 <TimelineOppositeContent>
-                                    <Card sx={{ maxWidth: 500 }}>
+                                    <Card sx={{ maxWidth: 500 }} className={classes.timelineCard}>
 
-                                        <CardContent>
-                                            <Typography variant="h6">
-                                                Web Developer (Summer Intern)
-                                            </Typography>
-                                            <Typography gutterBottom variant='h8'>Institute of Applied Design and Technology Education Society</Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                Worked on maintaining and updating the 5 internal and external sites hosted by the Bank of Canada. Introduced quality of life changes to the PHP component library to allow
-                                            </Typography>
-                                        </CardContent>
+                                    {workHistory[1]}
 
                                     </Card>
                                 </TimelineOppositeContent>
@@ -182,17 +211,9 @@ function Home() {
 
                                 </TimelineSeparator>
                                 <TimelineContent>
-                                    <Card sx={{ maxWidth: 500 }}>
+                                    <Card sx={{ maxWidth: 500 }} className={classes.timelineCard}>
 
-                                        <CardContent>
-                                            <Typography variant="h6">
-                                                iOS Developer (Summer Intern)
-                                            </Typography>
-                                            <Typography gutterBottom variant='h8'>Institute of Applied Design and Technology Education Society</Typography>
-                                            <Typography variant="body2" >
-                                                Worked on maintaining and updating the 5 internal and external sites hosted by the Bank of Canada. Introduced quality of life changes to the PHP component library to allow
-                                            </Typography>
-                                        </CardContent>
+                                    {workHistory[2]}
                                     </Card>
                                 </TimelineContent>
                             </TimelineItem>
