@@ -31,12 +31,19 @@ import { maxWidth } from "@mui/system";
 
 const useStyles = makeStyles({
     timelineCard: {
+
         '&:hover': {
             transition: "transform .2s ease-in-out",
-
-            transform: "scale(1.05)"
-        }
+            transform: "scale(1.03)"
+        },
     },
+
+    projectCard: {
+        '&:hover': {
+            transition: "transform .2s ease-in-out",
+            transform: "scale(1.05)"
+        },
+    }
 });
 
 const darkTheme = createTheme({
@@ -63,22 +70,6 @@ const workHistoryList = [
     }
 ]
 
-let workHistory = workHistoryList.map((workHistoryList, index) => (
-
-    <CardContent key='{'>
-        <Typography variant="h6">
-            {workHistoryList.title}
-        </Typography>
-        <Typography gutterBottom variant='h8'>
-            {workHistoryList.subtitle}
-        </Typography>
-        <Typography variant="body2">
-            {workHistoryList.description}
-        </Typography>
-    </CardContent>
-
-
-));
 
 const projectList = [
     {
@@ -113,31 +104,48 @@ const projectList = [
     },
 ]
 
-let projects = projectList.map((projectList, index) => (
-    <Grid item xs={12} sm={6} md={4} key={index}>
-        <Card sx={{ maxWidth: 345, minWidth: 200 }}>
-            <CardHeader
-
-
-                title={projectList.title}
-                subheader={projectList.subtitle}
-            />
-            <CardMedia
-                component="img"
-                height="194"
-                image={projectList.image}
-            />
-            <CardContent >
-                <Typography variant="body2" color="text.secondary">
-                    {projectList.description}
-                </Typography>
-            </CardContent>
-
-        </Card>
-    </Grid>));
 
 function Home() {
     const classes = useStyles();
+
+    let workHistory = workHistoryList.map((workHistoryList, index) => (
+        <Card sx={{ maxWidth: 500 }} className={classes.timelineCard}>
+            <CardContent key='{'>
+                <Typography variant="h6">
+                    {workHistoryList.title}
+                </Typography>
+                <Typography gutterBottom variant='h8'>
+                    {workHistoryList.subtitle}
+                </Typography>
+                <Typography variant="body2">
+                    {workHistoryList.description}
+                </Typography>
+            </CardContent>
+        </Card>
+    ));
+
+
+    let projects = projectList.map((projectList, index) => (
+        <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
+                <CardHeader
+                    title={projectList.title}
+                    subheader={projectList.subtitle}
+                />
+                <CardMedia
+                    component="img"
+                    height="194"
+                    image={projectList.image}
+                />
+                <CardContent >
+                    <Typography variant="body2" color="text.secondary">
+                        {projectList.description}
+                    </Typography>
+                </CardContent>
+            </Card>
+        </Grid>));
+
+
     return (
         <ThemeProvider theme={darkTheme}>
             <div className="App">
@@ -158,8 +166,9 @@ function Home() {
                             </Grid>
 
                         </Grid>
-
                     </div>
+
+
                     <div style={{ paddingBottom: '250px' }}>
                         <Typography variant='h3' component='h1'>Work History</Typography>
                         <Timeline position="alternate">
@@ -168,27 +177,18 @@ function Home() {
                                     <Typography variant='h6'>
                                         September 2021 - April 2022
                                     </Typography>
-
                                 </TimelineOppositeContent>
                                 <TimelineSeparator>
                                     <TimelineDot color="primary" />
                                     <TimelineConnector />
                                 </TimelineSeparator>
                                 <TimelineContent>
-                                    <Card sx={{ maxWidth: 500 }} className={classes.timelineCard}>
-
-                                        {workHistory[0]}
-
-                                    </Card>
+                                    {workHistory[0]}
                                 </TimelineContent>
                             </TimelineItem>
                             <TimelineItem>
                                 <TimelineOppositeContent>
-                                    <Card sx={{ maxWidth: 500 }} className={classes.timelineCard}>
-
                                     {workHistory[1]}
-
-                                    </Card>
                                 </TimelineOppositeContent>
                                 <TimelineSeparator>
                                     <TimelineDot color="secondary" />
@@ -208,30 +208,24 @@ function Home() {
                                 </TimelineOppositeContent>
                                 <TimelineSeparator>
                                     <TimelineDot color="success" />
-
                                 </TimelineSeparator>
                                 <TimelineContent>
-                                    <Card sx={{ maxWidth: 500 }} className={classes.timelineCard}>
-
                                     {workHistory[2]}
-                                    </Card>
                                 </TimelineContent>
                             </TimelineItem>
                         </Timeline>
                     </div>
-                    <div >
-                        <Typography gutterBottom variant='h3' component='h1'>Personal Projects</Typography>
 
-                        <Grid
-                            justifyContent="flex-start"
-                            alignItems="center"
-                            container spacing={12}
-                            rowSpacing={6}
-                        >
-                            {projects}
-                        </Grid>
-                    </div>
 
+                    <Typography gutterBottom variant='h3' component='h1'>Personal Projects</Typography>
+                    <Grid
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        container spacing={12}
+                        rowSpacing={6}
+                    >
+                        {projects}
+                    </Grid>
                 </Container>
             </div>
         </ThemeProvider>
