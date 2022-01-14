@@ -11,10 +11,10 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/personal-site" exact element={<Home />} />
-      <Route path="/personal-site/spacepewpew" exact element={<Spacepewpew />} />
-      {/* <Route path="/" exact element={<Home />} />
-      <Route path="/spacepewpew" exact element={<Spacepewpew />} /> */}
+      {/* <Route path="/personal-site" exact element={<Home />} />
+      <Route path="/personal-site/spacepewpew" exact element={<Spacepewpew />} /> */}
+      <Route path="/" exact element={<Home />} />
+      <Route path="/spacepewpew" exact element={<Spacepewpew />} />
       </Routes>
     </Router>
   );
