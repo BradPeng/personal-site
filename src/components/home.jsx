@@ -28,6 +28,9 @@ import { red } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { maxWidth } from "@mui/system";
+import ProjectPopup from './projectPopup'
+
+import { useState } from 'react'
 
 const useStyles = makeStyles({
     timelineCard: {
@@ -107,7 +110,7 @@ const projectList = [
 
 function Home() {
     const classes = useStyles();
-
+    const [buttonPopup, setButtonPopup] = useState(false);
     let workHistory = workHistoryList.map((workHistoryList, index) => (
         <Card sx={{ maxWidth: 500 }} className={classes.timelineCard}>
             <CardContent key='{'>
@@ -126,7 +129,12 @@ function Home() {
 
 
     let projects = projectList.map((projectList, index) => (
+        
         <Grid item xs={12} sm={6} md={4} key={index}>
+            <button onClick={() => setButtonPopup(true)}>open</button>
+            <ProjectPopup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                <h3> hi</h3>
+            </ProjectPopup>
             <Card sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
                 <CardHeader
                     title={projectList.title}
