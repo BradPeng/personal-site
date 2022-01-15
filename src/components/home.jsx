@@ -16,6 +16,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { makeStyles } from '@mui/styles';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import { styled } from '@mui/material/styles';
 import CardHeader from '@mui/material/CardHeader';
@@ -29,8 +30,12 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { maxWidth } from "@mui/system";
 import ProjectPopup from './projectPopup'
+import { CardActionArea } from '@mui/material';
 
 import { useState } from 'react'
+
+import { Carousel } from 'react-responsive-carousel';
+
 
 const useStyles = makeStyles({
     timelineCard: {
@@ -46,6 +51,10 @@ const useStyles = makeStyles({
             transition: "transform .2s ease-in-out",
             transform: "scale(1.05)"
         },
+    },
+    projectCarousel: {
+        width: '500px',
+        height: '500px'
     }
 });
 
@@ -129,28 +138,70 @@ function Home() {
 
 
     let projects = projectList.map((projectList, index) => (
-        
+
         <Grid item xs={12} sm={6} md={4} key={index}>
-            <button onClick={() => setButtonPopup(true)}>open</button>
             <ProjectPopup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                <h3> hi</h3>
+
+                <Card >
+                    <CardHeader
+                        action={
+                            <IconButton onClick={() => setButtonPopup(false)}>
+                                <button type="image" src="https://freesvg.org/img/close-button.png" onClick={() => setButtonPopup(false)}></button>
+                            </IconButton>
+                        }
+                        title={projectList.title}
+                        subheader={projectList.subtitle}
+                    />
+
+                   
+                    <Carousel className={classes.projectCarousel}>
+                        <div>
+                            <img src="https://freesvg.org/img/close-button.png" />
+                            <p className="legend">Legend 1</p>
+                        </div>
+                        <div>
+                            <img src="https://freesvg.org/img/close-button.png" />
+                            <p className="legend">Legend 2</p>
+                        </div>
+                        <div>
+                            <img src="assets/3.jpeg" />
+                            <p className="https://freesvg.org/img/close-button.png">Legend 3</p>
+                        </div>
+                    </Carousel>
+
+                    <CardContent>
+
+                        <Typography variant="body2" color="text.secondary">
+                            {projectList.description}
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small">Share</Button>
+                        <Button size="small">Learn More</Button>
+
+                    </CardActions>
+                </Card>
+
             </ProjectPopup>
             <Card sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
-                <CardHeader
-                    title={projectList.title}
-                    subheader={projectList.subtitle}
-                />
-                <CardMedia
-                    component="img"
-                    height="194"
-                    image={projectList.image}
-                />
-                <CardContent >
-                    <Typography variant="body2" color="text.secondary">
-                        {projectList.description}
-                    </Typography>
-                </CardContent>
+                <CardActionArea onClick={() => setButtonPopup(true)}>
+                    <CardHeader
+                        title={projectList.title}
+                        subheader={projectList.subtitle}
+                    />
+                    <CardMedia
+                        component="img"
+                        height="194"
+                        image={projectList.image}
+                    />
+                    <CardContent >
+                        <Typography variant="body2" color="text.secondary">
+                            {projectList.description}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
             </Card>
+
         </Grid>));
 
 
