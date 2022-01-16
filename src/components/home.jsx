@@ -137,9 +137,9 @@ function Home() {
     const [open, setOpen] = React.useState(false);
     const [title, setTitle] = React.useState();
     const [descriptionLong, setDescriptionLong] = React.useState();
-    const [images, setImages] = React.useState();
+    const [images, setImages] = React.useState([]);
 
-    const handleClickOpen = (scrollType, title, descriptionLong, images) => () => {
+    const handleClickOpen = (title, descriptionLong, images) => () => {
         setOpen(true);
         setTitle(title);
         setDescriptionLong(descriptionLong)
@@ -171,7 +171,6 @@ function Home() {
                         },
                     }}
                     open={open}
-                    BackdropComponent={false}
                     onClose={handleClose}
                     aria-labelledby="scroll-dialog-title"
                     aria-describedby="scroll-dialog-description"
@@ -179,12 +178,12 @@ function Home() {
                     <DialogTitle id="scroll-dialog-title">{title}</DialogTitle>
                     <DialogContent>
                         <Carousel>
-                        {images.map((image) => (
-                            <div>
-                                <img src={image} />
-                            </div>
-                        ))}
-                            
+                            {images.map((image) => (
+                                <div key={title}>
+                                    <img src={image} />
+                                </div>
+                            ))}
+
                         </Carousel>
                         <DialogContentText>
                             {descriptionLong}
@@ -197,7 +196,7 @@ function Home() {
             </div>
 
             <Card sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
-                <CardActionArea onClick={handleClickOpen('paper', projectList.title, projectList.descriptionLong, projectList.images)}>
+                <CardActionArea onClick={handleClickOpen(projectList.title, projectList.descriptionLong, projectList.images)}>
                     <CardHeader
                         title={projectList.title}
                         subheader={projectList.subtitle}
