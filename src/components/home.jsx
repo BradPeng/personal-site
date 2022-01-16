@@ -89,33 +89,43 @@ const workHistoryList = [
 
 const projectList = [
     {
-        title: 'Space Pew Pew 1',
+        title: 'Bruce Pew Pew',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        descriptionLong: 'Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a very simple game, I was able to learn about various game development techniques, such as handling precise movement and animation tricks done with sprites.',
+
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
     },
     {
-        title: 'Space Pew Pew 2',
-        subtitle: 'Summer 2021',
-        description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        title: '2D Platforming RPG',
+        subtitle: 'Fall 2021',
+        description: 'Jump around, destroy enemies and explore in this 2D platforming RPG!',
+        descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
     },
     {
         title: 'Space Pew Pew 3',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
     },
     {
         title: 'Space Pew Pew 4',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
     },
     {
         title: 'Space Pew Pew 5',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
     },
 ]
@@ -141,13 +151,13 @@ function Home() {
     ));
 
     const [open, setOpen] = React.useState(false);
-    const [scroll, setScroll] = React.useState('paper');
-    const [title, setTitle] = React.useState('');
+    const [title, setTitle] = React.useState();
+    const [descriptionLong, setDescriptionLong] = React.useState();
 
-    const handleClickOpen = (scrollType, title) => () => {
+    const handleClickOpen = (scrollType, title, descriptionLong) => () => {
         setOpen(true);
-        setScroll(scrollType);
         setTitle(title);
+        setDescriptionLong(descriptionLong)
     };
 
     const handleClose = () => {
@@ -168,32 +178,36 @@ function Home() {
         <Grid item xs={12} sm={6} md={4} key={index}>
             <div>
                 <Dialog
+                PaperProps={{
+                    style: {
+                      backgroundColor: 'transparent',
+                      boxShadow: 'none',
+                    },
+                  }}
                     open={open}
                     onClose={handleClose}
-                    scroll={scroll}
                     aria-labelledby="scroll-dialog-title"
                     aria-describedby="scroll-dialog-description"
                 >
                     <DialogTitle id="scroll-dialog-title">{title}</DialogTitle>
-                    <DialogContent dividers={scroll === 'paper'}>
-                        <DialogContentText
-                            id="scroll-dialog-description"
-                            ref={descriptionElementRef}
-                            tabIndex={-1}
-                        >
-                            {[...new Array(50)]
-                                .map(
-                                    () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-                                )
-                                .join('\n')}
+                    <DialogContent>
+                        <Carousel>
+                            <div>
+                                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" />
+                            </div>
+                            <div>
+                                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" />
+                            </div>
+                            <div>
+                                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" />
+                            </div>
+                        </Carousel>
+                        <DialogContentText>
+                            {descriptionLong}
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={handleClose}>Cancel</Button>
-                        <Button onClick={handleClose}>Subscribe</Button>
+                        <Button onClick={handleClose}>Close</Button>
                     </DialogActions>
                 </Dialog>
             </div>
@@ -202,7 +216,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
 
 
             <Card sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
-                <CardActionArea onClick={handleClickOpen('paper', projectList.title)}>
+                <CardActionArea onClick={handleClickOpen('paper', projectList.title, projectList.descriptionLong)}>
                     <CardHeader
                         title={projectList.title}
                         subheader={projectList.subtitle}
