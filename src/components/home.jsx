@@ -1,45 +1,28 @@
-import React from "react";
-import { Container, Typography } from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-
-import Grid from '@mui/material/Grid';
-import Item from '@mui/material/Grid';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import Timeline from '@mui/lab/Timeline';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import { CardActionArea, Container, Typography } from '@mui/material';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import { makeStyles } from '@mui/styles';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-
-import { styled } from '@mui/material/styles';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
-import { red } from '@mui/material/colors';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import { maxWidth } from "@mui/system";
-import ProjectPopup from './projectPopup'
-import { CardActionArea } from '@mui/material';
-
-import { useState } from 'react'
-
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Grid from '@mui/material/Grid';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
+import React, { useState } from "react";
 import { Carousel } from 'react-responsive-carousel';
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const useStyles = makeStyles({
     timelineCard: {
