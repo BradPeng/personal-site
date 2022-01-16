@@ -93,40 +93,41 @@ const projectList = [
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a very simple game, I was able to learn about various game development techniques, such as handling precise movement and animation tricks done with sprites.',
-
-        image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
     },
     {
         title: '2D Platforming RPG',
         subtitle: 'Fall 2021',
         description: 'Jump around, destroy enemies and explore in this 2D platforming RPG!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
 
-        image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
     },
     {
         title: 'Space Pew Pew 3',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
-
-        image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
+        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
     },
     {
         title: 'Space Pew Pew 4',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
-
-        image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
+        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
     },
     {
         title: 'Space Pew Pew 5',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
-
-        image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
+        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
     },
 ]
 
@@ -153,11 +154,13 @@ function Home() {
     const [open, setOpen] = React.useState(false);
     const [title, setTitle] = React.useState();
     const [descriptionLong, setDescriptionLong] = React.useState();
+    const [images, setImages] = React.useState();
 
-    const handleClickOpen = (scrollType, title, descriptionLong) => () => {
+    const handleClickOpen = (scrollType, title, descriptionLong, images) => () => {
         setOpen(true);
         setTitle(title);
         setDescriptionLong(descriptionLong)
+        setImages(images)
     };
 
     const handleClose = () => {
@@ -178,13 +181,14 @@ function Home() {
         <Grid item xs={12} sm={6} md={4} key={index}>
             <div>
                 <Dialog
-                PaperProps={{
-                    style: {
-                      backgroundColor: 'transparent',
-                      boxShadow: 'none',
-                    },
-                  }}
+                    PaperProps={{
+                        style: {
+                            backgroundColor: 'clear',
+                            boxShadow: 'none',
+                        },
+                    }}
                     open={open}
+                    BackdropComponent={false}
                     onClose={handleClose}
                     aria-labelledby="scroll-dialog-title"
                     aria-describedby="scroll-dialog-description"
@@ -192,15 +196,12 @@ function Home() {
                     <DialogTitle id="scroll-dialog-title">{title}</DialogTitle>
                     <DialogContent>
                         <Carousel>
+                        {images.map((image) => (
                             <div>
-                                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" />
+                                <img src={image} />
                             </div>
-                            <div>
-                                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" />
-                            </div>
-                            <div>
-                                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" />
-                            </div>
+                        ))}
+                            
                         </Carousel>
                         <DialogContentText>
                             {descriptionLong}
@@ -212,11 +213,8 @@ function Home() {
                 </Dialog>
             </div>
 
-
-
-
             <Card sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
-                <CardActionArea onClick={handleClickOpen('paper', projectList.title, projectList.descriptionLong)}>
+                <CardActionArea onClick={handleClickOpen('paper', projectList.title, projectList.descriptionLong, projectList.images)}>
                     <CardHeader
                         title={projectList.title}
                         subheader={projectList.subtitle}
@@ -224,7 +222,7 @@ function Home() {
                     <CardMedia
                         component="img"
                         height="194"
-                        image={projectList.image}
+                        image={projectList.thumbnail}
                     />
                     <CardContent >
                         <Typography variant="body2" color="text.secondary">
@@ -255,10 +253,8 @@ function Home() {
                                     <Avatar style={{ backgroundColor: 'white' }} src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png' />
                                 </a>
                             </Grid>
-
                         </Grid>
                     </div>
-
 
                     <div style={{ paddingBottom: '250px' }}>
                         <Typography variant='h3' component='h1'>Work History</Typography>
@@ -306,7 +302,6 @@ function Home() {
                             </TimelineItem>
                         </Timeline>
                     </div>
-
 
                     <Typography gutterBottom variant='h3' component='h1'>Personal Projects</Typography>
                     <Grid
