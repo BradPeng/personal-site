@@ -142,10 +142,12 @@ function Home() {
 
     const [open, setOpen] = React.useState(false);
     const [scroll, setScroll] = React.useState('paper');
+    const [title, setTitle] = React.useState('');
 
-    const handleClickOpen = (scrollType) => () => {
+    const handleClickOpen = (scrollType, title) => () => {
         setOpen(true);
         setScroll(scrollType);
+        setTitle(title);
     };
 
     const handleClose = () => {
@@ -165,8 +167,6 @@ function Home() {
 
         <Grid item xs={12} sm={6} md={4} key={index}>
             <div>
-                <Button onClick={handleClickOpen('paper')}>scroll=paper</Button>
-                <Button onClick={handleClickOpen('body')}>scroll=body</Button>
                 <Dialog
                     open={open}
                     onClose={handleClose}
@@ -174,7 +174,7 @@ function Home() {
                     aria-labelledby="scroll-dialog-title"
                     aria-describedby="scroll-dialog-description"
                 >
-                    <DialogTitle id="scroll-dialog-title">Subscribe</DialogTitle>
+                    <DialogTitle id="scroll-dialog-title">{title}</DialogTitle>
                     <DialogContent dividers={scroll === 'paper'}>
                         <DialogContentText
                             id="scroll-dialog-description"
@@ -202,7 +202,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
 
 
             <Card sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
-                <CardActionArea onClick={() => setButtonPopup(true)}>
+                <CardActionArea onClick={handleClickOpen('paper', projectList.title)}>
                     <CardHeader
                         title={projectList.title}
                         subheader={projectList.subtitle}
