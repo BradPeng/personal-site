@@ -23,6 +23,7 @@ import { makeStyles } from '@mui/styles';
 import React, { useState } from "react";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import './projectCarousel.css' 
 
 const useStyles = makeStyles({
     timelineCard: {
@@ -40,9 +41,8 @@ const useStyles = makeStyles({
         },
     },
     projectCarousel: {
-        width: '500px',
-        height: '500px'
-    }
+        
+    },
 });
 
 const darkTheme = createTheme({
@@ -177,7 +177,7 @@ function Home() {
                 >
                     <DialogTitle id="scroll-dialog-title">{title}</DialogTitle>
                     <DialogContent>
-                        <Carousel>
+                        <Carousel className='project-carousel'>
                             {images.map((image) => (
                                 <div key={title}>
                                     <img src={image} />
@@ -284,16 +284,17 @@ function Home() {
                             </TimelineItem>
                         </Timeline>
                     </div>
-
-                    <Typography gutterBottom variant='h3' component='h1'>Personal Projects</Typography>
-                    <Grid
-                        justifyContent="flex-start"
-                        alignItems="center"
-                        container spacing={12}
-                        rowSpacing={6}
-                    >
-                        {projects}
-                    </Grid>
+                    <Container style={{ paddingBottom: '250px' }}>
+                        <Typography gutterBottom variant='h3' component='h1'>Personal Projects</Typography>
+                        <Grid
+                            justifyContent="flex-start"
+                            alignItems="center"
+                            container spacing={12}
+                            rowSpacing={6}
+                        >
+                            {projects}
+                        </Grid>
+                    </Container>
                 </Container>
             </div>
         </ThemeProvider>
