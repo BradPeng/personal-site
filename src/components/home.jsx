@@ -4,7 +4,11 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import Grid from '@mui/material/Grid';
 import Item from '@mui/material/Grid';
-
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 import Timeline from '@mui/lab/Timeline';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
@@ -85,31 +89,31 @@ const workHistoryList = [
 
 const projectList = [
     {
-        title: 'Space Pew Pew',
+        title: 'Space Pew Pew 1',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
     },
     {
-        title: 'Space Pew Pew',
+        title: 'Space Pew Pew 2',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
     },
     {
-        title: 'Space Pew Pew',
+        title: 'Space Pew Pew 3',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
     },
     {
-        title: 'Space Pew Pew',
+        title: 'Space Pew Pew 4',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
     },
     {
-        title: 'Space Pew Pew',
+        title: 'Space Pew Pew 5',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'
@@ -136,53 +140,67 @@ function Home() {
         </Card>
     ));
 
+    const [open, setOpen] = React.useState(false);
+    const [scroll, setScroll] = React.useState('paper');
 
+    const handleClickOpen = (scrollType) => () => {
+        setOpen(true);
+        setScroll(scrollType);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const descriptionElementRef = React.useRef(null);
+    React.useEffect(() => {
+        if (open) {
+            const { current: descriptionElement } = descriptionElementRef;
+            if (descriptionElement !== null) {
+                descriptionElement.focus();
+            }
+        }
+    }, [open]);
     let projects = projectList.map((projectList, index) => (
 
         <Grid item xs={12} sm={6} md={4} key={index}>
-            <ProjectPopup trigger={buttonPopup} setTrigger={setButtonPopup}>
+            <div>
+                <Button onClick={handleClickOpen('paper')}>scroll=paper</Button>
+                <Button onClick={handleClickOpen('body')}>scroll=body</Button>
+                <Dialog
+                    open={open}
+                    onClose={handleClose}
+                    scroll={scroll}
+                    aria-labelledby="scroll-dialog-title"
+                    aria-describedby="scroll-dialog-description"
+                >
+                    <DialogTitle id="scroll-dialog-title">Subscribe</DialogTitle>
+                    <DialogContent dividers={scroll === 'paper'}>
+                        <DialogContentText
+                            id="scroll-dialog-description"
+                            ref={descriptionElementRef}
+                            tabIndex={-1}
+                        >
+                            {[...new Array(50)]
+                                .map(
+                                    () => `Cras mattis consectetur purus sit amet fermentum.
+Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
+                                )
+                                .join('\n')}
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleClose}>Cancel</Button>
+                        <Button onClick={handleClose}>Subscribe</Button>
+                    </DialogActions>
+                </Dialog>
+            </div>
 
-                <Card >
-                    <CardHeader
-                        action={
-                            <IconButton onClick={() => setButtonPopup(false)}>
-                                <button type="image" src="https://freesvg.org/img/close-button.png" onClick={() => setButtonPopup(false)}></button>
-                            </IconButton>
-                        }
-                        title={projectList.title}
-                        subheader={projectList.subtitle}
-                    />
 
-                   
-                    <Carousel className={classes.projectCarousel}>
-                        <div>
-                            <img src="https://freesvg.org/img/close-button.png" />
-                            <p className="legend">Legend 1</p>
-                        </div>
-                        <div>
-                            <img src="https://freesvg.org/img/close-button.png" />
-                            <p className="legend">Legend 2</p>
-                        </div>
-                        <div>
-                            <img src="assets/3.jpeg" />
-                            <p className="https://freesvg.org/img/close-button.png">Legend 3</p>
-                        </div>
-                    </Carousel>
 
-                    <CardContent>
 
-                        <Typography variant="body2" color="text.secondary">
-                            {projectList.description}
-                        </Typography>
-                    </CardContent>
-                    <CardActions>
-                        <Button size="small">Share</Button>
-                        <Button size="small">Learn More</Button>
-
-                    </CardActions>
-                </Card>
-
-            </ProjectPopup>
             <Card sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
                 <CardActionArea onClick={() => setButtonPopup(true)}>
                     <CardHeader
