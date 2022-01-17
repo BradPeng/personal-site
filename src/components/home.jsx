@@ -212,7 +212,7 @@ function Home() {
         </Grid>));
 
     useEffect(() => {
-        Aos.init({ duration: 1900, delay: 200});
+        Aos.init({ duration: 1900, delay: 200 });
     }, []);
 
     return (
@@ -237,11 +237,11 @@ function Home() {
 
                     </div>
 
-                    <div style={{ paddingBottom: '250px' }}>
+                    <Container style={{ paddingBottom: '250px' }}>
                         <Typography variant='h3' component='h1'>Work History</Typography>
                         <Timeline position="alternate" >
                             <TimelineItem >
-                                <TimelineOppositeContent  data-aos="slide-right">
+                                <TimelineOppositeContent data-aos="slide-right">
                                     <Typography variant='h6'>
                                         September 2021 - April 2022
                                     </Typography>
@@ -262,7 +262,7 @@ function Home() {
                                     <TimelineDot color="secondary" />
                                     <TimelineConnector />
                                 </TimelineSeparator >
-                                <TimelineContent  data-aos="slide-right">
+                                <TimelineContent data-aos="slide-right">
                                     <Typography variant='h6' >
                                         July 2020 - August 2020
                                     </Typography>
@@ -277,12 +277,13 @@ function Home() {
                                 <TimelineSeparator data-aos="fade">
                                     <TimelineDot color="success" />
                                 </TimelineSeparator>
-                                <TimelineContent  data-aos="slide-left">
+                                <TimelineContent data-aos="slide-left">
                                     {workHistory[2]}
                                 </TimelineContent>
                             </TimelineItem>
                         </Timeline>
-                    </div>
+                    </Container>
+
                     <Container style={{ paddingBottom: '250px' }}>
                         <Typography gutterBottom variant='h3' component='h1'>Personal Projects</Typography>
                         <Grid
@@ -295,7 +296,16 @@ function Home() {
                         </Grid>
                     </Container>
                 </Container>
+
+                <Container style={{ paddingBottom: '250px' }}>
+                    <Typography variant='h3' component='h1'>Volunteer Work</Typography>
+                    <Typography gutterBottom variant='h4' component='h1'>Game of Apps (2020 - Present)</Typography>
+                    <Typography align='left' variant='body1'>I volunteer at a  asd as asd aslocally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps.</Typography>
+                </Container>
             </div>
+
+
+
         </ThemeProvider>
     );
 };
