@@ -21,3 +21,7 @@
 .carousel .carousel .thumb {
     border: 3px solid #fff;
 }
+
+.MuiDialog-container .MuiPaper-root {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

@@ -1,3 +1,4 @@
+import { KeyboardDoubleArrowDown } from '@mui/icons-material';
 import Timeline from '@mui/lab/Timeline';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
@@ -18,12 +19,14 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
+import Icon from '@mui/material/Icon';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import React, { useState } from "react";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import './projectCarousel.css' 
+import './projectCarousel.css';
+import { shadows } from '@mui/system';
 
 const useStyles = makeStyles({
     timelineCard: {
@@ -41,7 +44,7 @@ const useStyles = makeStyles({
         },
     },
     projectCarousel: {
-        
+
     },
 });
 
@@ -162,20 +165,14 @@ function Home() {
     let projects = projectList.map((projectList, index) => (
 
         <Grid item xs={12} sm={6} md={4} key={index}>
-            <div>
+          
                 <Dialog
-                    PaperProps={{
-                        style: {
-                            backgroundColor: 'clear',
-                            boxShadow: 'none',
-                        },
-                    }}
                     open={open}
                     onClose={handleClose}
-                    aria-labelledby="scroll-dialog-title"
-                    aria-describedby="scroll-dialog-description"
+                    BackdropProps={{ invisible: true }}
+                    maxWidth='md'
                 >
-                    <DialogTitle id="scroll-dialog-title">{title}</DialogTitle>
+                    <DialogTitle>{title}</DialogTitle>
                     <DialogContent>
                         <Carousel className='project-carousel'>
                             {images.map((image) => (
@@ -193,7 +190,7 @@ function Home() {
                         <Button onClick={handleClose}>Close</Button>
                     </DialogActions>
                 </Dialog>
-            </div>
+       
 
             <Card sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
                 <CardActionArea onClick={handleClickOpen(projectList.title, projectList.descriptionLong, projectList.images)}>
@@ -213,7 +210,6 @@ function Home() {
                     </CardContent>
                 </CardActionArea>
             </Card>
-
         </Grid>));
 
 
@@ -236,6 +232,7 @@ function Home() {
                                 </a>
                             </Grid>
                         </Grid>
+                
                     </div>
 
                     <div style={{ paddingBottom: '250px' }}>
