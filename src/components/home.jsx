@@ -20,10 +20,12 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import './projectCarousel.css';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles({
     timelineCard: {
@@ -189,7 +191,7 @@ function Home() {
             </Dialog>
 
 
-            <Card sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
+            <Card data-aos="slide-up" sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
                 <CardActionArea onClick={handleClickOpen(projectList.title, projectList.descriptionLong, projectList.images)}>
                     <CardHeader
                         title={projectList.title}
@@ -209,6 +211,9 @@ function Home() {
             </Card>
         </Grid>));
 
+    useEffect(() => {
+        Aos.init({ duration: 1900, delay: 200});
+    }, []);
 
     return (
         <ThemeProvider theme={darkTheme}>
@@ -234,45 +239,45 @@ function Home() {
 
                     <div style={{ paddingBottom: '250px' }}>
                         <Typography variant='h3' component='h1'>Work History</Typography>
-                        <Timeline position="alternate">
-                            <TimelineItem>
-                                <TimelineOppositeContent >
+                        <Timeline position="alternate" >
+                            <TimelineItem >
+                                <TimelineOppositeContent  data-aos="slide-right">
                                     <Typography variant='h6'>
                                         September 2021 - April 2022
                                     </Typography>
-                                </TimelineOppositeContent>
-                                <TimelineSeparator>
+                                </TimelineOppositeContent >
+                                <TimelineSeparator data-aos="fade">
                                     <TimelineDot color="primary" />
                                     <TimelineConnector />
                                 </TimelineSeparator>
-                                <TimelineContent>
+                                <TimelineContent data-aos="slide-left">
                                     {workHistory[0]}
                                 </TimelineContent>
                             </TimelineItem>
                             <TimelineItem>
-                                <TimelineOppositeContent>
+                                <TimelineOppositeContent data-aos="slide-left">
                                     {workHistory[1]}
                                 </TimelineOppositeContent>
-                                <TimelineSeparator>
+                                <TimelineSeparator data-aos="fade">
                                     <TimelineDot color="secondary" />
                                     <TimelineConnector />
-                                </TimelineSeparator>
-                                <TimelineContent>
-                                    <Typography variant='h6'>
+                                </TimelineSeparator >
+                                <TimelineContent  data-aos="slide-right">
+                                    <Typography variant='h6' >
                                         July 2020 - August 2020
                                     </Typography>
                                 </TimelineContent>
                             </TimelineItem>
-                            <TimelineItem>
-                                <TimelineOppositeContent >
-                                    <Typography variant='h6'>
+                            <TimelineItem >
+                                <TimelineOppositeContent data-aos="slide-right">
+                                    <Typography variant='h6'  >
                                         July 2018 - August 2018
                                     </Typography>
-                                </TimelineOppositeContent>
-                                <TimelineSeparator>
+                                </TimelineOppositeContent >
+                                <TimelineSeparator data-aos="fade">
                                     <TimelineDot color="success" />
                                 </TimelineSeparator>
-                                <TimelineContent>
+                                <TimelineContent  data-aos="slide-left">
                                     {workHistory[2]}
                                 </TimelineContent>
                             </TimelineItem>
