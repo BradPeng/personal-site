@@ -26,6 +26,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import './projectCarousel.css';
 import Aos from 'aos';
 import "aos/dist/aos.css";
+import BPP1 from '../project-images/brucepewpewimages/BPP_img_1.png'
+import BPP2 from '../project-images/brucepewpewimages/BPP_img_2.png'
+import BPP3 from '../project-images/brucepewpewimages/BPP_img_3.png'
 
 const useStyles = makeStyles({
     timelineCard: {
@@ -74,15 +77,15 @@ const workHistoryList = [
 
 const projectList = [
     {
-        title: 'Bruce Pew Pew',
+        title: 'Bruce Pew Pew (Game Maker)',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a very simple game, I was able to learn about various game development techniques, such as handling precise movement and animation tricks done with sprites.',
-        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
-        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
+        thumbnail: BPP1,
+        images: [BPP1, BPP2, BPP3]
     },
     {
-        title: '2D Platforming RPG',
+        title: '2D Platforming RPG (Game Maker)',
         subtitle: 'Fall 2021',
         description: 'Jump around, destroy enemies and explore in this 2D platforming RPG!',
         descriptionLong: "This game was the result of my second adventure with Game Maker Studio 2. I've always wanted to make an rpg style game, and a 2D platforming approach seemed like the perfect way to tackle my ideas, as well as learn some new game development tricks. The most important aspect of a platformer is the player movement. I wanted to have multiple attacks and precise movement, so I had to find a clever way to write maintainable code. That's where the player states come in. Every movement the player can do is associated with a so-called player state. In each specific state, the player can only perform certain actions. This way, I isolate movement of the player depending on the state, allowing for my to easily code the specific movements I want. I also had the opportunity to play with some simple math functions while coding the enemy AI. I was able to implement very basic parabolas into the spider's arched movements, as well as do some basic trig to make the bat enemy fly at the player at a constant speed.",
@@ -91,7 +94,15 @@ const projectList = [
 
     },
     {
-        title: 'Space Pew Pew 3',
+        title: 'Personal Portfolio Website (React)',
+        subtitle: 'Winter 2022',
+        description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
+    },
+    {
+        title: 'Volunteer Opportunities App (iOS)',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
@@ -99,7 +110,7 @@ const projectList = [
         images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
     },
     {
-        title: 'Space Pew Pew 4',
+        title: 'Youth Financial Tracking App (iOS)',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
@@ -107,7 +118,7 @@ const projectList = [
         images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
     },
     {
-        title: 'Space Pew Pew 5',
+        title: 'Reminder Manager (Java)',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
