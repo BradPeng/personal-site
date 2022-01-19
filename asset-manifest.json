@@ -1,18 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.4e3e295c.css",
-    "main.js": "/static/js/main.3bd4cfc4.js",
+    "main.js": "/static/js/main.b83a9ecf.js",
     "static/js/787.949ba037.chunk.js": "/static/js/787.949ba037.chunk.js",
+    "static/media/ARPG_img_6.png": "/static/media/ARPG_img_6.0e15fffc9439c6081d12.png",
+    "static/media/ARPG_img_4.png": "/static/media/ARPG_img_4.6f9c7a0a6d6a374b9ad3.png",
+    "static/media/ARPG_img_5.png": "/static/media/ARPG_img_5.aacf4df1beb35dfe3db7.png",
     "static/media/BPP_img_3.png": "/static/media/BPP_img_3.5b38d3be13acc0e1e894.png",
     "static/media/BPP_img_2.png": "/static/media/BPP_img_2.b8f7d8f302946d4c38d7.png",
+    "static/media/ARPG_img_0.png": "/static/media/ARPG_img_0.be0b4af55d9e1716463d.png",
+    "static/media/ARPG_img_2.png": "/static/media/ARPG_img_2.d50670d347f4372a5242.png",
+    "static/media/ARPG_img_1.png": "/static/media/ARPG_img_1.ca1f695c0ca4658290a2.png",
+    "static/media/ARPG_img_3.png": "/static/media/ARPG_img_3.16e30963b2195badd2a6.png",
     "static/media/BPP_img_1.png": "/static/media/BPP_img_1.0388976829f0dd4d51a7.png",
     "index.html": "/index.html",
     "main.4e3e295c.css.map": "/static/css/main.4e3e295c.css.map",
-    "main.3bd4cfc4.js.map": "/static/js/main.3bd4cfc4.js.map",
+    "main.b83a9ecf.js.map": "/static/js/main.b83a9ecf.js.map",
     "787.949ba037.chunk.js.map": "/static/js/787.949ba037.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4e3e295c.css",
-    "static/js/main.3bd4cfc4.js"
+    "static/js/main.b83a9ecf.js"
   ]
 }
