@@ -38,6 +38,12 @@ import ARPG4 from '../project-images/adventurerpg_images/ARPG_img_4.png';
 import ARPG5 from '../project-images/adventurerpg_images/ARPG_img_5.png';
 import ARPG6 from '../project-images/adventurerpg_images/ARPG_img_6.png';
 
+import PS1 from '../project-images/personal_site_images/personalSite_img_1.png';
+import GOA1 from '../project-images/GOA1_images/GOA1_img_1.JPG';
+import GOA2 from '../project-images/GOA1_images/GOA1_img_2.JPG';
+import GOA3 from '../project-images/GOA1_images/GOA1_img_3.JPG';
+import GOA4 from '../project-images/GOA1_images/GOA1_img_4.png';
+
 const useStyles = makeStyles({
     timelineCard: {
 
@@ -106,16 +112,16 @@ const projectList = [
         subtitle: 'Winter 2022',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
-        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
-        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
+        thumbnail: PS1,
+        images: [PS1]
     },
     {
         title: 'Volunteer Opportunities App (iOS)',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
-        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
-        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
+        thumbnail: GOA4,
+        images: [GOA2, GOA3, GOA4, GOA1]
     },
     {
         title: 'Youth Financial Tracking App (iOS)',
@@ -195,7 +201,7 @@ function Home() {
                     <Carousel emulateTouch useKeyboardArrows swipeable className='project-carousel'>
                         {images.map((image) => (
                             <div key={title}>
-                                <img src={image} />
+                                <img style={{maxHeight: '600px'}} src={image} />
                             </div>
                         ))}
 
