@@ -29,6 +29,14 @@ import "aos/dist/aos.css";
 import BPP1 from '../project-images/brucepewpewimages/BPP_img_1.png'
 import BPP2 from '../project-images/brucepewpewimages/BPP_img_2.png'
 import BPP3 from '../project-images/brucepewpewimages/BPP_img_3.png'
+import ARPG0 from '../project-images/adventurerpg_images/ARPG_img_0.png';
+
+import ARPG1 from '../project-images/adventurerpg_images/ARPG_img_1.png';
+import ARPG2 from '../project-images/adventurerpg_images/ARPG_img_2.png';
+import ARPG3 from '../project-images/adventurerpg_images/ARPG_img_3.png';
+import ARPG4 from '../project-images/adventurerpg_images/ARPG_img_4.png';
+import ARPG5 from '../project-images/adventurerpg_images/ARPG_img_5.png';
+import ARPG6 from '../project-images/adventurerpg_images/ARPG_img_6.png';
 
 const useStyles = makeStyles({
     timelineCard: {
@@ -89,8 +97,8 @@ const projectList = [
         subtitle: 'Fall 2021',
         description: 'Jump around, destroy enemies and explore in this 2D platforming RPG!',
         descriptionLong: "This game was the result of my second adventure with Game Maker Studio 2. I've always wanted to make an rpg style game, and a 2D platforming approach seemed like the perfect way to tackle my ideas, as well as learn some new game development tricks. The most important aspect of a platformer is the player movement. I wanted to have multiple attacks and precise movement, so I had to find a clever way to write maintainable code. That's where the player states come in. Every movement the player can do is associated with a so-called player state. In each specific state, the player can only perform certain actions. This way, I isolate movement of the player depending on the state, allowing for my to easily code the specific movements I want. I also had the opportunity to play with some simple math functions while coding the enemy AI. I was able to implement very basic parabolas into the spider's arched movements, as well as do some basic trig to make the bat enemy fly at the player at a constant speed.",
-        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
-        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
+        thumbnail: ARPG0,
+        images: [ARPG0, ARPG1, ARPG2, ARPG3, ARPG4, ARPG5, ARPG6]
 
     },
     {
