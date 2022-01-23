@@ -39,10 +39,13 @@ import ARPG5 from '../project-images/adventurerpg_images/ARPG_img_5.png';
 import ARPG6 from '../project-images/adventurerpg_images/ARPG_img_6.png';
 
 import PS1 from '../project-images/personal_site_images/personalSite_img_1.png';
-import GOA1 from '../project-images/GOA1_images/GOA1_img_1.JPG';
-import GOA2 from '../project-images/GOA1_images/GOA1_img_2.JPG';
-import GOA3 from '../project-images/GOA1_images/GOA1_img_3.JPG';
+
+import GOA1 from '../project-images/GOA1_images/GOA1_img_1.png';
+import GOA2 from '../project-images/GOA1_images/GOA1_img_2.png';
+import GOA3 from '../project-images/GOA1_images/GOA1_img_3.png';
 import GOA4 from '../project-images/GOA1_images/GOA1_img_4.png';
+import GOA5 from '../project-images/GOA1_images/GOA1_img_5.png';
+import GOA6 from '../project-images/GOA1_images/GOA1_img_6.JPG';
 
 const useStyles = makeStyles({
     timelineCard: {
@@ -116,12 +119,12 @@ const projectList = [
         images: [PS1]
     },
     {
-        title: 'Volunteer Opportunities App (iOS)',
+        title: 'Student Volunteer Opportunities App (iOS)',
         subtitle: 'Summer 2021',
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
-        thumbnail: GOA4,
-        images: [GOA2, GOA3, GOA4, GOA1]
+        thumbnail: GOA1,
+        images: [GOA1, GOA2, GOA3, GOA4, GOA5, GOA6]
     },
     {
         title: 'Youth Financial Tracking App (iOS)',
