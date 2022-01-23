@@ -20,32 +20,32 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
-import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import './projectCarousel.css';
 import Aos from 'aos';
 import "aos/dist/aos.css";
-import BPP1 from '../project-images/brucepewpewimages/BPP_img_1.png'
-import BPP2 from '../project-images/brucepewpewimages/BPP_img_2.png'
-import BPP3 from '../project-images/brucepewpewimages/BPP_img_3.png'
+import React, { useEffect, useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import ARPG0 from '../project-images/adventurerpg_images/ARPG_img_0.png';
-
 import ARPG1 from '../project-images/adventurerpg_images/ARPG_img_1.png';
 import ARPG2 from '../project-images/adventurerpg_images/ARPG_img_2.png';
 import ARPG3 from '../project-images/adventurerpg_images/ARPG_img_3.png';
 import ARPG4 from '../project-images/adventurerpg_images/ARPG_img_4.png';
 import ARPG5 from '../project-images/adventurerpg_images/ARPG_img_5.png';
 import ARPG6 from '../project-images/adventurerpg_images/ARPG_img_6.png';
-
-import PS1 from '../project-images/personal_site_images/personalSite_img_1.png';
-
+import BPP1 from '../project-images/brucepewpewimages/BPP_img_1.png';
+import BPP2 from '../project-images/brucepewpewimages/BPP_img_2.png';
+import BPP3 from '../project-images/brucepewpewimages/BPP_img_3.png';
 import GOA1 from '../project-images/GOA1_images/GOA1_img_1.png';
 import GOA2 from '../project-images/GOA1_images/GOA1_img_2.png';
 import GOA3 from '../project-images/GOA1_images/GOA1_img_3.png';
 import GOA4 from '../project-images/GOA1_images/GOA1_img_4.png';
 import GOA5 from '../project-images/GOA1_images/GOA1_img_5.png';
 import GOA6 from '../project-images/GOA1_images/GOA1_img_6.JPG';
+import PS1 from '../project-images/personal_site_images/personalSite_img_1.png';
+import './projectCarousel.css';
+
+
+
 
 const useStyles = makeStyles({
     timelineCard: {
@@ -94,14 +94,6 @@ const workHistoryList = [
 
 const projectList = [
     {
-        title: 'Bruce Pew Pew (Game Maker)',
-        subtitle: 'Summer 2021',
-        description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
-        descriptionLong: 'Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a very simple game, I was able to learn about various game development techniques, such as handling precise movement and animation tricks done with sprites.',
-        thumbnail: BPP1,
-        images: [BPP1, BPP2, BPP3]
-    },
-    {
         title: '2D Platforming RPG (Game Maker)',
         subtitle: 'Fall 2021',
         description: 'Jump around, destroy enemies and explore in this 2D platforming RPG!',
@@ -109,6 +101,14 @@ const projectList = [
         thumbnail: ARPG0,
         images: [ARPG0, ARPG1, ARPG2, ARPG3, ARPG4, ARPG5, ARPG6]
 
+    },
+    {
+        title: 'Bruce Pew Pew (Game Maker)',
+        subtitle: 'Summer 2021',
+        description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        descriptionLong: 'Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a very simple game, I was able to learn about various game development techniques, such as handling precise movement and animation tricks done with sprites.',
+        thumbnail: BPP1,
+        images: [BPP1, BPP2, BPP3]
     },
     {
         title: 'Personal Portfolio Website (React)',
@@ -204,7 +204,7 @@ function Home() {
                     <Carousel emulateTouch useKeyboardArrows swipeable className='project-carousel'>
                         {images.map((image) => (
                             <div key={title}>
-                                <img style={{maxHeight: '600px'}} src={image} />
+                                <img style={{ maxHeight: '600px' }} src={image} />
                             </div>
                         ))}
 
@@ -219,7 +219,7 @@ function Home() {
             </Dialog>
 
 
-            <Card data-aos="slide-up" sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
+            <Card data-aos="flip-up" sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
                 <CardActionArea onClick={handleClickOpen(projectList.title, projectList.descriptionLong, projectList.images)}>
                     <CardHeader
                         title={projectList.title}
@@ -240,7 +240,7 @@ function Home() {
         </Grid>));
 
     useEffect(() => {
-        Aos.init({ duration: 1900, delay: 200 });
+        Aos.init({ duration: 1200, delay: 200 });
     }, []);
 
     return (
