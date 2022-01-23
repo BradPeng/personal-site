@@ -249,27 +249,27 @@ function Home() {
         <ThemeProvider theme={darkTheme}>
             <div className="App">
                 <Container maxWidth='xl'>
-                    <div style={{ height: "100vh", flexDirection: "column", display: "flex", justifyContent: "space-between" }}>
-                        <div style={{ height: "100vh", flexDirection: "column", display: "flex", justifyContent: "center" }}>
-                            <Typography variant='h3' component='h1'>Brad Peng</Typography>
-                            <Typography gutterBottom variant='h5'>Computer Science, The University of British Columbia (2019 - 2024)</Typography>
-                            <Grid justifyContent="center" container spacing={1}>
-                                <Grid item>
-                                    <a target="_blank" href="https://github.com/BradPeng">
-                                        <Avatar src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' />
-                                    </a>
-                                </Grid>
-                                <Grid item>
-                                    <a target="_blank" href="https://www.linkedin.com/in/brad-peng-165206214/">
-                                        <Avatar style={{ backgroundColor: 'white' }} src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png' />
-                                    </a>
-                                </Grid>
+                    <div style={{ height: "100vh", flexDirection: "column", display: "flex", justifyContent: "center" }}>
+                        <Typography variant='h3' component='h1'>Brad Peng</Typography>
+                        <Typography gutterBottom variant='h5'>Computer Science, The University of British Columbia (2019 - 2024)</Typography>
+                        <Grid justifyContent="center" container spacing={1}>
+                            <Grid item>
+                                <a target="_blank" href="https://github.com/BradPeng">
+                                    <Avatar src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' />
+                                </a>
                             </Grid>
-                        </div>
-                        <a style={{ margin: 'auto', paddingBottom: 50, cursor: "pointer" }} onClick={() => { handleScroll(workSectionRef) }}>
-                            <Avatar src={DownArrow} />
-                        </a>
+                            <Grid item>
+                                <a target="_blank" href="https://www.linkedin.com/in/brad-peng-165206214/">
+                                    <Avatar style={{ backgroundColor: 'white' }} src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png' />
+                                </a>
+                            </Grid>
+                        </Grid>
 
+                        <div style={{ width: 50, textAlign: 'center', position: 'absolute', bottom: 50, right: 0, left: 0, marginLeft: 'auto', marginRight: 'auto', cursor: "pointer" }}>
+                            <a onClick={() => { handleScroll(workSectionRef) }}>
+                                <Avatar src={DownArrow} />
+                            </a>
+                        </div>
                     </div>
 
                     <div ref={workSectionRef} style={{ paddingTop: 75 }} id="work"></div>
