@@ -12,15 +12,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import Stack from '@mui/material/Stack';
-import DownArrow from '../images/downarrow.png'
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
-import { default as DownIcon, default as IconButton } from '@mui/material/IconButton';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import Aos from 'aos';
@@ -28,6 +25,7 @@ import "aos/dist/aos.css";
 import React, { useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import DownArrow from '../images/downarrow.png';
 import ARPG0 from '../project-images/adventurerpg_images/ARPG_img_0.png';
 import ARPG1 from '../project-images/adventurerpg_images/ARPG_img_1.png';
 import ARPG2 from '../project-images/adventurerpg_images/ARPG_img_2.png';
@@ -46,13 +44,9 @@ import GOA5 from '../project-images/GOA1_images/GOA1_img_5.png';
 import GOA6 from '../project-images/GOA1_images/GOA1_img_6.JPG';
 import PS1 from '../project-images/personal_site_images/personalSite_img_1.png';
 import './projectCarousel.css';
-import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
-
-
 
 const useStyles = makeStyles({
     timelineCard: {
-
         '&:hover': {
             transition: "transform .2s ease-in-out",
             transform: "scale(1.03)"
@@ -66,7 +60,6 @@ const useStyles = makeStyles({
         },
     },
     projectCarousel: {
-
     },
 });
 
@@ -93,7 +86,6 @@ const workHistoryList = [
         description: "My first internship was with the Institute of Applied Design and Technology Education Society, a new non-profit hosting a mobile app development course and competition. I was on the team tasked with developing and launching the first version of the companion app for students to use while taking their course. I created a few screens, which involved creating views through Xcode's Storyboard functionality and wrote the associated code. I also did bug testing on various supported iOS devices throughout the development process. As we neared completion of the app, I also spent some time writing scripts that would populate and manage our Google Firebase backend with test data.",
     }
 ]
-
 
 const projectList = [
     {
@@ -147,7 +139,6 @@ const projectList = [
     },
 ]
 
-
 function Home() {
     const classes = useStyles();
     let workHistory = workHistoryList.map((workHistoryList) => (
@@ -193,7 +184,6 @@ function Home() {
     }, [open]);
 
     let projects = projectList.map((projectList, index) => (
-
         <Grid item xs={12} sm={6} md={4} key={index}>
             <Dialog
                 open={open}
@@ -338,12 +328,8 @@ function Home() {
                     <Typography align='left' variant='body1'>I volunteer at a  asd as asd aslocally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps.</Typography>
                 </Container>
             </div>
-
-
-
         </ThemeProvider>
     );
 };
 
 export default Home;
-
