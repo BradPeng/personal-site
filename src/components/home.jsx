@@ -75,17 +75,17 @@ const darkTheme = createTheme({
 
 const workHistoryList = [
     {
-        title: 'Web Developer (Co-op)',
+        title: 'Web Developer Intern',
         subtitle: 'Bank of Canada',
-        description: 'Worked on maintaining and updating the 5 internal and external sites hosted by the Bank of Canada. Introduced quality of life changes to the PHP component library to allow',
+        description: 'As part of the front-end web team at the Bank of Canada, I was responsible for tasks regarding the six internal and external-facing sites used by the Bank of Canada. As an intern, I was allowed to work on any jobs that came up in our sprint boards, including implementation tasks and quality assurance testing. I was well known in the team to be an excellent peer reviewer, as my review process had uncovered many vulnerabilities and bugs. This saved a lot of time for the senior developers who reviewed pull requests. I also wrote many automated test scripts that ensured everything would behave as expected. In addition to minor bug fixes, I got the opportunity to implement various quality of life changes to the sites, such as adding a search feature to our drop-down menus or adding additional attributes to our components for increased customizablity. ',
     },
     {
-        title: 'Web Developer (Summer Intern)',
+        title: 'Web Developer Intern',
         subtitle: 'Institute of Applied Design and Technology Education Society',
         description: 'Worked on maintaining and updating the 5 internal and external sites hosted by the Bank of Canada. Introduced quality of life changes to the PHP component library to allow',
     },
     {
-        title: 'iOS Developer (Summer Intern)',
+        title: 'iOS Developer Intern',
         subtitle: 'Institute of Applied Design and Technology Education Society',
         description: 'Worked on maintaining and updating the 5 internal and external sites hosted by the Bank of Canada. Introduced quality of life changes to the PHP component library to allow',
     }
@@ -147,17 +147,16 @@ const projectList = [
 
 function Home() {
     const classes = useStyles();
-    const [buttonPopup, setButtonPopup] = useState(false);
-    let workHistory = workHistoryList.map((workHistoryList, index) => (
-        <Card sx={{ maxWidth: 500 }} className={classes.timelineCard}>
+    let workHistory = workHistoryList.map((workHistoryList) => (
+        <Card sx={{ maxWidth: 800 }} style={{ paddingRight: 0 }} className={classes.timelineCard}>
             <CardContent key='{'>
-                <Typography variant="h6">
+                <Typography variant="h5">
                     {workHistoryList.title}
                 </Typography>
-                <Typography gutterBottom variant='h8'>
+                <Typography gutterBottom variant='h7'>
                     {workHistoryList.subtitle}
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant="body1">
                     {workHistoryList.description}
                 </Typography>
             </CardContent>
@@ -189,10 +188,10 @@ function Home() {
             }
         }
     }, [open]);
+
     let projects = projectList.map((projectList, index) => (
 
         <Grid item xs={12} sm={6} md={4} key={index}>
-
             <Dialog
                 open={open}
                 onClose={handleClose}
@@ -218,7 +217,6 @@ function Home() {
                 </DialogActions>
             </Dialog>
 
-
             <Card data-aos="flip-up" sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
                 <CardActionArea onClick={handleClickOpen(projectList.title, projectList.descriptionLong, projectList.images)}>
                     <CardHeader
@@ -240,13 +238,13 @@ function Home() {
         </Grid>));
 
     useEffect(() => {
-        Aos.init({ duration: 1200, delay: 200 });
+        Aos.init({ duration: 1400, delay: 100 });
     }, []);
 
     return (
         <ThemeProvider theme={darkTheme}>
             <div className="App">
-                <Container>
+                <Container maxWidth='xl' >
                     <div style={{ height: "100vh", flexDirection: "column", display: "flex", justifyContent: "center" }}>
                         <Typography variant='h3' component='h1'>Brad Peng</Typography>
                         <Typography gutterBottom variant='h5'>Computer Science, The University of British Columbia (2019 - 2024)</Typography>
@@ -267,9 +265,9 @@ function Home() {
 
                     <Container style={{ paddingBottom: '250px' }}>
                         <Typography variant='h3' component='h1'>Work History</Typography>
-                        <Timeline position="alternate" >
+                        <Timeline position="alternate" style={{ paddingRight: 0 }}>
                             <TimelineItem >
-                                <TimelineOppositeContent data-aos="slide-right">
+                                <TimelineOppositeContent data-aos="slide-right" style={{ flex: 0.3 }}>
                                     <Typography variant='h6'>
                                         September 2021 - April 2022
                                     </Typography>
@@ -282,7 +280,7 @@ function Home() {
                                     {workHistory[0]}
                                 </TimelineContent>
                             </TimelineItem>
-                            <TimelineItem>
+                            <TimelineItem >
                                 <TimelineOppositeContent data-aos="slide-left">
                                     {workHistory[1]}
                                 </TimelineOppositeContent>
@@ -290,14 +288,14 @@ function Home() {
                                     <TimelineDot color="secondary" />
                                     <TimelineConnector />
                                 </TimelineSeparator >
-                                <TimelineContent data-aos="slide-right">
+                                <TimelineContent data-aos="slide-right" style={{ flex: 0.3 }}>
                                     <Typography variant='h6' >
                                         July 2020 - August 2020
                                     </Typography>
                                 </TimelineContent>
                             </TimelineItem>
                             <TimelineItem >
-                                <TimelineOppositeContent data-aos="slide-right">
+                                <TimelineOppositeContent data-aos="slide-right" style={{ flex: 0.3 }}>
                                     <Typography variant='h6'  >
                                         July 2018 - August 2018
                                     </Typography>
