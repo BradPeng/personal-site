@@ -22,7 +22,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import Aos from 'aos';
 import "aos/dist/aos.css";
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import DownArrow from '../images/downarrow.png';
@@ -45,6 +45,7 @@ import GOA6 from '../project-images/GOA1_images/GOA1_img_6.JPG';
 import PS1 from '../project-images/personal_site_images/personalSite_img_1.png';
 import './projectCarousel.css';
 
+
 const useStyles = makeStyles({
     timelineCard: {
         '&:hover': {
@@ -62,6 +63,15 @@ const useStyles = makeStyles({
     projectCarousel: {
     },
 });
+
+const handleScroll = ref => {
+    window.scrollTo({
+        behavior: "smooth",
+        top: ref.current.offsetTop
+    });
+};
+
+
 
 const darkTheme = createTheme({
     palette: {
@@ -234,6 +244,7 @@ function Home() {
         Aos.init({ duration: 1200, delay: 100 });
     }, []);
 
+    const workSectionRef = useRef();
     return (
         <ThemeProvider theme={darkTheme}>
             <div className="App">
@@ -255,13 +266,13 @@ function Home() {
                                 </Grid>
                             </Grid>
                         </div>
-                        <a style={{ margin: 'auto', paddingBottom: 50, cursor: "pointer" }} onClick={() => { document.getElementById("work").scrollIntoView({ behavior: 'smooth', block: 'start' }) }}>
+                        <a style={{ margin: 'auto', paddingBottom: 50, cursor: "pointer" }} onClick={() => { handleScroll(workSectionRef) }}>
                             <Avatar src={DownArrow} />
                         </a>
 
                     </div>
 
-                    <div style={{ paddingTop: 75 }} id="work"></div>
+                    <div ref={workSectionRef} style={{ paddingTop: 75 }} id="work"></div>
                     <Container style={{ paddingBottom: '250px' }}>
                         <Typography variant='h3' component='h1'>Work History</Typography>
                         <Timeline position="alternate" style={{ paddingRight: 0 }}>
