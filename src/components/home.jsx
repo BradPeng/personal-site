@@ -12,12 +12,15 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
+import Stack from '@mui/material/Stack';
+import DownArrow from '../images/downarrow.png'
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
+import { default as DownIcon, default as IconButton } from '@mui/material/IconButton';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import Aos from 'aos';
@@ -43,7 +46,7 @@ import GOA5 from '../project-images/GOA1_images/GOA1_img_5.png';
 import GOA6 from '../project-images/GOA1_images/GOA1_img_6.JPG';
 import PS1 from '../project-images/personal_site_images/personalSite_img_1.png';
 import './projectCarousel.css';
-
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 
 
 
@@ -238,31 +241,37 @@ function Home() {
         </Grid>));
 
     useEffect(() => {
-        Aos.init({ duration: 1400, delay: 100 });
+        Aos.init({ duration: 1200, delay: 100 });
     }, []);
 
     return (
         <ThemeProvider theme={darkTheme}>
             <div className="App">
-                <Container maxWidth='xl' >
-                    <div style={{ height: "100vh", flexDirection: "column", display: "flex", justifyContent: "center" }}>
-                        <Typography variant='h3' component='h1'>Brad Peng</Typography>
-                        <Typography gutterBottom variant='h5'>Computer Science, The University of British Columbia (2019 - 2024)</Typography>
-                        <Grid justifyContent="center" container spacing={1}>
-                            <Grid item>
-                                <a target="_blank" href="https://github.com/BradPeng">
-                                    <Avatar src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' />
-                                </a>
+                <Container maxWidth='xl'>
+                    <div style={{ height: "100vh", flexDirection: "column", display: "flex", justifyContent: "space-between" }}>
+                        <div style={{ height: "100vh", flexDirection: "column", display: "flex", justifyContent: "center" }}>
+                            <Typography variant='h3' component='h1'>Brad Peng</Typography>
+                            <Typography gutterBottom variant='h5'>Computer Science, The University of British Columbia (2019 - 2024)</Typography>
+                            <Grid justifyContent="center" container spacing={1}>
+                                <Grid item>
+                                    <a target="_blank" href="https://github.com/BradPeng">
+                                        <Avatar src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' />
+                                    </a>
+                                </Grid>
+                                <Grid item>
+                                    <a target="_blank" href="https://www.linkedin.com/in/brad-peng-165206214/">
+                                        <Avatar style={{ backgroundColor: 'white' }} src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png' />
+                                    </a>
+                                </Grid>
                             </Grid>
-                            <Grid item>
-                                <a target="_blank" href="https://www.linkedin.com/in/brad-peng-165206214/">
-                                    <Avatar style={{ backgroundColor: 'white' }} src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png' />
-                                </a>
-                            </Grid>
-                        </Grid>
+                        </div>
+                        <a style={{ margin: 'auto', paddingBottom: 50, cursor: "pointer" }} onClick={() => { document.getElementById("work").scrollIntoView({ behavior: 'smooth', block: 'start' }) }}>
+                            <Avatar src={DownArrow} />
+                        </a>
 
                     </div>
 
+                    <div style={{ paddingTop: 75 }} id="work"></div>
                     <Container style={{ paddingBottom: '250px' }}>
                         <Typography variant='h3' component='h1'>Work History</Typography>
                         <Timeline position="alternate" style={{ paddingRight: 0 }}>
@@ -276,12 +285,12 @@ function Home() {
                                     <TimelineDot color="primary" />
                                     <TimelineConnector />
                                 </TimelineSeparator>
-                                <TimelineContent data-aos="slide-left">
+                                <TimelineContent data-aos="fade">
                                     {workHistory[0]}
                                 </TimelineContent>
                             </TimelineItem>
                             <TimelineItem >
-                                <TimelineOppositeContent data-aos="slide-left">
+                                <TimelineOppositeContent data-aos="fade">
                                     {workHistory[1]}
                                 </TimelineOppositeContent>
                                 <TimelineSeparator data-aos="fade">
@@ -303,7 +312,7 @@ function Home() {
                                 <TimelineSeparator data-aos="fade">
                                     <TimelineDot color="success" />
                                 </TimelineSeparator>
-                                <TimelineContent data-aos="slide-left">
+                                <TimelineContent data-aos="fade">
                                     {workHistory[2]}
                                 </TimelineContent>
                             </TimelineItem>
