@@ -9,6 +9,7 @@ import DownArrow from '../../images/downarrow.png';
 import ProjectCards from './projectcards';
 import './projectCarousel.css';
 import WorkHistory from './workhistory';
+import Link from '@mui/material/Link';
 
 const handleScroll = ref => {
     window.scrollTo({
@@ -34,21 +35,21 @@ function Home() {
                         <Typography gutterBottom variant='h5'>Computer Science, The University of British Columbia (2019 - 2024)</Typography>
                         <Grid justifyContent="center" container spacing={1}>
                             <Grid item>
-                                <a target="_blank" href="https://github.com/BradPeng">
+                                <Link target="_blank" rel="noopener" href="https://github.com/BradPeng">
                                     <Avatar src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' />
-                                </a>
+                                </Link>
                             </Grid>
                             <Grid item>
-                                <a target="_blank" href="https://www.linkedin.com/in/brad-peng-165206214/">
+                                <Link target="_blank" rel="noopener" href="https://www.linkedin.com/in/brad-peng-165206214/">
                                     <Avatar style={{ backgroundColor: 'white' }} src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png' />
-                                </a>
+                                </Link>
                             </Grid>
                         </Grid>
 
                         <div style={{ width: 50, textAlign: 'center', position: 'absolute', bottom: 50, right: 0, left: 0, marginLeft: 'auto', marginRight: 'auto', cursor: "pointer" }}>
-                            <a onClick={() => { handleScroll(workSectionRef) }}>
+                            <Link onClick={() => { handleScroll(workSectionRef) }}>
                                 <Avatar src={DownArrow} />
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -62,7 +63,7 @@ function Home() {
 
                 <Container style={{ paddingBottom: '250px' }}>
                     <Typography variant='h3' component='h1'>Volunteer Work</Typography>
-                    <Typography gutterBottom variant='h4' component='h1'>Game of Apps (2020 - Present)</Typography>
+                    <Link target="_blank" rel="noopener" href='https://gameofapps.org/' gutterBottom variant='h4'>Game of Apps (2020 - Present)</Link>
                     <Typography align='left' variant='body1'>I volunteer at a  asd as asd aslocally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps.</Typography>
                 </Container>
             </div>
