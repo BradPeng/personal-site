@@ -45,15 +45,8 @@ import GOA6 from '../../project-images/GOA1_images/GOA1_img_6.JPG';
 import PS1 from '../../project-images/personal_site_images/personalSite_img_1.png';
 import './projectCarousel.css';
 import ProjectCards from './projectcards'
+import WorkHistory from './workhistory'
 
-const useStyles = makeStyles({
-    timelineCard: {
-        '&:hover': {
-            transition: "transform .2s ease-in-out",
-            transform: "scale(1.03)"
-        },
-    },
-});
 
 const handleScroll = ref => {
     window.scrollTo({
@@ -87,22 +80,7 @@ const workHistoryList = [
 ]
 
 function Home() {
-    const classes = useStyles();
-    let workHistory = workHistoryList.map((workHistoryList) => (
-        <Card sx={{ maxWidth: 800 }} style={{ paddingRight: 0 }} className={classes.timelineCard}>
-            <CardContent key='{'>
-                <Typography variant="h5">
-                    {workHistoryList.title}
-                </Typography>
-                <Typography gutterBottom variant='h7'>
-                    {workHistoryList.subtitle}
-                </Typography>
-                <Typography variant="body1">
-                    {workHistoryList.description}
-                </Typography>
-            </CardContent>
-        </Card>
-    ));
+
 
     useEffect(() => {
         Aos.init({ duration: 1200, delay: 100 });
@@ -136,53 +114,9 @@ function Home() {
                         </div>
                     </div>
 
-                    <div ref={workSectionRef} style={{ paddingTop: 75 }} id="work"></div>
-                    <Container style={{ paddingBottom: '250px' }}>
-                        <Typography variant='h3' component='h1'>Work History</Typography>
-                        <Timeline position="alternate" style={{ paddingRight: 0 }}>
-                            <TimelineItem >
-                                <TimelineOppositeContent data-aos="slide-right" style={{ flex: 0.5 }}>
-                                    <Typography variant='h6'>
-                                        September 2021 - April 2022
-                                    </Typography>
-                                </TimelineOppositeContent >
-                                <TimelineSeparator data-aos="fade">
-                                    <TimelineDot color="primary" />
-                                    <TimelineConnector />
-                                </TimelineSeparator>
-                                <TimelineContent data-aos="fade">
-                                    {workHistory[0]}
-                                </TimelineContent>
-                            </TimelineItem>
-                            <TimelineItem >
-                                <TimelineOppositeContent data-aos="fade">
-                                    {workHistory[1]}
-                                </TimelineOppositeContent>
-                                <TimelineSeparator data-aos="fade">
-                                    <TimelineDot color="secondary" />
-                                    <TimelineConnector />
-                                </TimelineSeparator >
-                                <TimelineContent data-aos="slide-right" style={{ flex: 0.5 }}>
-                                    <Typography variant='h6' >
-                                        July 2020 - August 2020
-                                    </Typography>
-                                </TimelineContent>
-                            </TimelineItem>
-                            <TimelineItem >
-                                <TimelineOppositeContent data-aos="slide-right" style={{ flex: 0.5 }}>
-                                    <Typography variant='h6'  >
-                                        July 2018 - August 2018
-                                    </Typography>
-                                </TimelineOppositeContent >
-                                <TimelineSeparator data-aos="fade">
-                                    <TimelineDot color="success" />
-                                </TimelineSeparator>
-                                <TimelineContent data-aos="fade">
-                                    {workHistory[2]}
-                                </TimelineContent>
-                            </TimelineItem>
-                        </Timeline>
-                    </Container>
+                    <div ref={workSectionRef} style={{ paddingTop: 75 }} id="work" />
+
+                    <WorkHistory />
 
                     <Container style={{ paddingBottom: '250px' }}>
                         <Typography gutterBottom variant='h3' component='h1'>Personal Projects</Typography>
@@ -192,7 +126,7 @@ function Home() {
                             container spacing={12}
                             rowSpacing={6}
                         >
-                            <ProjectCards/>
+                            <ProjectCards />
                         </Grid>
                     </Container>
                 </Container>

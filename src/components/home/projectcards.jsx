@@ -1,12 +1,4 @@
-import Timeline from '@mui/lab/Timeline';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import { CardActionArea, Container, Typography } from '@mui/material';
-import Avatar from '@mui/material/Avatar';
+import { CardActionArea, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -18,13 +10,11 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import Aos from 'aos';
 import "aos/dist/aos.css";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import DownArrow from '../../images/downarrow.png';
 import ARPG0 from '../../project-images/adventurerpg_images/ARPG_img_0.png';
 import ARPG1 from '../../project-images/adventurerpg_images/ARPG_img_1.png';
 import ARPG2 from '../../project-images/adventurerpg_images/ARPG_img_2.png';
@@ -189,10 +179,8 @@ function ProjectCards() {
 
     return (
         <>
-           { projects }
-           hi
+            {projects}
         </>
-     
     );
 };
 
