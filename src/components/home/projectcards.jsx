@@ -33,6 +33,10 @@ import GOA5 from '../../project-images/GOA1_images/GOA1_img_5.png';
 import GOA6 from '../../project-images/GOA1_images/GOA1_img_6.JPG';
 import PS1 from '../../project-images/personal_site_images/personalSite_img_1.png';
 
+import RMA1 from '../../project-images/JavaReminderProject/javaprojec_img1.png';
+import RMA2 from '../../project-images/JavaReminderProject/javaprojec_img2.png';
+import RMA3 from '../../project-images/JavaReminderProject/javaprojec_img3.png';
+import RMA4 from '../../project-images/JavaReminderProject/javaprojec_img4.png';
 
 const useStyles = makeStyles({
     projectCard: {
@@ -88,12 +92,12 @@ const projectList = [
         images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
     },
     {
-        title: 'Reminder Manager (Java)',
-        subtitle: 'Summer 2021',
+        title: 'Desktop Reminder Manager (Java)',
+        subtitle: 'Summer 2021', 
         description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
-        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
-        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
+        thumbnail: RMA2,
+        images: [RMA1, RMA2, RMA3, RMA4]
     },
 ]
 
