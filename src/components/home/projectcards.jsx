@@ -71,7 +71,7 @@ const projectList = [
         title: 'Personal Portfolio Website (React)',
         subtitle: 'Winter 2022',
         description: 'A portfolio website made with React to display my projects through a visual medium.',
-        descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        descriptionLong: "During my internship with the Institute of Applied Design and Technology Education Society, I learned how to use the Material UI library and React. It had been a while since I worked with React. Since I happen to be looking for work, creating a portfolio website seemed like the perfect way to get some practice in while also showing off some of my abilities. This site was primarily built with Material UI, a React component library created with Google's Material Design principles in mind. \n Using the Material UI components as a base, I made more complex compound components that this project is built on. Throughout the development of the project, I was able to play with React states, React hooks and React refs, which let me dive a little bit deeper into the capabilities of React. I also played with some CSS overriding, which was excellent practice. I also had the opportunity to deploy a website for the first time. I bought the domain through Google domains, and I am hosting the website using Github Pages.",
         thumbnail: PS1,
         images: [PS1]
     },
