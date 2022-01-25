@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.67f25d04.css",
-    "main.js": "/static/js/main.e43d6da7.js",
+    "main.js": "/static/js/main.4795245e.js",
     "static/media/GOA1_img_2.png": "/static/media/GOA1_img_2.b6563505051aebaf00e6.png",
     "static/media/GOA1_img_1.png": "/static/media/GOA1_img_1.e91234b37807910f237c.png",
     "static/media/GOA1_img_3.png": "/static/media/GOA1_img_3.5c647c72ebc05111a9d3.png",
@@ -27,10 +27,10 @@
     "static/media/linkedinlogo.png": "/static/media/linkedinlogo.263da0ba9e782b8ecd5b.png",
     "index.html": "/index.html",
     "main.67f25d04.css.map": "/static/css/main.67f25d04.css.map",
-    "main.e43d6da7.js.map": "/static/js/main.e43d6da7.js.map"
+    "main.4795245e.js.map": "/static/js/main.4795245e.js.map"
   },
   "entrypoints": [
     "static/css/main.67f25d04.css",
-    "static/js/main.e43d6da7.js"
+    "static/js/main.4795245e.js"
   ]
 }
