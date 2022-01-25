@@ -1,4 +1,4 @@
-import { CardActionArea, Typography } from '@mui/material';
+import { CardActionArea, Container, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -32,6 +32,7 @@ import GOA4 from '../../project-images/GOA1_images/GOA1_img_4.png';
 import GOA5 from '../../project-images/GOA1_images/GOA1_img_5.png';
 import GOA6 from '../../project-images/GOA1_images/GOA1_img_6.JPG';
 import PS1 from '../../project-images/personal_site_images/personalSite_img_1.png';
+
 
 const useStyles = makeStyles({
     projectCard: {
@@ -178,9 +179,20 @@ function ProjectCards() {
     }, []);
 
     return (
-        <>
-            {projects}
-        </>
+
+        <Container style={{ paddingBottom: '250px' }}>
+            <Typography gutterBottom variant='h3' component='h1'>Personal Projects</Typography>
+            <Grid
+                justifyContent="flex-start"
+                alignItems="center"
+                container spacing={12}
+                rowSpacing={6}
+            >
+                {projects}
+            </Grid>
+        </Container >
+
+
     );
 };
 
