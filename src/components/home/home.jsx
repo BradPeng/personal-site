@@ -1,15 +1,17 @@
 import { Container, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import "aos/dist/aos.css";
 import React, { useRef } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import DownArrow from '../../images/downarrow.png';
+import GitHubLogo from '../../images/githublogo.png';
+import LinkedInLogo from '../../images/linkedinlogo.png';
 import ProjectCards from './projectcards';
 import './projectCarousel.css';
 import WorkHistory from './workhistory';
-import Link from '@mui/material/Link';
 
 const handleScroll = ref => {
     window.scrollTo({
@@ -36,12 +38,12 @@ function Home() {
                         <Grid justifyContent="center" container spacing={1}>
                             <Grid item>
                                 <Link target="_blank" rel="noopener" href="https://github.com/BradPeng">
-                                    <Avatar src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' />
+                                    <Avatar src={GitHubLogo} />
                                 </Link>
                             </Grid>
                             <Grid item>
                                 <Link target="_blank" rel="noopener" href="https://www.linkedin.com/in/brad-peng-165206214/">
-                                    <Avatar style={{ backgroundColor: 'white' }} src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png' />
+                                    <Avatar style={{ backgroundColor: 'white' }} src={LinkedInLogo} />
                                 </Link>
                             </Grid>
                         </Grid>
