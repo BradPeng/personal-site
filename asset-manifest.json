@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.67f25d04.css",
-    "main.js": "/static/js/main.3837626d.js",
+    "main.js": "/static/js/main.48f4e5ef.js",
     "static/media/GOA1_img_2.png": "/static/media/GOA1_img_2.b6563505051aebaf00e6.png",
     "static/media/GOA1_img_1.png": "/static/media/GOA1_img_1.e91234b37807910f237c.png",
     "static/media/GOA1_img_3.png": "/static/media/GOA1_img_3.5c647c72ebc05111a9d3.png",
@@ -14,19 +14,23 @@
     "static/media/BPP_img_3.png": "/static/media/BPP_img_3.5b38d3be13acc0e1e894.png",
     "static/media/BPP_img_2.png": "/static/media/BPP_img_2.b8f7d8f302946d4c38d7.png",
     "static/media/ARPG_img_0.png": "/static/media/ARPG_img_0.be0b4af55d9e1716463d.png",
+    "static/media/javaprojec_img2.png": "/static/media/javaprojec_img2.7de431021fec798d8b76.png",
+    "static/media/javaprojec_img3.png": "/static/media/javaprojec_img3.27b9aeb14f1b94033e39.png",
+    "static/media/javaprojec_img4.png": "/static/media/javaprojec_img4.b595535f7a32e3f929b8.png",
     "static/media/ARPG_img_2.png": "/static/media/ARPG_img_2.d50670d347f4372a5242.png",
     "static/media/ARPG_img_1.png": "/static/media/ARPG_img_1.ca1f695c0ca4658290a2.png",
     "static/media/ARPG_img_3.png": "/static/media/ARPG_img_3.16e30963b2195badd2a6.png",
+    "static/media/javaprojec_img1.png": "/static/media/javaprojec_img1.477abf608c5a8a4e3281.png",
     "static/media/personalSite_img_1.png": "/static/media/personalSite_img_1.dd857c7535734eeef0d0.png",
     "static/media/downarrow.png": "/static/media/downarrow.5cab4f7e8fb30c016c14.png",
     "static/media/BPP_img_1.png": "/static/media/BPP_img_1.0388976829f0dd4d51a7.png",
     "static/media/linkedinlogo.png": "/static/media/linkedinlogo.263da0ba9e782b8ecd5b.png",
     "index.html": "/index.html",
     "main.67f25d04.css.map": "/static/css/main.67f25d04.css.map",
-    "main.3837626d.js.map": "/static/js/main.3837626d.js.map"
+    "main.48f4e5ef.js.map": "/static/js/main.48f4e5ef.js.map"
   },
   "entrypoints": [
     "static/css/main.67f25d04.css",
-    "static/js/main.3837626d.js"
+    "static/js/main.48f4e5ef.js"
   ]
 }
