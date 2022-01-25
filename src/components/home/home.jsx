@@ -65,8 +65,10 @@ function Home() {
 
                 <Container style={{ paddingBottom: '250px' }}>
                     <Typography variant='h3' component='h1'>Volunteer Work</Typography>
-                    <Link target="_blank" rel="noopener" href='https://gameofapps.org/' gutterBottom variant='h4'>Game of Apps (2020 - Present)</Link>
-                    <Typography align='left' variant='body1'>I volunteer at a  asd as asd aslocally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps. I volunteer at a locally based non-profit that runs a program called the Game of Apps.</Typography>
+                    <Link  target="_blank" rel="noopener" href='https://gameofapps.org/' gutterBottom variant='h4'>Game of Apps (2020 - Present)</Link>
+                    <Typography style={{paddingTop: 40}} align='left' variant='body1'>The Game of Apps program is a course available to public school students in the Greater Vancouver Area. The program's mission statement is to introduce real-world technology design and development to students and create interest in STEM fields. I have volunteered in both the senior and junior programs. The senior program teaches app design and development through Java and Android studio. I scripted and recorded lessons for the students and directly mentored one of the teams during the program. The junior program is a lot lighter and only teaches programming fundamentals. I spend my time during and after lectures answering student questions about basic coding principles and the Swift language.
+
+</Typography>
                 </Container>
             </div>
         </ThemeProvider>
