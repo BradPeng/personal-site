@@ -4,7 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Spacepewpew from './components/spacepewpew/spacepewpew';
-import Home from './components/home';
+import Home from './components/home/home'
 
 function App() {
   return (

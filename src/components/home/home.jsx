@@ -25,26 +25,25 @@ import "aos/dist/aos.css";
 import React, { useEffect, useRef } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import DownArrow from '../images/downarrow.png';
-import ARPG0 from '../project-images/adventurerpg_images/ARPG_img_0.png';
-import ARPG1 from '../project-images/adventurerpg_images/ARPG_img_1.png';
-import ARPG2 from '../project-images/adventurerpg_images/ARPG_img_2.png';
-import ARPG3 from '../project-images/adventurerpg_images/ARPG_img_3.png';
-import ARPG4 from '../project-images/adventurerpg_images/ARPG_img_4.png';
-import ARPG5 from '../project-images/adventurerpg_images/ARPG_img_5.png';
-import ARPG6 from '../project-images/adventurerpg_images/ARPG_img_6.png';
-import BPP1 from '../project-images/brucepewpewimages/BPP_img_1.png';
-import BPP2 from '../project-images/brucepewpewimages/BPP_img_2.png';
-import BPP3 from '../project-images/brucepewpewimages/BPP_img_3.png';
-import GOA1 from '../project-images/GOA1_images/GOA1_img_1.png';
-import GOA2 from '../project-images/GOA1_images/GOA1_img_2.png';
-import GOA3 from '../project-images/GOA1_images/GOA1_img_3.png';
-import GOA4 from '../project-images/GOA1_images/GOA1_img_4.png';
-import GOA5 from '../project-images/GOA1_images/GOA1_img_5.png';
-import GOA6 from '../project-images/GOA1_images/GOA1_img_6.JPG';
-import PS1 from '../project-images/personal_site_images/personalSite_img_1.png';
+import DownArrow from '../../images/downarrow.png';
+import ARPG0 from '../../project-images/adventurerpg_images/ARPG_img_0.png';
+import ARPG1 from '../../project-images/adventurerpg_images/ARPG_img_1.png';
+import ARPG2 from '../../project-images/adventurerpg_images/ARPG_img_2.png';
+import ARPG3 from '../../project-images/adventurerpg_images/ARPG_img_3.png';
+import ARPG4 from '../../project-images/adventurerpg_images/ARPG_img_4.png';
+import ARPG5 from '../../project-images/adventurerpg_images/ARPG_img_5.png';
+import ARPG6 from '../../project-images/adventurerpg_images/ARPG_img_6.png';
+import BPP1 from '../../project-images/brucepewpewimages/BPP_img_1.png';
+import BPP2 from '../../project-images/brucepewpewimages/BPP_img_2.png';
+import BPP3 from '../../project-images/brucepewpewimages/BPP_img_3.png';
+import GOA1 from '../../project-images/GOA1_images/GOA1_img_1.png';
+import GOA2 from '../../project-images/GOA1_images/GOA1_img_2.png';
+import GOA3 from '../../project-images/GOA1_images/GOA1_img_3.png';
+import GOA4 from '../../project-images/GOA1_images/GOA1_img_4.png';
+import GOA5 from '../../project-images/GOA1_images/GOA1_img_5.png';
+import GOA6 from '../../project-images/GOA1_images/GOA1_img_6.JPG';
+import PS1 from '../../project-images/personal_site_images/personalSite_img_1.png';
 import './projectCarousel.css';
-
 
 const useStyles = makeStyles({
     timelineCard: {
