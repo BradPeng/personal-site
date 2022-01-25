@@ -31,12 +31,12 @@ import GOA3 from '../../project-images/GOA1_images/GOA1_img_3.png';
 import GOA4 from '../../project-images/GOA1_images/GOA1_img_4.png';
 import GOA5 from '../../project-images/GOA1_images/GOA1_img_5.png';
 import GOA6 from '../../project-images/GOA1_images/GOA1_img_6.JPG';
-import PS1 from '../../project-images/personal_site_images/personalSite_img_1.png';
-
 import RMA1 from '../../project-images/JavaReminderProject/javaprojec_img1.png';
 import RMA2 from '../../project-images/JavaReminderProject/javaprojec_img2.png';
 import RMA3 from '../../project-images/JavaReminderProject/javaprojec_img3.png';
 import RMA4 from '../../project-images/JavaReminderProject/javaprojec_img4.png';
+import PS1 from '../../project-images/personal_site_images/personalSite_img_1.png';
+
 
 const useStyles = makeStyles({
     projectCard: {
@@ -54,7 +54,7 @@ const projectList = [
         title: '2D Platforming RPG (Game Maker)',
         subtitle: 'Fall 2021',
         description: 'Jump around, destroy enemies and explore in this 2D platforming RPG!',
-        descriptionLong: "This game was the result of my second adventure with Game Maker Studio 2. I've always wanted to make an rpg style game, and a 2D platforming approach seemed like the perfect way to tackle my ideas, as well as learn some new game development tricks. The most important aspect of a platformer is the player movement. I wanted to have multiple attacks and precise movement, so I had to find a clever way to write maintainable code. That's where the player states come in. Every movement the player can do is associated with a so-called player state. In each specific state, the player can only perform certain actions. This way, I isolate movement of the player depending on the state, allowing for my to easily code the specific movements I want. I also had the opportunity to play with some simple math functions while coding the enemy AI. I was able to implement very basic parabolas into the spider's arched movements, as well as do some basic trig to make the bat enemy fly at the player at a constant speed.",
+        descriptionLong: "This game resulted from my second adventure with Game Maker Studio 2. I've always wanted to make an RPG-style game, and a 2D platforming approach seemed like the perfect way to tackle my ideas, as well as learn some new game development tricks. The most important aspect of a platformer is the player movement. I wanted to have multiple attacks and precise movement, so I had to find a clever way to write maintainable code. That's where the player states come in. Every move the player can make is associated with a so-called player state. In each specific state, the player can only perform certain actions. This way, I isolate the player's movement depending on the state, allowing me to effortlessly code the specific movements I want. I also had the opportunity to play with some simple math functions while coding the enemy AI. For example, I implemented basic parabolas into the spider's arched movements and did some basic trigonometry to make the bat enemy fly toward the player at a constant speed.",
         thumbnail: ARPG0,
         images: [ARPG0, ARPG1, ARPG2, ARPG3, ARPG4, ARPG5, ARPG6]
 
@@ -63,7 +63,7 @@ const projectList = [
         title: 'Bruce Pew Pew (Game Maker)',
         subtitle: 'Summer 2021',
         description: 'Play a fun arcade-style 2D top-down shooting game!',
-        descriptionLong: 'Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a very simple game, I was able to learn about various game development techniques, such as handling precise movement and animation tricks done with sprites.',
+        descriptionLong: 'Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a straightforward game, I learned about various game development techniques, such as handling precise movement and animation tricks done with sprites. This was the first time I had the opportunity to bring my creative ideas to life. I had a lot of fun coming up with enemy types, enemy attacks and powerups. The result, while simple, is an enjoyable game that I enjoyed playing with my friends. This also cemented in me a love for game development, and I plan to pursue more projects in the future.',
         thumbnail: BPP1,
         images: [BPP1, BPP2, BPP3]
     },
@@ -77,7 +77,7 @@ const projectList = [
     },
     {
         title: 'Student Volunteer Opportunities App (iOS)',
-        subtitle: 'Summer 2021',
+        subtitle: 'Fall 2017',
         description: 'A simple app for students to find volunteer opportunities.',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         thumbnail: GOA1,
@@ -85,7 +85,7 @@ const projectList = [
     },
     {
         title: 'Youth Financial Tracking App (iOS)',
-        subtitle: 'Summer 2021',
+        subtitle: 'Fall 2018',
         description: 'A lightweight application that teaches youth financial tracking habits.',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
@@ -93,7 +93,7 @@ const projectList = [
     },
     {
         title: 'Desktop Reminder Manager (Java)',
-        subtitle: 'Summer 2021', 
+        subtitle: 'Fall 2020', 
         description: 'A project for a Software Construction Course made with object oriented design principles.',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         thumbnail: RMA2,
