@@ -62,7 +62,7 @@ const projectList = [
     {
         title: 'Bruce Pew Pew (Game Maker)',
         subtitle: 'Summer 2021',
-        description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        description: 'Play a fun arcade-style 2D top-down shooting game!',
         descriptionLong: 'Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a very simple game, I was able to learn about various game development techniques, such as handling precise movement and animation tricks done with sprites.',
         thumbnail: BPP1,
         images: [BPP1, BPP2, BPP3]
@@ -70,7 +70,7 @@ const projectList = [
     {
         title: 'Personal Portfolio Website (React)',
         subtitle: 'Winter 2022',
-        description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        description: 'A portfolio website made with React to display my projects through a visual medium.',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         thumbnail: PS1,
         images: [PS1]
@@ -78,7 +78,7 @@ const projectList = [
     {
         title: 'Student Volunteer Opportunities App (iOS)',
         subtitle: 'Summer 2021',
-        description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        description: 'A simple app for students to find volunteer opportunities.',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         thumbnail: GOA1,
         images: [GOA1, GOA2, GOA3, GOA4, GOA5, GOA6]
@@ -86,7 +86,7 @@ const projectList = [
     {
         title: 'Youth Financial Tracking App (iOS)',
         subtitle: 'Summer 2021',
-        description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        description: 'A lightweight application that teaches youth financial tracking habits.',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
         images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
@@ -94,7 +94,7 @@ const projectList = [
     {
         title: 'Desktop Reminder Manager (Java)',
         subtitle: 'Summer 2021', 
-        description: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        description: 'A project for a Software Construction Course made with object oriented design principles.',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
         thumbnail: RMA2,
         images: [RMA1, RMA2, RMA3, RMA4]
