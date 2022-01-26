@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.67f25d04.css",
-    "main.js": "/static/js/main.8e1ace6c.js",
+    "main.js": "/static/js/main.5653302b.js",
     "static/media/GOA1_img_2.png": "/static/media/GOA1_img_2.b6563505051aebaf00e6.png",
     "static/media/GOA1_img_1.png": "/static/media/GOA1_img_1.e91234b37807910f237c.png",
     "static/media/GOA1_img_3.png": "/static/media/GOA1_img_3.5c647c72ebc05111a9d3.png",
+    "static/media/GOA1_img_6.png": "/static/media/GOA1_img_6.d51e3848d95a4d0ca41c.png",
     "static/media/GOA1_img_5.png": "/static/media/GOA1_img_5.f44b8ed9f8548e0cabe3.png",
     "static/media/GOA1_img_4.png": "/static/media/GOA1_img_4.13a4d6f0df3b3982e05f.png",
-    "static/media/GOA1_img_6.JPG": "/static/media/GOA1_img_6.10a19622dbb2ab131d3e.JPG",
     "static/media/ARPG_img_6.png": "/static/media/ARPG_img_6.0e15fffc9439c6081d12.png",
     "static/media/ARPG_img_4.png": "/static/media/ARPG_img_4.6f9c7a0a6d6a374b9ad3.png",
     "static/media/ARPG_img_5.png": "/static/media/ARPG_img_5.aacf4df1beb35dfe3db7.png",
@@ -33,10 +33,10 @@
     "static/media/linkedinlogo.png": "/static/media/linkedinlogo.263da0ba9e782b8ecd5b.png",
     "index.html": "/index.html",
     "main.67f25d04.css.map": "/static/css/main.67f25d04.css.map",
-    "main.8e1ace6c.js.map": "/static/js/main.8e1ace6c.js.map"
+    "main.5653302b.js.map": "/static/js/main.5653302b.js.map"
   },
   "entrypoints": [
     "static/css/main.67f25d04.css",
-    "static/js/main.8e1ace6c.js"
+    "static/js/main.5653302b.js"
   ]
 }
