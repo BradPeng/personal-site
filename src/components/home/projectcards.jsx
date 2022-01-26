@@ -30,7 +30,7 @@ import GOA2 from '../../project-images/GOA1_images/GOA1_img_2.png';
 import GOA3 from '../../project-images/GOA1_images/GOA1_img_3.png';
 import GOA4 from '../../project-images/GOA1_images/GOA1_img_4.png';
 import GOA5 from '../../project-images/GOA1_images/GOA1_img_5.png';
-import GOA6 from '../../project-images/GOA1_images/GOA1_img_6.JPG';
+import GOA6 from '../../project-images/GOA1_images/GOA1_img_6.png';
 import GOA2_1 from '../../project-images/GOA2_images/goa2_1.png';
 import GOA2_2 from '../../project-images/GOA2_images/goa2_2.png';
 import GOA2_3 from '../../project-images/GOA2_images/goa2_3.png';
@@ -84,7 +84,7 @@ const projectList = [
         title: 'Student Volunteer Opportunities App (iOS)',
         subtitle: 'Fall 2017',
         description: 'A simple app for students to find volunteer opportunities.',
-        descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        descriptionLong: "This project resulted from my first year participating in the Game of Apps program - an iOS app design and development. The theme of this year's competition was \"Making a Change,\" and we decided to embody that idea by creating an app that would enable anyone to make an impact on the world. Being my first significant exposure to programming, I learned a lot from experience. Starting from basic coding principles like variables, loops and conditionals, I then moved on to more complex iOS development tools like optional values, structures, and Storyboarding. More specifically, I learned a lot about using reusable cell elements. I remember spending many hours learning how to create table view cells and mapping data from a list onto them. Being on a team with two other developers, I also had a chance to learn how to use git. Git was quite terrifying at first, but being able to freely execute commands in my project made me feel a lot more confident when I moved on to using git in company work during my internships. By the end of the hackathon, our team received an award for the best-designed app. Unfortunately, the application has been lost to time, and I could only recover some images of the project mockups we made in Figma, which are the pictures displayed in the carousel above.",
         thumbnail: GOA1,
         images: [GOA1, GOA2, GOA3, GOA4, GOA5, GOA6]
     },
