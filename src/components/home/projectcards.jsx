@@ -31,12 +31,17 @@ import GOA3 from '../../project-images/GOA1_images/GOA1_img_3.png';
 import GOA4 from '../../project-images/GOA1_images/GOA1_img_4.png';
 import GOA5 from '../../project-images/GOA1_images/GOA1_img_5.png';
 import GOA6 from '../../project-images/GOA1_images/GOA1_img_6.JPG';
+import GOA2_1 from '../../project-images/GOA2_images/goa2_1.png';
+import GOA2_2 from '../../project-images/GOA2_images/goa2_2.png';
+import GOA2_3 from '../../project-images/GOA2_images/goa2_3.png';
+import GOA2_4 from '../../project-images/GOA2_images/goa2_4.png';
+import GOA2_5 from '../../project-images/GOA2_images/goa2_5.png';
+import GOA2_6 from '../../project-images/GOA2_images/goa2_6.png';
 import RMA1 from '../../project-images/JavaReminderProject/javaprojec_img1.png';
 import RMA2 from '../../project-images/JavaReminderProject/javaprojec_img2.png';
 import RMA3 from '../../project-images/JavaReminderProject/javaprojec_img3.png';
 import RMA4 from '../../project-images/JavaReminderProject/javaprojec_img4.png';
 import PS1 from '../../project-images/personal_site_images/personalSite_img_1.png';
-
 
 const useStyles = makeStyles({
     projectCard: {
@@ -88,8 +93,8 @@ const projectList = [
         subtitle: 'Fall 2018',
         description: 'A lightweight application that teaches youth financial tracking habits.',
         descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
-        thumbnail: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
-        images: ["https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg", "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"]
+        thumbnail: GOA2_1,
+        images: [GOA2_1, GOA2_2, GOA2_6, GOA2_3, GOA2_4, GOA2_5]
     },
     {
         title: 'Desktop Reminder Manager (Java)',
