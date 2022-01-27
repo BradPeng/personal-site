@@ -11,6 +11,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
 import { makeStyles } from '@mui/styles';
+import { typography } from '@mui/system';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import React, { useEffect } from 'react';
@@ -59,7 +60,7 @@ const projectList = [
         title: '2D Platforming RPG (Game Maker)',
         subtitle: 'Fall 2021',
         description: 'Jump around, destroy enemies and explore in this 2D platforming RPG!',
-        descriptionLong: "This game resulted from my second adventure with Game Maker Studio 2. I've always wanted to make an RPG-style game, and a 2D platforming approach seemed like the perfect way to tackle my ideas, as well as learn some new game development tricks. The most important aspect of a platformer is the player movement. I wanted to have multiple attacks and precise movement, so I had to find a clever way to write maintainable code. That's where the player states come in. Every move the player can make is associated with a so-called player state. In each specific state, the player can only perform certain actions. This way, I isolate the player's movement depending on the state, allowing me to effortlessly code the specific movements I want. I also had the opportunity to play with some simple math functions while coding the enemy AI. For example, I implemented basic parabolas into the spider's arched movements and did some basic trigonometry to make the bat enemy fly toward the player at a constant speed.",
+        descriptionLong: ["This game resulted from my second adventure with Game Maker Studio 2. I've always wanted to make an RPG-style game, and a 2D platforming approach seemed like the perfect way to tackle my ideas, as well as learn some new game development tricks. The most important aspect of a platformer is the player movement. I wanted to have multiple attacks and precise movement, so I had to find a clever way to write maintainable code. That's where the player states come in. Every move the player can make is associated with a so-called player state. In each specific state, the player can only perform certain actions. This way, I isolate the player's movement depending on the state, allowing me to effortlessly code the specific movements I want. I also had the opportunity to play with some simple math functions while coding the enemy AI. For example, I implemented basic parabolas into the spider's arched movements and did some basic trigonometry to make the bat enemy fly toward the player at a constant speed.",],
         thumbnail: ARPG0,
         images: [ARPG0, ARPG1, ARPG2, ARPG3, ARPG4, ARPG5, ARPG6]
 
@@ -68,7 +69,7 @@ const projectList = [
         title: 'Bruce Pew Pew (Game Maker)',
         subtitle: 'Summer 2021',
         description: 'Play a fun arcade-style 2D top-down shooting game!',
-        descriptionLong: 'Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a straightforward game, I learned about various game development techniques, such as handling precise movement and animation tricks done with sprites. This was the first time I had the opportunity to bring my creative ideas to life. I had a lot of fun coming up with enemy types, enemy attacks and powerups. The result, while simple, is an enjoyable game that I enjoyed playing with my friends. This also cemented in me a love for game development, and I plan to pursue more projects in the future.',
+        descriptionLong: ['Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a straightforward game, I learned about various game development techniques, such as handling precise movement and animation tricks done with sprites. This was the first time I had the opportunity to bring my creative ideas to life. I had a lot of fun coming up with enemy types, enemy attacks and powerups. The result, while simple, is an enjoyable game that I enjoyed playing with my friends. This also cemented in me a love for game development, and I plan to pursue more projects in the future.',],
         thumbnail: BPP1,
         images: [BPP1, BPP2, BPP3]
     },
@@ -76,7 +77,7 @@ const projectList = [
         title: 'Personal Portfolio Website (React)',
         subtitle: 'Winter 2022',
         description: 'A portfolio website made with React to display my projects through a visual medium.',
-        descriptionLong: "During my internship with the Institute of Applied Design and Technology Education Society, I learned how to use the Material UI library and React. It had been a while since I worked with React. Since I happen to be looking for work, creating a portfolio website seemed like the perfect way to get some practice in while also showing off some of my abilities. This site was primarily built with Material UI, a React component library created with Google's Material Design principles in mind. \n Using the Material UI components as a base, I made more complex compound components that this project is built on. Throughout the development of the project, I was able to play with React states, React hooks and React refs, which let me dive a little bit deeper into the capabilities of React. I also played with some CSS overriding, which was excellent practice. I also had the opportunity to deploy a website for the first time. I bought the domain through Google domains, and I am hosting the website using Github Pages.",
+        descriptionLong: ["During my internship with the Institute of Applied Design and Technology Education Society, I learned how to use the Material UI library and React. It had been a while since I worked with React. Since I happen to be looking for work, creating a portfolio website seemed like the perfect way to get some practice in while also showing off some of my abilities. This site was primarily built with Material UI, a React component library created with Google's Material Design principles in mind.", "Using the Material UI components as a base, I made more complex compound components that this project is built on. Throughout the development of the project, I was able to play with React states, React hooks and React refs, which let me dive a little bit deeper into the capabilities of React. I also played with some CSS overriding, which was excellent practice. I also had the opportunity to deploy a website for the first time. I bought the domain through Google domains, and I am hosting the website using Github Pages.",],
         thumbnail: PS1,
         images: [PS1]
     },
@@ -84,7 +85,7 @@ const projectList = [
         title: 'Student Volunteer Opportunities App (iOS)',
         subtitle: 'Fall 2017',
         description: 'A simple app for students to find volunteer opportunities.',
-        descriptionLong: "This project resulted from my first year participating in the Game of Apps program - an iOS app design and development. The theme of this year's competition was \"Making a Change,\" and we decided to embody that idea by creating an app that would enable anyone to make an impact on the world. Being my first significant exposure to programming, I learned a lot from experience. Starting from basic coding principles like variables, loops and conditionals, I then moved on to more complex iOS development tools like optional values, structures, and Storyboarding. More specifically, I learned a lot about using reusable cell elements. I remember spending many hours learning how to create table view cells and mapping data from a list onto them. Being on a team with two other developers, I also had a chance to learn how to use git. Git was quite terrifying at first, but being able to freely execute commands in my project made me feel a lot more confident when I moved on to using git in company work during my internships. By the end of the hackathon, our team received an award for the best-designed app. Unfortunately, the application has been lost to time, and I could only recover some images of the project mockups we made in Figma, which are the pictures displayed in the carousel above.",
+        descriptionLong: ["This project resulted from my first year participating in the Game of Apps program - an iOS app design and development. The theme of this year's competition was \"Making a Change,\" and we decided to embody that idea by creating an app that would enable anyone to make an impact on the world.",  "Being my first significant exposure to programming, I learned a lot from experience. Starting from basic coding principles like variables, loops and conditionals, I then moved on to more complex iOS development tools like optional values, structures, and Storyboarding. More specifically, I learned a lot about using reusable cell elements. I remember spending many hours learning how to create table view cells and mapping data from a list onto them. Being on a team with two other developers, I also had a chance to learn how to use git. Git was quite terrifying at first, but being able to freely execute commands in my project made me feel a lot more confident when I moved on to using git in company work during my internships. By the end of the hackathon, our team received an award for the best-designed app. Unfortunately, the application has been lost to time, and I could only recover some images of the project mockups we made in Figma, which are the pictures displayed in the carousel above.",],
         thumbnail: GOA1,
         images: [GOA1, GOA2, GOA3, GOA4, GOA5, GOA6]
     },
@@ -92,15 +93,15 @@ const projectList = [
         title: 'Youth Financial Tracking App (iOS)',
         subtitle: 'Fall 2018',
         description: 'A lightweight application that teaches youth financial tracking habits.',
-        descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        descriptionLong: ["In my senior year of high school, I participated in the Game of Apps program for the second time. The Game of Apps program is a mobile app design and development course and competition. This year, the hackathon theme was \"A day in the Life.\" My team and I decided that finance tracking was a problem we wanted to solve. We noticed that a lot of spending would often go untracked in day-to-day life. It was often inconvenient to record cash purchases, especially on the go. So we decided to create a very lightweight application for tracking finances. Because we could not compete with existing solutions like Mint, we decided to target a much younger demographic.", "We built the app for children without credit and debit cards or youth who primarily buy things with cash. We hoped to get young users to begin developing healthy financial tracking habits early by creating a straightforward application with a low entry-level. The app features everything you would expect, such as recording transactions and income separated by categories. The app comes with a few preloaded categories or tags and allows users to create their own. The tags will enable the user to see a breakdown of their spending easily. Another unique feature provided by the app is the goal feature. Users can create a target for purchase and view their progress as they start to save money.", "Three developers and three designers worked on the project. The dev portion of the application was built using Xcode 9.3 and Swift 4, and version control was maintained through git and Bitbucket. A significant focus of my tasks on the application was on Storyboarding the views and creating the reusable CollectionView cells and TableView cells present throughout the app. ",],
         thumbnail: GOA2_1,
         images: [GOA2_1, GOA2_2, GOA2_6, GOA2_3, GOA2_4, GOA2_5]
     },
     {
         title: 'Desktop Reminder Manager (Java)',
-        subtitle: 'Fall 2020', 
+        subtitle: 'Fall 2020',
         description: 'A project for a Software Construction Course made with object oriented design principles.',
-        descriptionLong: 'Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',
+        descriptionLong: ['Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!Shoot my friend bruce in a fun arcade-style 2D top-down shooting game!',],
         thumbnail: RMA2,
         images: [RMA1, RMA2, RMA3, RMA4]
     },
@@ -112,7 +113,7 @@ function ProjectCards() {
 
     const [open, setOpen] = React.useState(false);
     const [title, setTitle] = React.useState();
-    const [descriptionLong, setDescriptionLong] = React.useState();
+    const [descriptionLong, setDescriptionLong] = React.useState([]);
     const [images, setImages] = React.useState([]);
 
     const handleClickOpen = (title, descriptionLong, images) => () => {
@@ -155,7 +156,19 @@ function ProjectCards() {
 
                     </Carousel>
                     <DialogContentText>
-                        {descriptionLong}
+
+                        {descriptionLong.map((description) => (
+                            <>
+                                <Typography >
+                                    {description}
+                                </Typography>
+                                <br />
+                            </>
+                        ))}
+
+
+
+
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
