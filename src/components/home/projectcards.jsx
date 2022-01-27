@@ -11,7 +11,6 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
 import { makeStyles } from '@mui/styles';
-import { typography } from '@mui/system';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import React, { useEffect } from 'react';
@@ -85,7 +84,7 @@ const projectList = [
         title: 'Student Volunteer Opportunities App (iOS)',
         subtitle: 'Fall 2017',
         description: 'A simple app for students to find volunteer opportunities.',
-        descriptionLong: ["This project resulted from my first year participating in the Game of Apps program - an iOS app design and development. The theme of this year's competition was \"Making a Change,\" and we decided to embody that idea by creating an app that would enable anyone to make an impact on the world.",  "Being my first significant exposure to programming, I learned a lot from experience. Starting from basic coding principles like variables, loops and conditionals, I then moved on to more complex iOS development tools like optional values, structures, and Storyboarding. More specifically, I learned a lot about using reusable cell elements. I remember spending many hours learning how to create table view cells and mapping data from a list onto them. Being on a team with two other developers, I also had a chance to learn how to use git. Git was quite terrifying at first, but being able to freely execute commands in my project made me feel a lot more confident when I moved on to using git in company work during my internships. By the end of the hackathon, our team received an award for the best-designed app. Unfortunately, the application has been lost to time, and I could only recover some images of the project mockups we made in Figma, which are the pictures displayed in the carousel above.",],
+        descriptionLong: ["This project resulted from my first year participating in the Game of Apps program - an iOS app design and development. The theme of this year's competition was \"Making a Change,\" and we decided to embody that idea by creating an app that would enable anyone to make an impact on the world.", "Being my first significant exposure to programming, I learned a lot from experience. Starting from basic coding principles like variables, loops and conditionals, I then moved on to more complex iOS development tools like optional values, structures, and Storyboarding. More specifically, I learned a lot about using reusable cell elements. I remember spending many hours learning how to create table view cells and mapping data from a list onto them. Being on a team with two other developers, I also had a chance to learn how to use git. Git was quite terrifying at first, but being able to freely execute commands in my project made me feel a lot more confident when I moved on to using git in company work during my internships. By the end of the hackathon, our team received an award for the best-designed app. Unfortunately, the application has been lost to time, and I could only recover some images of the project mockups we made in Figma, which are the pictures displayed in the carousel above.",],
         thumbnail: GOA1,
         images: [GOA1, GOA2, GOA3, GOA4, GOA5, GOA6]
     },
@@ -106,7 +105,6 @@ const projectList = [
         images: [RMA1, RMA2, RMA3, RMA4]
     },
 ]
-
 
 function ProjectCards() {
     const classes = useStyles();
@@ -153,10 +151,9 @@ function ProjectCards() {
                                 <img style={{ maxHeight: '600px' }} src={image} />
                             </div>
                         ))}
-
                     </Carousel>
-                    <DialogContentText>
 
+                    <DialogContentText>
                         {descriptionLong.map((description) => (
                             <>
                                 <Typography >
@@ -165,10 +162,6 @@ function ProjectCards() {
                                 <br />
                             </>
                         ))}
-
-
-
-
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
@@ -213,8 +206,6 @@ function ProjectCards() {
                 {projects}
             </Grid>
         </Container >
-
-
     );
 };
 
