@@ -63,7 +63,7 @@ const projectList = [
         descriptionLong: ["This game resulted from my second adventure with Game Maker Studio 2. I've always wanted to make an RPG-style game, and a 2D platforming approach seemed like the perfect way to tackle my ideas, as well as learn some new game development tricks. The most important aspect of a platformer is the player movement. I wanted to have multiple attacks and precise movement, so I had to find a clever way to write maintainable code. That's where the player states come in. Every move the player can make is associated with a so-called player state. In each specific state, the player can only perform certain actions. This way, I isolate the player's movement depending on the state, allowing me to effortlessly code the specific movements I want. I also had the opportunity to play with some simple math functions while coding the enemy AI. For example, I implemented basic parabolas into the spider's arched movements and did some basic trigonometry to make the bat enemy fly toward the player at a constant speed.",],
         thumbnail: ARPG0,
         images: [ARPG0, ARPG1, ARPG2, ARPG3, ARPG4, ARPG5, ARPG6],
-        githubrepo: "",
+        githubrepo: "https://github.com/BradPeng/adventure-platforming-game",
 
     },
     {
