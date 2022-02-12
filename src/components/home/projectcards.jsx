@@ -75,7 +75,7 @@ const projectList = [
         thumbnail: BPP1,
         images: [BPP1, BPP2, BPP3],
         githubrepo: "https://github.com/BradPeng/space-shooter-game",
-        webdemo: "https://bradpeng.ca/brucepewpew/brucepewpew.html",
+        webdemo: "https://bradpeng.ca/brucepewpew/game.html",
     },
     {
         title: 'Personal Portfolio Website (React)',
