@@ -64,6 +64,7 @@ const projectList = [
         thumbnail: ARPG0,
         images: [ARPG0, ARPG1, ARPG2, ARPG3, ARPG4, ARPG5, ARPG6],
         githubrepo: "https://github.com/BradPeng/adventure-platforming-game",
+        webdemo: "https://bradpeng.ca/adventureplatformer/game.html",
 
     },
     {
@@ -74,6 +75,7 @@ const projectList = [
         thumbnail: BPP1,
         images: [BPP1, BPP2, BPP3],
         githubrepo: "https://github.com/BradPeng/space-shooter-game",
+        webdemo: "https://bradpeng.ca/brucepewpew/brucepewpew.html",
     },
     {
         title: 'Personal Portfolio Website (React)',
@@ -83,6 +85,7 @@ const projectList = [
         thumbnail: PS1,
         images: [PS1],
         githubrepo: "https://github.com/BradPeng/personal-site",
+        webdemo: "",
     },
     {
         title: 'Student Volunteer Opportunities App (iOS)',
@@ -92,6 +95,7 @@ const projectList = [
         thumbnail: GOA1,
         images: [GOA1, GOA2, GOA3, GOA4, GOA5, GOA6],
         githubrepo: "",
+        webdemo: "",
     },
     {
         title: 'Youth Financial Tracking App (iOS)',
@@ -101,6 +105,7 @@ const projectList = [
         thumbnail: GOA2_1,
         images: [GOA2_1, GOA2_2, GOA2_6, GOA2_3, GOA2_4, GOA2_5],
         githubrepo: "",
+        webdemo: "",
     },
     {
         title: 'Desktop Reminder Manager (Java)',
@@ -110,6 +115,7 @@ const projectList = [
         thumbnail: RMA2,
         images: [RMA1, RMA2, RMA3, RMA4],
         githubrepo: "https://github.com/BradPeng/cpsc_210_project",
+        webdemo: "",
     },
 ]
 
@@ -121,13 +127,15 @@ function ProjectCards() {
     const [descriptionLong, setDescriptionLong] = React.useState([]);
     const [images, setImages] = React.useState([]);
     const [githubrepo, setRepo] = React.useState();
+    const [webdemo, setWebDemo] = React.useState();
 
-    const handleClickOpen = (title, descriptionLong, images, githubrepo) => () => {
+    const handleClickOpen = (title, descriptionLong, images, githubrepo, webdemo) => () => {
         setOpen(true);
         setTitle(title);
         setDescriptionLong(descriptionLong);
         setImages(images);
         setRepo(githubrepo);
+        setWebDemo(webdemo);
     };
 
     const handleClose = () => {
@@ -154,10 +162,19 @@ function ProjectCards() {
             >
                 <DialogTitle style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                     {title}
-                    {(githubrepo != "")
-                        ?
-                        (<Link target="_blank" rel="noopener" href={githubrepo}>GitHub Repo</Link>)
-                        : <></>}
+                    <div style={{ display: 'flex' }}>
+                        <div style={{ paddingRight: '20px' }}>
+                            {(webdemo != "")
+                                ?
+                                (<Link target="_blank" rel="noopener" href={webdemo}>Demo</Link>)
+                                : <></>}
+                        </div>
+                        {(githubrepo != "")
+                            ?
+                            (<Link target="_blank" rel="noopener" href={githubrepo}>GitHub Repo</Link>)
+                            : <></>}
+                    </div>
+
                 </DialogTitle>
 
                 <DialogContent>
@@ -187,7 +204,7 @@ function ProjectCards() {
             </Dialog>
 
             <Card data-aos="flip-up" sx={{ maxWidth: 345, minWidth: 200 }} className={classes.projectCard}>
-                <CardActionArea onClick={handleClickOpen(projectList.title, projectList.descriptionLong, projectList.images, projectList.githubrepo)}>
+                <CardActionArea onClick={handleClickOpen(projectList.title, projectList.descriptionLong, projectList.images, projectList.githubrepo, projectList.webdemo)}>
                     <CardHeader
                         title={projectList.title}
                         subheader={projectList.subtitle}
