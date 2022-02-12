@@ -34,6 +34,7 @@ function Home() {
                 <Container maxWidth='xl'>
                     <div style={{ height: "100vh", flexDirection: "column", display: "flex", justifyContent: "center" }}>
                         <Typography variant='h3' component='h1'>Brad Peng</Typography>
+
                         <Typography gutterBottom variant='h5'>Computer Science, The University of British Columbia (2019 - 2024)</Typography>
                         <Grid justifyContent="center" container spacing={1}>
                             <Grid item>
