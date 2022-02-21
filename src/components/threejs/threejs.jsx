@@ -17,7 +17,7 @@ function Box(props) {
     return (
         <mesh onClick={() => {
 
-            api.velocity.set(randomNum(),randomNum(),  Math.abs(randomNum()));
+            api.velocity.set(randomNum(), randomNum(), Math.abs(randomNum()));
         }} ref={ref} position={[0, 2, 0]}>
             <boxBufferGeometry attach='geometry' />
             <meshStandardMaterial map={colorMap} attach='material' />
@@ -34,7 +34,7 @@ function Sphere(props) {
     return (
         <mesh onClick={() => {
 
-            api.velocity.set(randomNum(),randomNum(),  Math.abs(randomNum()));
+            api.velocity.set(randomNum(), randomNum(), Math.abs(randomNum()));
         }} ref={ref} position={[0, 2, 0]}>
             <sphereBufferGeometry attach='geometry' />
             <meshStandardMaterial map={colorMap} attach='material' />
@@ -65,7 +65,7 @@ function Threejs() {
             <Physics>
                 <Box />
                 <Plane />
-                <Sphere/>
+                <Sphere />
             </Physics>
         </Canvas>
     );
