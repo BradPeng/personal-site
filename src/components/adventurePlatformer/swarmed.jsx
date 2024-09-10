@@ -1,12 +1,12 @@
 import React from "react";
 
-const Spacepewpew = () => {
+const AdventurePlatformer = () => {
   return (
     <div style={{ textAlign: "center" }}>
       <iframe
-        src="/brucepewpew/game.html"
-        width="1920"
-        height="1080"
+        src="/adventurePlatformer/index.html"
+        width="2000"
+        height="1280"
         style={{ border: "none" }}
         title="Game"
       />
@@ -14,4 +14,4 @@ const Spacepewpew = () => {
   );
 };
   
-export default Spacepewpew;
+export default AdventurePlatformer;
