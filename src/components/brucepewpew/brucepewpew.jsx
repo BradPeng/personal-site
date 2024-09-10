@@ -4,7 +4,7 @@ const Brucepewpew = () => {
   return (
     <div style={{ textAlign: "center" }}>
       <iframe
-        src="/brucepewpew/game.html"
+        src="/brucepewpew/index.html"
         width="1920"
         height="1080"
         style={{ border: "none" }}
