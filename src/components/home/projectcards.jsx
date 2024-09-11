@@ -66,7 +66,7 @@ const projectList = [
         thumbnail: Swarmed1,
         images: [Swarmed1],
         githubrepo: "https://github.com/BradPeng/Swarmed-Release",
-        webdemo: "https://bradpeng.ca/swarmed-platformer",
+        webdemo: "https://bradpeng.ca/swarmed",
 
     },
     {
