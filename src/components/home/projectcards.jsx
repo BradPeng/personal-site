@@ -43,6 +43,8 @@ import RMA2 from '../../project-images/JavaReminderProject/javaprojec_img2.png';
 import RMA3 from '../../project-images/JavaReminderProject/javaprojec_img3.png';
 import RMA4 from '../../project-images/JavaReminderProject/javaprojec_img4.png';
 import PS1 from '../../project-images/personal_site_images/personalSite_img_1.png';
+import Swarmed1 from '../../project-images/swarmed_images/swarmed_splash.png';
+import Doodlle1 from '../../project-images/doodlle_images/doodlle1.png';
 
 const useStyles = makeStyles({
     projectCard: {
@@ -57,6 +59,28 @@ const useStyles = makeStyles({
 
 const projectList = [
     {
+        title: 'Swarmed',
+        subtitle: 'Summer 2024',
+        description: 'How long can you last in this minigame?',
+        descriptionLong: ["",],
+        thumbnail: Swarmed1,
+        images: [Swarmed1],
+        githubrepo: "https://github.com/BradPeng/Swarmed-Release",
+        webdemo: "https://bradpeng.ca/swarmed-platformer",
+
+    },
+    {
+        title: 'Doodlle - React Web App',
+        subtitle: 'Summer 2024',
+        description: 'Draw Doodles and guess what other people have drawn!',
+        descriptionLong: ["",],
+        thumbnail: Doodlle1,
+        images: [Doodlle1],
+        githubrepo: "",
+        webdemo: "https://doodlle.web.app/"
+
+    },
+    {
         title: '2D Platforming RPG (Game Maker)',
         subtitle: 'Fall 2021',
         description: 'Jump around, destroy enemies and explore in this 2D platforming RPG!',
@@ -64,7 +88,7 @@ const projectList = [
         thumbnail: ARPG0,
         images: [ARPG0, ARPG1, ARPG2, ARPG3, ARPG4, ARPG5, ARPG6],
         githubrepo: "https://github.com/BradPeng/adventure-platforming-game",
-        webdemo: "https://bradpeng.ca/adventureplatformer/game.html",
+        webdemo: "https://bradpeng.ca/adventure-platformer",
 
     },
     {
@@ -75,7 +99,7 @@ const projectList = [
         thumbnail: BPP1,
         images: [BPP1, BPP2, BPP3],
         githubrepo: "https://github.com/BradPeng/space-shooter-game",
-        webdemo: "https://bradpeng.ca/brucepewpew/game.html",
+        webdemo: "https://bradpeng.ca/brucepewpew",
     },
     {
         title: 'Personal Portfolio Website (React)',
