@@ -51,12 +51,11 @@ function Home() {
               <Typography variant="body1" align="left">
                 Hi, I'm Brad, a Computer Science graduate from the University of
                 British Columbia. This website outlines my software development
-                journey, which has had a focus on Web and Game Development.
-                Below, you'll find some information about my past work
-                experiences, as well as some of the project's I made while
-                learning about different tech stacks. Some of my projects even
-                have convient web demo's available, so make sure to check them
-                out if you get a chance!
+                journey, which has focused on web and game development. Below,
+                you'll find some information about my past work experiences and
+                some of the projects I made while learning about different tech
+                stacks. Some of my projects even have convenient web demos
+                available, so make sure to check them out if you get a chance!
               </Typography>
             </Container>
             <Grid justifyContent="center" container spacing={1}>
@@ -107,7 +106,7 @@ function Home() {
           </div>
 
           <div ref={workSectionRef} style={{ paddingTop: 75 }} id="work" />
-        
+
           <WorkHistory />
 
           <ProjectCards />
