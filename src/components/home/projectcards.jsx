@@ -59,16 +59,6 @@ const useStyles = makeStyles({
 
 const projectList = [
   {
-    title: "Swarmed (Game Maker)",
-    subtitle: "Summer 2024",
-    description: "How long can you last in this minigame?",
-    descriptionLong: [""],
-    thumbnail: Swarmed1,
-    images: [Swarmed1],
-    githubrepo: "https://github.com/BradPeng/Swarmed-Release",
-    webdemo: "https://bradpeng.ca/swarmed",
-  },
-  {
     title: "Doodlle (React Web App)",
     subtitle: "Summer 2024",
     description: "Draw Doodles and guess what other people have drawn!",
@@ -79,7 +69,31 @@ const projectList = [
     webdemo: "https://doodlle.web.app/",
   },
   {
-    title: "2D Platforming RPG (Game Maker)",
+    title: "Swarmed (Game Maker)",
+    subtitle: "Summer 2024",
+    description: "How long can you last in this minigame?",
+    descriptionLong: [""],
+    thumbnail: Swarmed1,
+    images: [Swarmed1],
+    githubrepo: "https://github.com/BradPeng/Swarmed-Release",
+    webdemo: "https://bradpeng.ca/swarmed",
+  },
+  {
+    title: "Personal Portfolio Website (React)",
+    subtitle: "Winter 2022",
+    description:
+      "A portfolio website made with React to display my projects through a visual medium.",
+    descriptionLong: [
+      "During my internship with the Institute of Applied Design and Technology Education Society, I learned how to use the Material UI library and React. It had been a while since I worked with React. Since I happen to be looking for work, creating a portfolio website seemed like the perfect way to get some practice in while also showing off some of my abilities. This site was primarily built with Material UI, a React component library created with Google's Material Design principles in mind.",
+      "Using the Material UI components as a base, I made more complex compound components that this project is built on. Throughout the development of the project, I was able to play with React states, React hooks and React refs, which let me dive a little bit deeper into the capabilities of React. I also played with some CSS overriding, which was excellent practice. I also had the opportunity to deploy a website for the first time. I bought the domain through Google domains, and I am hosting the website using Github Pages.",
+    ],
+    thumbnail: PS1,
+    images: [PS1],
+    githubrepo: "https://github.com/BradPeng/personal-site",
+    webdemo: "",
+  },
+  {
+    title: "Action Platformer (Game Maker)",
     subtitle: "Fall 2021",
     description:
       "Jump around, destroy enemies and explore in this 2D platforming RPG!",
@@ -103,33 +117,23 @@ const projectList = [
     githubrepo: "https://github.com/BradPeng/space-shooter-game",
     webdemo: "https://bradpeng.ca/brucepewpew",
   },
+
   {
-    title: "Personal Portfolio Website (React)",
-    subtitle: "Winter 2022",
+    title: "Desktop Reminder Manager (Java)",
+    subtitle: "Fall 2020",
     description:
-      "A portfolio website made with React to display my projects through a visual medium.",
+      "A project for a Software Construction Course made with object oriented design principles.",
     descriptionLong: [
-      "During my internship with the Institute of Applied Design and Technology Education Society, I learned how to use the Material UI library and React. It had been a while since I worked with React. Since I happen to be looking for work, creating a portfolio website seemed like the perfect way to get some practice in while also showing off some of my abilities. This site was primarily built with Material UI, a React component library created with Google's Material Design principles in mind.",
-      "Using the Material UI components as a base, I made more complex compound components that this project is built on. Throughout the development of the project, I was able to play with React states, React hooks and React refs, which let me dive a little bit deeper into the capabilities of React. I also played with some CSS overriding, which was excellent practice. I also had the opportunity to deploy a website for the first time. I bought the domain through Google domains, and I am hosting the website using Github Pages.",
+      "I built this project for my Software Construction course using plain Java in conjunction with the Java Swing library and a JSON library for application persistence. I first made the project a console application, where console commands were used to create reminders and add reminders to a list. At this point, I had already implemented multiple type-hierarchies and used the iterator design pattern.",
+      "The second phase of the project was to add persistence to the application. In other words, I wanted users of the application to have the option to load their saved data from their last session. Because of the simple list-like nature of the application, the user's data could easily be stored in a JSON file as JSON objects. So I used a very lightweight JSON library to convert my custom classes into JSON objects. Once the user saved their data into a JSON file, it was simple enough to parse through and reconstruct the Java objects from the data.",
+      "The next part of the project was to create a graphical user interface (GUI) for the application. Since the project's backbone had already been coded and tested, I just had to make the GUI elements and map each button press to an existing function. Of course, some minor changes had to be made to accommodate the new method of entering data. Still, it ended up being an excellent opportunity to practice code refactoring. As a bonus, I also went over my code again and made minor improvements.",
     ],
-    thumbnail: PS1,
-    images: [PS1],
-    githubrepo: "https://github.com/BradPeng/personal-site",
+    thumbnail: RMA2,
+    images: [RMA1, RMA2, RMA3, RMA4],
+    githubrepo: "https://github.com/BradPeng/cpsc_210_project",
     webdemo: "",
   },
-  {
-    title: "Student Volunteer Opportunities App (iOS)",
-    subtitle: "Fall 2017",
-    description: "A simple app for students to find volunteer opportunities.",
-    descriptionLong: [
-      'This project resulted from my first year participating in the Game of Apps program - an iOS app design and development. The theme of this year\'s competition was "Making a Change," and we decided to embody that idea by creating an app that would enable anyone to make an impact on the world.',
-      "Being my first significant exposure to programming, I learned a lot from experience. Starting from basic coding principles like variables, loops and conditionals, I then moved on to more complex iOS development tools like optional values, structures, and Storyboarding. More specifically, I learned a lot about using reusable cell elements. I remember spending many hours learning how to create table view cells and mapping data from a list onto them. Being on a team with two other developers, I also had a chance to learn how to use git. Git was quite terrifying at first, but being able to freely execute commands in my project made me feel a lot more confident when I moved on to using git in company work during my internships. By the end of the hackathon, our team received an award for the best-designed app. Unfortunately, the application has been lost to time, and I could only recover some images of the project mockups we made in Figma, which are the pictures displayed in the carousel above.",
-    ],
-    thumbnail: GOA1,
-    images: [GOA1, GOA2, GOA3, GOA4, GOA5, GOA6],
-    githubrepo: "",
-    webdemo: "",
-  },
+
   {
     title: "Youth Financial Tracking App (iOS)",
     subtitle: "Fall 2018",
@@ -146,18 +150,16 @@ const projectList = [
     webdemo: "",
   },
   {
-    title: "Desktop Reminder Manager (Java)",
-    subtitle: "Fall 2020",
-    description:
-      "A project for a Software Construction Course made with object oriented design principles.",
+    title: "Student Volunteer Opportunities App (iOS)",
+    subtitle: "Fall 2017",
+    description: "A simple app for students to find volunteer opportunities.",
     descriptionLong: [
-      "I built this project for my Software Construction course using plain Java in conjunction with the Java Swing library and a JSON library for application persistence. I first made the project a console application, where console commands were used to create reminders and add reminders to a list. At this point, I had already implemented multiple type-hierarchies and used the iterator design pattern.",
-      "The second phase of the project was to add persistence to the application. In other words, I wanted users of the application to have the option to load their saved data from their last session. Because of the simple list-like nature of the application, the user's data could easily be stored in a JSON file as JSON objects. So I used a very lightweight JSON library to convert my custom classes into JSON objects. Once the user saved their data into a JSON file, it was simple enough to parse through and reconstruct the Java objects from the data.",
-      "The next part of the project was to create a graphical user interface (GUI) for the application. Since the project's backbone had already been coded and tested, I just had to make the GUI elements and map each button press to an existing function. Of course, some minor changes had to be made to accommodate the new method of entering data. Still, it ended up being an excellent opportunity to practice code refactoring. As a bonus, I also went over my code again and made minor improvements.",
+      'This project resulted from my first year participating in the Game of Apps program - an iOS app design and development. The theme of this year\'s competition was "Making a Change," and we decided to embody that idea by creating an app that would enable anyone to make an impact on the world.',
+      "Being my first significant exposure to programming, I learned a lot from experience. Starting from basic coding principles like variables, loops and conditionals, I then moved on to more complex iOS development tools like optional values, structures, and Storyboarding. More specifically, I learned a lot about using reusable cell elements. I remember spending many hours learning how to create table view cells and mapping data from a list onto them. Being on a team with two other developers, I also had a chance to learn how to use git. Git was quite terrifying at first, but being able to freely execute commands in my project made me feel a lot more confident when I moved on to using git in company work during my internships. By the end of the hackathon, our team received an award for the best-designed app. Unfortunately, the application has been lost to time, and I could only recover some images of the project mockups we made in Figma, which are the pictures displayed in the carousel above.",
     ],
-    thumbnail: RMA2,
-    images: [RMA1, RMA2, RMA3, RMA4],
-    githubrepo: "https://github.com/BradPeng/cpsc_210_project",
+    thumbnail: GOA1,
+    images: [GOA1, GOA2, GOA3, GOA4, GOA5, GOA6],
+    githubrepo: "",
     webdemo: "",
   },
 ];
