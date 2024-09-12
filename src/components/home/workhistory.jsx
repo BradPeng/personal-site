@@ -3,9 +3,8 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineItem from "@mui/lab/TimelineItem";
-// import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { makeStyles } from "@mui/styles";
@@ -101,6 +100,8 @@ const workHistoryList = [
 ];
 
 function WorkHistory() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const classes = useStyles();
 
   let workHistory = workHistoryList.map((workHistoryList) => (
@@ -145,6 +146,66 @@ function WorkHistory() {
     </TimelineItem>
   ));
 
+  let workHistorySmall = workHistoryList.map((workHistoryList) => (
+    <>
+      <TimelineItem key={workHistoryList.date}>
+        <TimelineOppositeContent data-aos="fade"></TimelineOppositeContent>
+        <TimelineSeparator data-aos="fade">
+          <TimelineDot color={workHistoryList.dotColor} />
+          {!workHistoryList.isLast && <TimelineConnector />}
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade">
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+
+              justifyContent: "space-between",
+            }}
+          >
+            {/* Date */}
+            <Typography variant="h6" style={{ marginRight: "16px" }}>
+              {workHistoryList.date}
+            </Typography>
+            {/* Logo */}
+            <img
+              src={workHistoryList.logo}
+              className={classes.logo}
+              alt={`${workHistoryList.title} logo`}
+            />
+          </div>
+          <Card className={classes.timelineCard}>
+            <CardContent>
+              <Container>
+                <Typography sx={{ fontWeight: "bold" }} variant="h5">
+                  {workHistoryList.title}
+                </Typography>
+                <Typography variant="body1" color="textSecondary">
+                  {workHistoryList.subtitle}
+                </Typography>
+                <Typography gutterBottom variant="body1">
+                  {workHistoryList.description}
+                </Typography>
+                {workHistoryList.bullets && (
+                  <>
+                    <Typography sx={{ fontWeight: "bold" }}>
+                      Work Summary
+                    </Typography>
+                    <ul>
+                      {workHistoryList.bullets.map((bullet, index) => (
+                        <li key={index}>{bullet}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </Container>
+            </CardContent>
+          </Card>
+        </TimelineContent>
+      </TimelineItem>
+    </>
+  ));
+
   useEffect(() => {
     Aos.init({ duration: 1200, delay: 100 });
   }, []);
@@ -158,7 +219,7 @@ function WorkHistory() {
           },
         }}
       >
-        {workHistory}
+        {isSmallScreen ? workHistorySmall : workHistory}
       </Timeline>
     </Container>
   );
