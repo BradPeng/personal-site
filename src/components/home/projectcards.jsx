@@ -45,6 +45,7 @@ import RMA3 from "../../project-images/JavaReminderProject/javaprojec_img3.png";
 import RMA4 from "../../project-images/JavaReminderProject/javaprojec_img4.png";
 import PS1 from "../../project-images/personal_site_images/personalSite_img_1.png";
 import Swarmed1 from "../../project-images/swarmed_images/swarmed_splash.png";
+import Grid2 from "@mui/material/Grid2";
 
 const useStyles = makeStyles({
   projectCard: {
@@ -260,38 +261,32 @@ function ProjectCards() {
     </Dialog>
   );
   let projects = projectList.map((projectList, index) => (
-    <Grid item xs={12} sm={6} md={4} key={index}>
-      <Card
-        data-aos="flip-up"
-        sx={{ maxWidth: 345, minWidth: 200 }}
-        className={classes.projectCard}
+    <Card
+      data-aos="flip-up"
+      sx={{ maxWidth: 345, minWidth: 200 }}
+      className={classes.projectCard}
+    >
+      <CardActionArea
+        onClick={handleClickOpen(
+          projectList.title,
+          projectList.descriptionLong,
+          projectList.images,
+          projectList.githubrepo,
+          projectList.webdemo
+        )}
       >
-        <CardActionArea
-          onClick={handleClickOpen(
-            projectList.title,
-            projectList.descriptionLong,
-            projectList.images,
-            projectList.githubrepo,
-            projectList.webdemo
-          )}
-        >
-          <CardHeader
-            title={projectList.title}
-            subheader={projectList.subtitle}
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image={projectList.thumbnail}
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              {projectList.description}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </Grid>
+        <CardHeader
+          title={projectList.title}
+          subheader={projectList.subtitle}
+        />
+        <CardMedia component="img" height="194" image={projectList.thumbnail} />
+        <CardContent>
+          <Typography variant="body2" color="text.secondary">
+            {projectList.description}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   ));
 
   useEffect(() => {
@@ -303,16 +298,16 @@ function ProjectCards() {
       <Typography gutterBottom variant="h3" component="h1">
         Personal Projects
       </Typography>
-      <Grid
-        justifyContent="flex-start"
-        alignItems="center"
+      {dialogue}
+      <Grid2
+        justifyContent="space-evenly"
+        alignItems="stretch"
         container
-        spacing={12}
-        rowSpacing={6}
+        rowSpacing={4}
+        columnSpacing={4}
       >
-        {dialogue}
         {projects}
-      </Grid>
+      </Grid2>
     </Container>
   );
 }
