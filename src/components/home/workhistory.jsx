@@ -2,7 +2,6 @@ import Timeline from "@mui/lab/Timeline";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import { Container, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Card from "@mui/material/Card";
@@ -17,6 +16,7 @@ import GoaLogo from "./work_logos/goa_logo.jpg";
 import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from "@mui/lab/TimelineOppositeContent";
+import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 
 const useStyles = makeStyles({
   timelineCard: {
@@ -147,63 +147,60 @@ function WorkHistory() {
   ));
 
   let workHistorySmall = workHistoryList.map((workHistoryList) => (
-    <>
-      <TimelineItem key={workHistoryList.date}>
-        <TimelineOppositeContent data-aos="fade"></TimelineOppositeContent>
-        <TimelineSeparator data-aos="fade">
-          <TimelineDot color={workHistoryList.dotColor} />
-          {!workHistoryList.isLast && <TimelineConnector />}
-        </TimelineSeparator>
-        <TimelineContent data-aos="fade">
-          <div
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
+    <TimelineItem key={workHistoryList.date}>
+      <TimelineSeparator data-aos="fade">
+        <TimelineDot color={workHistoryList.dotColor} />
+        {!workHistoryList.isLast && <TimelineConnector />}
+      </TimelineSeparator>
+      <TimelineContent data-aos="fade">
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
 
-              justifyContent: "space-between",
-            }}
-          >
-            {/* Date */}
-            <Typography variant="h6" style={{ marginRight: "16px" }}>
-              {workHistoryList.date}
-            </Typography>
-            {/* Logo */}
-            <img
-              src={workHistoryList.logo}
-              className={classes.logo}
-              alt={`${workHistoryList.title} logo`}
-            />
-          </div>
-          <Card className={classes.timelineCard}>
-            <CardContent>
-              <Container>
-                <Typography sx={{ fontWeight: "bold" }} variant="h5">
-                  {workHistoryList.title}
-                </Typography>
-                <Typography variant="body1" color="textSecondary">
-                  {workHistoryList.subtitle}
-                </Typography>
-                <Typography gutterBottom variant="body1">
-                  {workHistoryList.description}
-                </Typography>
-                {workHistoryList.bullets && (
-                  <>
-                    <Typography sx={{ fontWeight: "bold" }}>
-                      Work Summary
-                    </Typography>
-                    <ul>
-                      {workHistoryList.bullets.map((bullet, index) => (
-                        <li key={index}>{bullet}</li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-              </Container>
-            </CardContent>
-          </Card>
-        </TimelineContent>
-      </TimelineItem>
-    </>
+            justifyContent: "space-between",
+          }}
+        >
+          {/* Date */}
+          <Typography variant="h6" style={{ marginRight: "16px" }}>
+            {workHistoryList.date}
+          </Typography>
+          {/* Logo */}
+          <img
+            src={workHistoryList.logo}
+            className={classes.logo}
+            alt={`${workHistoryList.title} logo`}
+          />
+        </div>
+        <Card className={classes.timelineCard}>
+          <CardContent>
+            <Container>
+              <Typography sx={{ fontWeight: "bold" }} variant="h5">
+                {workHistoryList.title}
+              </Typography>
+              <Typography variant="body1" color="textSecondary">
+                {workHistoryList.subtitle}
+              </Typography>
+              <Typography gutterBottom variant="body1">
+                {workHistoryList.description}
+              </Typography>
+              {workHistoryList.bullets && (
+                <>
+                  <Typography sx={{ fontWeight: "bold" }}>
+                    Work Summary
+                  </Typography>
+                  <ul>
+                    {workHistoryList.bullets.map((bullet, index) => (
+                      <li key={index}>{bullet}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </Container>
+          </CardContent>
+        </Card>
+      </TimelineContent>
+    </TimelineItem>
   ));
 
   useEffect(() => {
@@ -213,11 +210,20 @@ function WorkHistory() {
   return (
     <Container>
       <Timeline
-        sx={{
-          [`& .${timelineOppositeContentClasses.root}`]: {
-            flex: 0.2,
-          },
-        }}
+        sx={
+          isSmallScreen
+            ? {
+                [`& .${timelineItemClasses.root}:before`]: {
+                  flex: 0,
+                  padding: 0,
+                },
+              }
+            : {
+                [`& .${timelineOppositeContentClasses.root}`]: {
+                  flex: 0.2,
+                },
+              }
+        }
       >
         {isSmallScreen ? workHistorySmall : workHistory}
       </Timeline>
