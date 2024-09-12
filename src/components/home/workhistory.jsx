@@ -3,7 +3,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+// import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import { Container, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
@@ -15,6 +15,9 @@ import React, { useEffect } from "react";
 import AlidaLogo from "./work_logos/Alida_logo.jpg";
 import BankLogo from "./work_logos/bank_logo.jpg";
 import GoaLogo from "./work_logos/goa_logo.jpg";
+import TimelineOppositeContent, {
+  timelineOppositeContentClasses,
+} from "@mui/lab/TimelineOppositeContent";
 
 const useStyles = makeStyles({
   timelineCard: {
@@ -22,19 +25,10 @@ const useStyles = makeStyles({
       transition: "transform .2s ease-in-out",
       transform: "scale(1.03)",
     },
-    paddingRight: 0,
-    flex: 1,
   },
   logo: {
     width: "64px",
     height: "64px",
-  },
-  timelineDate: {
-    flex: "0 0 auto",
-    display: "flex",
-    alignItems: "flex-end",
-    flexDirection: "column",
-    minWidth: "261px",
   },
 });
 
@@ -94,13 +88,15 @@ function WorkHistory() {
   const classes = useStyles();
 
   let workHistory = workHistoryList.map((workHistoryList) => (
-    <Card sx={{ maxWidth: 800 }} className={classes.timelineCard}>
+    <Card className={classes.timelineCard}>
       <CardContent key={workHistoryList.title}>
         <Container>
           <Typography sx={{ fontWeight: "bold" }} variant="h5">
             {workHistoryList.title}
           </Typography>
-          <Typography variant="h6">{workHistoryList.subtitle}</Typography>
+          <Typography variant="body1" color="textSecondary">
+            {workHistoryList.subtitle}
+          </Typography>
           <Typography gutterBottom variant="body1">
             {workHistoryList.description}
           </Typography>
@@ -124,22 +120,16 @@ function WorkHistory() {
   }, []);
 
   return (
-    <Container style={{ paddingBottom: "250px" }}>
-      <Typography variant="h3" component="h1">
-        Work History
-      </Typography>
+    <Container>
       <Timeline
-        position="alternate"
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
+        sx={{
+          [`& .${timelineOppositeContentClasses.root}`]: {
+            flex: 0.2,
+          },
         }}
       >
         <TimelineItem>
-          <TimelineOppositeContent
-            data-aos="slide-right"
-            className={classes.timelineDate}
-          >
+          <TimelineOppositeContent data-aos="slide-right">
             <Typography variant="h6">May 2022 - December 2022</Typography>
             <img src={AlidaLogo} className={classes.logo} />
           </TimelineOppositeContent>
@@ -150,27 +140,19 @@ function WorkHistory() {
           <TimelineContent data-aos="fade">{workHistory[0]}</TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent data-aos="fade">
-            {workHistory[1]}
+          <TimelineOppositeContent data-aos="slide-right">
+            <Typography variant="h6">September 2021 - April 2022</Typography>
+            <img src={BankLogo} className={classes.logo} />
           </TimelineOppositeContent>
           <TimelineSeparator data-aos="fade">
             <TimelineDot color="warning" />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent
-            data-aos="slide-right"
-            className={classes.timelineDate}
-          >
-            <Typography variant="h6">September 2021 - April 2022</Typography>
-            <img src={BankLogo} className={classes.logo} />
-          </TimelineContent>
+          <TimelineContent data-aos="fade">{workHistory[1]}</TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent
-            data-aos="slide-right"
-            className={classes.timelineDate}
-          >
-            <Typography variant="h6">July 2020 - August 2020</Typography>
+          <TimelineOppositeContent data-aos="slide-right">
+            <Typography variant="h6">September 2021 - April 2022</Typography>
             <img src={GoaLogo} className={classes.logo} />
           </TimelineOppositeContent>
           <TimelineSeparator data-aos="fade">
@@ -180,23 +162,90 @@ function WorkHistory() {
           <TimelineContent data-aos="fade">{workHistory[2]}</TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent data-aos="fade">
-            {workHistory[3]}
+          <TimelineOppositeContent data-aos="slide-right">
+            <Typography variant="h6">July 2018 - August 2018</Typography>
+            <img src={GoaLogo} className={classes.logo} />
           </TimelineOppositeContent>
           <TimelineSeparator data-aos="fade">
             <TimelineDot color="info" />
-            <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent
-            data-aos="slide-right"
-            className={classes.timelineDate}
-          >
-            <Typography variant="h6">July 2018 - August 2018</Typography>
-            <img src={GoaLogo} className={classes.logo} />
-          </TimelineContent>
+          <TimelineContent data-aos="fade">{workHistory[3]}</TimelineContent>
         </TimelineItem>
       </Timeline>
     </Container>
+    // <Container style={{ paddingBottom: "250px" }}>
+    //   <Typography variant="h3" component="h1">
+    //     Work History
+    //   </Typography>
+    //   <Timeline
+    //     position="alternate"
+    //     style={{
+    //       display: "flex",
+    //       justifyContent: "space-between",
+    //     }}
+    //   >
+    //     <TimelineItem>
+    //       <TimelineOppositeContent
+    //         data-aos="slide-right"
+    //         className={classes.timelineDate}
+    //       >
+    //         <Typography variant="h6">May 2022 - December 2022</Typography>
+    //         <img src={AlidaLogo} className={classes.logo} />
+    //       </TimelineOppositeContent>
+    //       <TimelineSeparator data-aos="fade">
+    //         <TimelineDot color="error" />
+    //         <TimelineConnector />
+    //       </TimelineSeparator>
+    //       <TimelineContent data-aos="fade">{workHistory[0]}</TimelineContent>
+    //     </TimelineItem>
+    //     <TimelineItem>
+    //       <TimelineOppositeContent data-aos="fade">
+    //         {workHistory[1]}
+    //       </TimelineOppositeContent>
+    //       <TimelineSeparator data-aos="fade">
+    //         <TimelineDot color="warning" />
+    //         <TimelineConnector />
+    //       </TimelineSeparator>
+    //       <TimelineContent
+    //         data-aos="slide-right"
+    //         className={classes.timelineDate}
+    //       >
+    //         <Typography variant="h6">September 2021 - April 2022</Typography>
+    //         <img src={BankLogo} className={classes.logo} />
+    //       </TimelineContent>
+    //     </TimelineItem>
+    //     <TimelineItem>
+    //       <TimelineOppositeContent
+    //         data-aos="slide-right"
+    //         className={classes.timelineDate}
+    //       >
+    //         <Typography variant="h6">July 2020 - August 2020</Typography>
+    //         <img src={GoaLogo} className={classes.logo} />
+    //       </TimelineOppositeContent>
+    //       <TimelineSeparator data-aos="fade">
+    //         <TimelineDot color="success" />
+    //         <TimelineConnector />
+    //       </TimelineSeparator>
+    //       <TimelineContent data-aos="fade">{workHistory[2]}</TimelineContent>
+    //     </TimelineItem>
+    //     <TimelineItem>
+    //       <TimelineOppositeContent data-aos="fade">
+    //         {workHistory[3]}
+    //       </TimelineOppositeContent>
+    //       <TimelineSeparator data-aos="fade">
+    //         <TimelineDot color="info" />
+    //         <TimelineConnector />
+    //       </TimelineSeparator>
+    //       <TimelineContent
+    //         data-aos="slide-right"
+    //         className={classes.timelineDate}
+    //       >
+    //         <Typography variant="h6">July 2018 - August 2018</Typography>
+    //         <img src={GoaLogo} className={classes.logo} />
+    //       </TimelineContent>
+    //     </TimelineItem>
+    //   </Timeline>
+    // </Container>
   );
 }
 
