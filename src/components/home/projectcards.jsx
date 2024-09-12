@@ -59,7 +59,7 @@ const useStyles = makeStyles({
 
 const projectList = [
   {
-    title: "Swarmed",
+    title: "Swarmed (Game Maker)",
     subtitle: "Summer 2024",
     description: "How long can you last in this minigame?",
     descriptionLong: [""],
@@ -69,7 +69,7 @@ const projectList = [
     webdemo: "https://bradpeng.ca/swarmed",
   },
   {
-    title: "Doodlle - React Web App",
+    title: "Doodlle (React Web App)",
     subtitle: "Summer 2024",
     description: "Draw Doodles and guess what other people have drawn!",
     descriptionLong: [""],
@@ -276,12 +276,28 @@ function ProjectCards() {
         )}
       >
         <CardHeader
+          sx={{
+            height: 80,
+            "& .MuiCardHeader-title": {
+              fontSize: "clamp(1.5rem, 2vw, 1.6rem)", // Dynamic scaling based on viewport width
+            },
+            "& .MuiCardHeader-subheader": {
+              fontSize: "clamp(1.2rem, 1.5vw, 1.2rem)", // Dynamic scaling for the subheader
+            },
+          }}
           title={projectList.title}
           subheader={projectList.subtitle}
         />
         <CardMedia component="img" height="194" image={projectList.thumbnail} />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              fontSize: "clamp(1rem, 1.5vw, 1.1rem)", // Dynamic scaling for the body text
+              lineHeight: 1.5, // Adjust line height to control vertical space between lines
+            }}
+          >
             {projectList.description}
           </Typography>
         </CardContent>
