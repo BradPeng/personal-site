@@ -194,73 +194,73 @@ function ProjectCards() {
       }
     }
   }, [open]);
-
-  let projects = projectList.map((projectList, index) => (
-    <Grid item xs={12} sm={6} md={4} key={index}>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        slotProps={{
-          backdrop: { invisible: true },
+  let dialogue = (
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      slotProps={{
+        backdrop: { invisible: true },
+      }}
+      maxWidth="md"
+    >
+      <DialogTitle
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "baseline",
         }}
-        maxWidth="md"
       >
-        <DialogTitle
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "baseline",
-          }}
-        >
-          {title}
-          <div style={{ display: "flex" }}>
-            <div style={{ paddingRight: "20px" }}>
-              {webdemo != "" ? (
-                <Link target="_blank" rel="noopener" href={webdemo}>
-                  Demo
-                </Link>
-              ) : (
-                <></>
-              )}
-            </div>
-            {githubrepo != "" ? (
-              <Link target="_blank" rel="noopener" href={githubrepo}>
-                GitHub Repo
+        {title}
+        <div style={{ display: "flex" }}>
+          <div style={{ paddingRight: "20px" }}>
+            {webdemo != "" ? (
+              <Link target="_blank" rel="noopener" href={webdemo}>
+                Demo
               </Link>
             ) : (
               <></>
             )}
           </div>
-        </DialogTitle>
+          {githubrepo != "" ? (
+            <Link target="_blank" rel="noopener" href={githubrepo}>
+              GitHub Repo
+            </Link>
+          ) : (
+            <></>
+          )}
+        </div>
+      </DialogTitle>
 
-        <DialogContent>
-          <Carousel
-            emulateTouch
-            useKeyboardArrows
-            swipeable
-            className="project-carousel"
-          >
-            {images.map((image) => (
-              <div key={title}>
-                <img style={{ maxHeight: "600px" }} src={image} />
-              </div>
-            ))}
-          </Carousel>
+      <DialogContent>
+        <Carousel
+          emulateTouch
+          useKeyboardArrows
+          swipeable
+          className="project-carousel"
+        >
+          {images.map((image) => (
+            <div key={title}>
+              <img style={{ maxHeight: "600px" }} src={image} />
+            </div>
+          ))}
+        </Carousel>
 
-          <DialogContentText>
-            {descriptionLong.map((description) => (
-              <>
-                <Typography>{description}</Typography>
-                <br />
-              </>
-            ))}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Close</Button>
-        </DialogActions>
-      </Dialog>
-
+        <DialogContentText>
+          {descriptionLong.map((description) => (
+            <>
+              <Typography>{description}</Typography>
+              <br />
+            </>
+          ))}
+        </DialogContentText>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleClose}>Close</Button>
+      </DialogActions>
+    </Dialog>
+  );
+  let projects = projectList.map((projectList, index) => (
+    <Grid item xs={12} sm={6} md={4} key={index}>
       <Card
         data-aos="flip-up"
         sx={{ maxWidth: 345, minWidth: 200 }}
@@ -310,6 +310,7 @@ function ProjectCards() {
         spacing={12}
         rowSpacing={6}
       >
+        {dialogue}
         {projects}
       </Grid>
     </Container>
