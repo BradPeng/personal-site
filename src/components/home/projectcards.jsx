@@ -12,6 +12,8 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import { makeStyles } from "@mui/styles";
+import Box from "@mui/material/Box";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
@@ -263,48 +265,61 @@ function ProjectCards() {
     </Dialog>
   );
   let projects = projectList.map((projectList, index) => (
-    <Card
-      data-aos="flip-up"
-      sx={{ maxWidth: 345, minWidth: 200 }}
-      className={classes.projectCard}
+    <Grid2
+      key={index}
+      size={{
+        xs: 12,
+        sm: 6,
+        md: 6,
+        lg: 4,
+      }}
     >
-      <CardActionArea
-        onClick={handleClickOpen(
-          projectList.title,
-          projectList.descriptionLong,
-          projectList.images,
-          projectList.githubrepo,
-          projectList.webdemo
-        )}
+      <Card
+        style={{ height: "100%" }}
+        data-aos="flip-up"
+        className={classes.projectCard}
       >
-        <CardHeader
-          sx={{
-            height: 80,
-            "& .MuiCardHeader-title": {
-              fontSize: "clamp(1.5rem, 2vw, 1.6rem)", // Dynamic scaling based on viewport width
-            },
-            "& .MuiCardHeader-subheader": {
-              fontSize: "clamp(1.2rem, 1.5vw, 1.2rem)", // Dynamic scaling for the subheader
-            },
-          }}
-          title={projectList.title}
-          subheader={projectList.subtitle}
-        />
-        <CardMedia component="img" height="194" image={projectList.thumbnail} />
-        <CardContent>
-          <Typography
-            variant="body2"
-            color="text.secondary"
+        <CardActionArea
+          onClick={handleClickOpen(
+            projectList.title,
+            projectList.descriptionLong,
+            projectList.images,
+            projectList.githubrepo,
+            projectList.webdemo
+          )}
+        >
+          <CardHeader
+            style={{ height: "80px" }}
             sx={{
-              fontSize: "clamp(1rem, 1.5vw, 1.1rem)", // Dynamic scaling for the body text
-              lineHeight: 1.5, // Adjust line height to control vertical space between lines
+              "& .MuiCardHeader-title": {
+                fontSize: "clamp(1.5rem, 2.5vw, 1.6rem)",
+              },
+              "& .MuiCardHeader-subheader": {
+                fontSize: "clamp(1.2rem, 1.5vw, 1.2rem)",
+              },
             }}
-          >
-            {projectList.description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+            title={projectList.title}
+            subheader={projectList.subtitle}
+          />
+          <CardMedia
+            component="img"
+            height="194"
+            image={projectList.thumbnail}
+          />
+          <CardContent>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{
+                fontSize: "clamp(1rem, 2.9vw, 1.2rem)",
+              }}
+            >
+              {projectList.description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </Grid2>
   ));
 
   useEffect(() => {
@@ -317,13 +332,7 @@ function ProjectCards() {
         Personal Projects
       </Typography>
       {dialogue}
-      <Grid2
-        justifyContent="space-evenly"
-        alignItems="stretch"
-        container
-        rowSpacing={4}
-        columnSpacing={4}
-      >
+      <Grid2 rowSpacing={4} columnSpacing={4} container>
         {projects}
       </Grid2>
     </Container>
