@@ -26,6 +26,7 @@ import ARPG6 from "../../project-images/adventurerpg_images/ARPG_img_6.png";
 import BPP1 from "../../project-images/brucepewpewimages/BPP_img_1.png";
 import BPP2 from "../../project-images/brucepewpewimages/BPP_img_2.png";
 import BPP3 from "../../project-images/brucepewpewimages/BPP_img_3.png";
+import Doodlle1 from "../../project-images/doodlle_images/doodlle1.png";
 import GOA1 from "../../project-images/GOA1_images/GOA1_img_1.png";
 import GOA2 from "../../project-images/GOA1_images/GOA1_img_2.png";
 import GOA3 from "../../project-images/GOA1_images/GOA1_img_3.png";
@@ -44,7 +45,6 @@ import RMA3 from "../../project-images/JavaReminderProject/javaprojec_img3.png";
 import RMA4 from "../../project-images/JavaReminderProject/javaprojec_img4.png";
 import PS1 from "../../project-images/personal_site_images/personalSite_img_1.png";
 import Swarmed1 from "../../project-images/swarmed_images/swarmed_splash.png";
-import Doodlle1 from "../../project-images/doodlle_images/doodlle1.png";
 
 const useStyles = makeStyles({
   projectCard: {

@@ -2,6 +2,10 @@ import Timeline from "@mui/lab/Timeline";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
+import TimelineOppositeContent, {
+  timelineOppositeContentClasses,
+} from "@mui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import { Container, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Card from "@mui/material/Card";
@@ -13,10 +17,6 @@ import React, { useEffect } from "react";
 import AlidaLogo from "./work_logos/Alida_logo.jpg";
 import BankLogo from "./work_logos/bank_logo.jpg";
 import GoaLogo from "./work_logos/goa_logo.jpg";
-import TimelineOppositeContent, {
-  timelineOppositeContentClasses,
-} from "@mui/lab/TimelineOppositeContent";
-import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 
 const useStyles = makeStyles({
   timelineCard: {
