@@ -36,6 +36,10 @@ const workHistoryList = [
   {
     title: "Software Development Intern",
     subtitle: "Alida",
+    date: "May 2022 - December 2022",
+    logo: AlidaLogo,
+    dotColor: "error",
+    isLast: false,
     description:
       "During my time at Alida, I primarily worked on the team's Foundation Effort, which focused on breaking down our monolithic application architecture into a microservices-driven approach. This internship was where I first gained hands-on experience with REST and backend web infrastructure.",
     bullets: [
@@ -48,6 +52,10 @@ const workHistoryList = [
   {
     title: "Web Development Intern",
     subtitle: "Bank of Canada",
+    date: "September 2021 - April 2022",
+    logo: BankLogo,
+    dotColor: "warning",
+    isLast: false,
     description:
       "As a part of the front-end web team at the Bank of Canada, I contributed to the development and maintenance of six internal and external-facing sites. This internship provided valuable learning opportunities, allowing me to collaborate with experienced developers and solve challenges alongside fellow interns.",
     bullets: [
@@ -61,6 +69,10 @@ const workHistoryList = [
   {
     title: "Web Development Intern",
     subtitle: "Institute of Applied Design and Technology Education Society",
+    date: "July 2020 - August 2020",
+    logo: GoaLogo,
+    dotColor: "success",
+    isLast: false,
     description:
       "Similar to my previous internship, I joined a team tasked with building a project from the ground up—this time, a React-based website. It was during this internship that I first gained experience with both React and TypeScript, laying the foundation for my front-end development skills.",
     bullets: [
@@ -73,6 +85,10 @@ const workHistoryList = [
   {
     title: "iOS Development Intern",
     subtitle: "Institute of Applied Design and Technology Education Society",
+    date: "July 2018 - August 2018",
+    logo: GoaLogo,
+    dotColor: "info",
+    isLast: true,
     description:
       "My first internship was with the Institute of Applied Design and Technology Education Society, a new non-profit hosting a mobile app development course and competition. I was part of the team responsible for developing and launching the first iOS version of the companion app for students. I contributed to the development of key app views and wrote scripts to manage our Google Firebase backend.",
     bullets: [
@@ -88,31 +104,45 @@ function WorkHistory() {
   const classes = useStyles();
 
   let workHistory = workHistoryList.map((workHistoryList) => (
-    <Card className={classes.timelineCard}>
-      <CardContent key={workHistoryList.title}>
-        <Container>
-          <Typography sx={{ fontWeight: "bold" }} variant="h5">
-            {workHistoryList.title}
-          </Typography>
-          <Typography variant="body1" color="textSecondary">
-            {workHistoryList.subtitle}
-          </Typography>
-          <Typography gutterBottom variant="body1">
-            {workHistoryList.description}
-          </Typography>
-          {workHistoryList.bullets && (
-            <>
-              <Typography sx={{ fontWeight: "bold" }}>Work Summary</Typography>
-              <ul>
-                {workHistoryList.bullets.map((bullet, index) => (
-                  <li key={index}>{bullet}</li>
-                ))}
-              </ul>
-            </>
-          )}
-        </Container>
-      </CardContent>
-    </Card>
+    <TimelineItem key={workHistoryList.date}>
+      <TimelineOppositeContent data-aos="slide-right">
+        <Typography variant="h6">{workHistoryList.date}</Typography>
+        <img src={workHistoryList.logo} className={classes.logo} />
+      </TimelineOppositeContent>
+      <TimelineSeparator data-aos="fade">
+        <TimelineDot color={workHistoryList.dotColor} />
+        {!workHistoryList.isLast && <TimelineConnector />}
+      </TimelineSeparator>
+      <TimelineContent data-aos="fade">
+        <Card className={classes.timelineCard}>
+          <CardContent>
+            <Container>
+              <Typography sx={{ fontWeight: "bold" }} variant="h5">
+                {workHistoryList.title}
+              </Typography>
+              <Typography variant="body1" color="textSecondary">
+                {workHistoryList.subtitle}
+              </Typography>
+              <Typography gutterBottom variant="body1">
+                {workHistoryList.description}
+              </Typography>
+              {workHistoryList.bullets && (
+                <>
+                  <Typography sx={{ fontWeight: "bold" }}>
+                    Work Summary
+                  </Typography>
+                  <ul>
+                    {workHistoryList.bullets.map((bullet, index) => (
+                      <li key={index}>{bullet}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </Container>
+          </CardContent>
+        </Card>
+      </TimelineContent>
+    </TimelineItem>
   ));
 
   useEffect(() => {
@@ -128,124 +158,9 @@ function WorkHistory() {
           },
         }}
       >
-        <TimelineItem>
-          <TimelineOppositeContent data-aos="slide-right">
-            <Typography variant="h6">May 2022 - December 2022</Typography>
-            <img src={AlidaLogo} className={classes.logo} />
-          </TimelineOppositeContent>
-          <TimelineSeparator data-aos="fade">
-            <TimelineDot color="error" />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent data-aos="fade">{workHistory[0]}</TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent data-aos="slide-right">
-            <Typography variant="h6">September 2021 - April 2022</Typography>
-            <img src={BankLogo} className={classes.logo} />
-          </TimelineOppositeContent>
-          <TimelineSeparator data-aos="fade">
-            <TimelineDot color="warning" />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent data-aos="fade">{workHistory[1]}</TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent data-aos="slide-right">
-            <Typography variant="h6">September 2021 - April 2022</Typography>
-            <img src={GoaLogo} className={classes.logo} />
-          </TimelineOppositeContent>
-          <TimelineSeparator data-aos="fade">
-            <TimelineDot color="success" />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent data-aos="fade">{workHistory[2]}</TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent data-aos="slide-right">
-            <Typography variant="h6">July 2018 - August 2018</Typography>
-            <img src={GoaLogo} className={classes.logo} />
-          </TimelineOppositeContent>
-          <TimelineSeparator data-aos="fade">
-            <TimelineDot color="info" />
-          </TimelineSeparator>
-          <TimelineContent data-aos="fade">{workHistory[3]}</TimelineContent>
-        </TimelineItem>
+        {workHistory}
       </Timeline>
     </Container>
-    // <Container style={{ paddingBottom: "250px" }}>
-    //   <Typography variant="h3" component="h1">
-    //     Work History
-    //   </Typography>
-    //   <Timeline
-    //     position="alternate"
-    //     style={{
-    //       display: "flex",
-    //       justifyContent: "space-between",
-    //     }}
-    //   >
-    //     <TimelineItem>
-    //       <TimelineOppositeContent
-    //         data-aos="slide-right"
-    //         className={classes.timelineDate}
-    //       >
-    //         <Typography variant="h6">May 2022 - December 2022</Typography>
-    //         <img src={AlidaLogo} className={classes.logo} />
-    //       </TimelineOppositeContent>
-    //       <TimelineSeparator data-aos="fade">
-    //         <TimelineDot color="error" />
-    //         <TimelineConnector />
-    //       </TimelineSeparator>
-    //       <TimelineContent data-aos="fade">{workHistory[0]}</TimelineContent>
-    //     </TimelineItem>
-    //     <TimelineItem>
-    //       <TimelineOppositeContent data-aos="fade">
-    //         {workHistory[1]}
-    //       </TimelineOppositeContent>
-    //       <TimelineSeparator data-aos="fade">
-    //         <TimelineDot color="warning" />
-    //         <TimelineConnector />
-    //       </TimelineSeparator>
-    //       <TimelineContent
-    //         data-aos="slide-right"
-    //         className={classes.timelineDate}
-    //       >
-    //         <Typography variant="h6">September 2021 - April 2022</Typography>
-    //         <img src={BankLogo} className={classes.logo} />
-    //       </TimelineContent>
-    //     </TimelineItem>
-    //     <TimelineItem>
-    //       <TimelineOppositeContent
-    //         data-aos="slide-right"
-    //         className={classes.timelineDate}
-    //       >
-    //         <Typography variant="h6">July 2020 - August 2020</Typography>
-    //         <img src={GoaLogo} className={classes.logo} />
-    //       </TimelineOppositeContent>
-    //       <TimelineSeparator data-aos="fade">
-    //         <TimelineDot color="success" />
-    //         <TimelineConnector />
-    //       </TimelineSeparator>
-    //       <TimelineContent data-aos="fade">{workHistory[2]}</TimelineContent>
-    //     </TimelineItem>
-    //     <TimelineItem>
-    //       <TimelineOppositeContent data-aos="fade">
-    //         {workHistory[3]}
-    //       </TimelineOppositeContent>
-    //       <TimelineSeparator data-aos="fade">
-    //         <TimelineDot color="info" />
-    //         <TimelineConnector />
-    //       </TimelineSeparator>
-    //       <TimelineContent
-    //         data-aos="slide-right"
-    //         className={classes.timelineDate}
-    //       >
-    //         <Typography variant="h6">July 2018 - August 2018</Typography>
-    //         <img src={GoaLogo} className={classes.logo} />
-    //       </TimelineContent>
-    //     </TimelineItem>
-    //   </Timeline>
-    // </Container>
   );
 }
 
