@@ -280,6 +280,7 @@ function ProjectCards() {
         className={classes.projectCard}
       >
         <CardActionArea
+          style={{ height: "100%" }}
           onClick={handleClickOpen(
             projectList.title,
             projectList.descriptionLong,
@@ -306,7 +307,7 @@ function ProjectCards() {
             height="194"
             image={projectList.thumbnail}
           />
-          <CardContent>
+          <CardContent style={{ height: "100%" }}>
             <Typography
               variant="body2"
               color="text.secondary"
@@ -328,8 +329,16 @@ function ProjectCards() {
 
   return (
     <Container style={{ paddingBottom: "250px" }}>
-      <Typography gutterBottom variant="h3" component="h1">
+      <Typography variant="h3" component="h1">
         Personal Projects
+      </Typography>
+      <Typography
+        style={{ paddingBottom: "30px" }}
+        variant="h6"
+        component="h2"
+        color="text.secondary"
+      >
+        Click on a card to view more details!
       </Typography>
       {dialogue}
       <Grid2 rowSpacing={4} columnSpacing={4} container>
