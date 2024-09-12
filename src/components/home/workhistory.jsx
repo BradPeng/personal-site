@@ -106,72 +106,55 @@ function WorkHistory() {
 
   let workHistory = workHistoryList.map((workHistoryList) => (
     <TimelineItem key={workHistoryList.date}>
-      <TimelineOppositeContent data-aos="slide-right">
-        <Typography variant="h6">{workHistoryList.date}</Typography>
-        <img src={workHistoryList.logo} className={classes.logo} />
-      </TimelineOppositeContent>
-      <TimelineSeparator data-aos="fade">
-        <TimelineDot color={workHistoryList.dotColor} />
-        {!workHistoryList.isLast && <TimelineConnector />}
-      </TimelineSeparator>
-      <TimelineContent data-aos="fade">
-        <Card className={classes.timelineCard}>
-          <CardContent>
-            <Container>
-              <Typography sx={{ fontWeight: "bold" }} variant="h5">
-                {workHistoryList.title}
-              </Typography>
-              <Typography variant="body1" color="textSecondary">
-                {workHistoryList.subtitle}
-              </Typography>
-              <Typography gutterBottom variant="body1">
-                {workHistoryList.description}
-              </Typography>
-              {workHistoryList.bullets && (
-                <>
-                  <Typography sx={{ fontWeight: "bold" }}>
-                    Work Summary
-                  </Typography>
-                  <ul>
-                    {workHistoryList.bullets.map((bullet, index) => (
-                      <li key={index}>{bullet}</li>
-                    ))}
-                  </ul>
-                </>
-              )}
-            </Container>
-          </CardContent>
-        </Card>
-      </TimelineContent>
-    </TimelineItem>
-  ));
-
-  let workHistorySmall = workHistoryList.map((workHistoryList) => (
-    <TimelineItem key={workHistoryList.date}>
-      <TimelineSeparator data-aos="fade">
-        <TimelineDot color={workHistoryList.dotColor} />
-        {!workHistoryList.isLast && <TimelineConnector />}
-      </TimelineSeparator>
-      <TimelineContent data-aos="fade">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-
-            justifyContent: "space-between",
-          }}
-        >
-          {/* Date */}
-          <Typography variant="h6" style={{ marginRight: "16px" }}>
+      {!isSmallScreen && (
+        <TimelineOppositeContent data-aos="slide-right">
+          <Typography
+            sx={{
+              display: "inline-block",
+              verticalAlign: "top", // Aligns text to the top of the container
+              lineHeight: "normal", // Adjust line height to avoid space
+            }}
+            variant="h6"
+          >
             {workHistoryList.date}
           </Typography>
-          {/* Logo */}
-          <img
-            src={workHistoryList.logo}
-            className={classes.logo}
-            alt={`${workHistoryList.title} logo`}
-          />
-        </div>
+          <img src={workHistoryList.logo} className={classes.logo} />
+        </TimelineOppositeContent>
+      )}
+      <TimelineSeparator data-aos="fade">
+        <TimelineDot color={workHistoryList.dotColor} />
+        {!workHistoryList.isLast && <TimelineConnector />}
+      </TimelineSeparator>
+      <TimelineContent data-aos="fade">
+        {isSmallScreen && (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+
+              justifyContent: "space-between",
+            }}
+          >
+            {/* Date */}
+            <Typography
+              sx={{
+                display: "inline-block",
+                verticalAlign: "top", // Aligns text to the top of the container
+                lineHeight: "normal", // Adjust line height to avoid space
+              }}
+              variant="h6"
+              style={{ marginRight: "16px" }}
+            >
+              {workHistoryList.date}
+            </Typography>
+            {/* Logo */}
+            <img
+              src={workHistoryList.logo}
+              className={classes.logo}
+              alt={`${workHistoryList.title} logo`}
+            />
+          </div>
+        )}
         <Card className={classes.timelineCard}>
           <CardContent>
             <Container>
@@ -225,7 +208,7 @@ function WorkHistory() {
               }
         }
       >
-        {isSmallScreen ? workHistorySmall : workHistory}
+        {workHistory}
       </Timeline>
     </Container>
   );
