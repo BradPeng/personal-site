@@ -103,7 +103,7 @@ function Home() {
               </Typography>
             </Container>
             <Grid2 justifyContent="center" container spacing={1}>
-              <Grid2 item>
+              <Grid2>
                 <Link
                   target="_blank"
                   rel="noopener"
@@ -112,7 +112,7 @@ function Home() {
                   <Avatar src={GitHubLogo} />
                 </Link>
               </Grid2>
-              <Grid2 item>
+              <Grid2>
                 <Link
                   target="_blank"
                   rel="noopener"
