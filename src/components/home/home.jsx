@@ -1,6 +1,5 @@
-import { Container, Typography } from "@mui/material";
+import { Container, Grid2, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
-import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "aos/dist/aos.css";
@@ -58,8 +57,8 @@ function Home() {
                 available, so make sure to check them out if you get a chance!
               </Typography>
             </Container>
-            <Grid justifyContent="center" container spacing={1}>
-              <Grid item>
+            <Grid2 justifyContent="center" container spacing={1}>
+              <Grid2 item>
                 <Link
                   target="_blank"
                   rel="noopener"
@@ -67,8 +66,8 @@ function Home() {
                 >
                   <Avatar src={GitHubLogo} />
                 </Link>
-              </Grid>
-              <Grid item>
+              </Grid2>
+              <Grid2 item>
                 <Link
                   target="_blank"
                   rel="noopener"
@@ -79,8 +78,8 @@ function Home() {
                     src={LinkedInLogo}
                   />
                 </Link>
-              </Grid>
-            </Grid>
+              </Grid2>
+            </Grid2>
 
             <div
               style={{
