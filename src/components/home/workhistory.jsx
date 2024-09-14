@@ -118,7 +118,7 @@ function WorkHistory() {
           >
             {workHistoryList.date}
           </Typography>
-          <img src={workHistoryList.logo} className={classes.logo} />
+          <img src={workHistoryList.logo} className={classes.logo} alt={workHistoryList.title} />
         </TimelineOppositeContent>
       )}
       <TimelineSeparator >

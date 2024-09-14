@@ -1,20 +1,16 @@
-import { Container, Grid2, Typography, Button } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
-import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import DownArrow from "../../images/downarrow.png";
-import GitHubLogo from "../../images/githublogo.png";
-import LinkedInLogo from "../../images/linkedinlogo.png";
+import Introduction from "./intro";
 import ProjectCards from "./projectcards";
 import "./projectCarousel.css";
 import WorkHistory from "./workhistory";
-import Aos from "aos"; // Import AOS
-import "aos/dist/aos.css"; // Import AOS CSS
-import Introduction from "./intro";
 
 const darkTheme = createTheme({
   palette: {
@@ -39,11 +35,10 @@ function Home() {
     <ThemeProvider theme={darkTheme}>
       <div className="App">
         <Container maxWidth="xl">
-          <Introduction />
-
+          <Introduction />  
           <div ref={workHistoryRef}>
             <WorkHistory />
-            <Container>
+            <Container data-aos="fade">
               <Avatar
                 src={DownArrow} // Your arrow image
                 onClick={() => scrollToSection(projectCardsRef)}

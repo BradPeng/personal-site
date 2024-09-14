@@ -12,7 +12,7 @@ import "./projectCarousel.css";
 
 function Introduction() {
   const workHistoryRef = useRef(null);
-  const [showScrollButton, setShowScrollButton] = useState(true);
+  const [showScrollButton] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
 
   const handleScroll = () => {
