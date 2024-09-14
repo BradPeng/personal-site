@@ -9,11 +9,10 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import { makeStyles } from "@mui/styles";
-import Box from "@mui/material/Box";
 
+import Grid2 from "@mui/material/Grid2";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
@@ -47,7 +46,6 @@ import RMA3 from "../../project-images/JavaReminderProject/javaprojec_img3.png";
 import RMA4 from "../../project-images/JavaReminderProject/javaprojec_img4.png";
 import PS1 from "../../project-images/personal_site_images/personalSite_img_1.png";
 import Swarmed1 from "../../project-images/swarmed_images/swarmed_splash.png";
-import Grid2 from "@mui/material/Grid2";
 
 const useStyles = makeStyles({
   projectCard: {
@@ -218,7 +216,7 @@ function ProjectCards() {
         {title}
         <div style={{ display: "flex" }}>
           <div style={{ paddingRight: "20px" }}>
-            {webdemo != "" ? (
+            {webdemo !== "" ? (
               <Link target="_blank" rel="noopener" href={webdemo}>
                 Demo
               </Link>
@@ -226,7 +224,7 @@ function ProjectCards() {
               <></>
             )}
           </div>
-          {githubrepo != "" ? (
+          {githubrepo !== "" ? (
             <Link target="_blank" rel="noopener" href={githubrepo}>
               GitHub Repo
             </Link>
@@ -245,7 +243,7 @@ function ProjectCards() {
         >
           {images.map((image) => (
             <div key={title}>
-              <img style={{ maxHeight: "600px" }} src={image} />
+              <img style={{ maxHeight: "600px" }} src={image} alt={title} />
             </div>
           ))}
         </Carousel>
