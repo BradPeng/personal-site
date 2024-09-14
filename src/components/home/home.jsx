@@ -1,9 +1,10 @@
-import { Container, Grid2, Typography } from "@mui/material";
+import { Container, Grid2, Typography, Button } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
+import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "aos/dist/aos.css";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import DownArrow from "../../images/downarrow.png";
 import GitHubLogo from "../../images/githublogo.png";
@@ -11,13 +12,8 @@ import LinkedInLogo from "../../images/linkedinlogo.png";
 import ProjectCards from "./projectcards";
 import "./projectCarousel.css";
 import WorkHistory from "./workhistory";
-
-const handleScroll = (ref) => {
-  window.scrollTo({
-    behavior: "smooth",
-    top: ref.current.offsetTop,
-  });
-};
+import Aos from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS CSS
 
 const darkTheme = createTheme({
   palette: {
@@ -26,7 +22,56 @@ const darkTheme = createTheme({
 });
 
 function Home() {
-  const workSectionRef = useRef();
+  const workHistoryRef = useRef(null);
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleScrollToWorkHistory = () => {
+    if (workHistoryRef.current) {
+      window.scrollTo({
+        top: workHistoryRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  useEffect(() => {
+    Aos.init({ duration: 1200, delay: 100 });
+  }, []);
+
+  useEffect(() => {
+    if (showScrollButton) {
+      setTimeout(() => setIsVisible(true), 50);
+    } else {
+      setTimeout(() => setIsVisible(false), 50);
+    }
+  }, [showScrollButton]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        // Hide button if any part of WorkHistory is visible
+        setShowScrollButton(!entry.isIntersecting);
+      },
+      {
+        root: null, // Observe based on the viewport
+        threshold: 0, // Trigger when any part of the component is visible
+      }
+    );
+
+    if (workHistoryRef.current) {
+      observer.observe(workHistoryRef.current);
+    }
+
+    // Clean up observer when component unmounts
+    return () => {
+      if (workHistoryRef.current) {
+        observer.unobserve(workHistoryRef.current);
+      }
+    };
+  }, []);
+
   return (
     <ThemeProvider theme={darkTheme}>
       <div className="App">
@@ -80,33 +125,31 @@ function Home() {
                 </Link>
               </Grid2>
             </Grid2>
-
-            <div
-              style={{
-                width: 50,
-                textAlign: "center",
-                position: "absolute",
-                bottom: 50,
-                right: 0,
-                left: 0,
-                marginLeft: "auto",
-                marginRight: "auto",
-                cursor: "pointer",
-              }}
-            >
-              <Link
-                onClick={() => {
-                  handleScroll(workSectionRef);
-                }}
-              >
-                <Avatar src={DownArrow} />
-              </Link>
-            </div>
+            {isVisible && (
+              <Container data-aos="fade">
+                <Avatar
+                  src={DownArrow} // Your arrow image
+                  onClick={handleScrollToWorkHistory} // Scroll down to WorkHistory when clicked
+                  sx={{
+                    position: "fixed",
+                    bottom: "20px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    zIndex: 1000,
+                    cursor: "pointer",
+                    transition: "0.3s", // Smooth transition for hover effect
+                    "&:hover": {
+                      backgroundColor: "rgba(255, 255, 255, 0.1)", // Slight white overlay on hover
+                    },
+                  }}
+                />
+              </Container>
+            )}
           </div>
-
-          <div ref={workSectionRef} style={{ paddingTop: 75 }} id="work" />
-
-          <WorkHistory />
+          {/* WorkHistory section */}
+          <div ref={workHistoryRef}>
+            <WorkHistory />
+          </div>
 
           <ProjectCards />
         </Container>

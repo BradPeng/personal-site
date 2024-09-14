@@ -121,7 +121,7 @@ function WorkHistory() {
           <img src={workHistoryList.logo} className={classes.logo} />
         </TimelineOppositeContent>
       )}
-      <TimelineSeparator data-aos="fade">
+      <TimelineSeparator >
         <TimelineDot color={workHistoryList.dotColor} />
         {!workHistoryList.isLast && <TimelineConnector />}
       </TimelineSeparator>
