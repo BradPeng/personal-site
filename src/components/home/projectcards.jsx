@@ -326,7 +326,7 @@ function ProjectCards() {
   }, []);
 
   return (
-    <Container style={{ paddingBottom: "250px" }}>
+    <Container style={{ paddingBottom: "34px" }}>
       <Typography variant="h3" component="h1">
         Personal Projects
       </Typography>

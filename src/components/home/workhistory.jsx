@@ -191,7 +191,7 @@ function WorkHistory() {
   }, []);
 
   return (
-    <Container style={{ paddingBottom: "250px" }}>
+    <Container style={{ }}>
       <Timeline
         sx={
           isSmallScreen
