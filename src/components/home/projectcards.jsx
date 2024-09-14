@@ -46,6 +46,11 @@ import RMA3 from "../../project-images/JavaReminderProject/javaprojec_img3.png";
 import RMA4 from "../../project-images/JavaReminderProject/javaprojec_img4.png";
 import PS1 from "../../project-images/personal_site_images/personalSite_img_1.png";
 import Swarmed1 from "../../project-images/swarmed_images/swarmed_splash.png";
+import Swarmed2 from "../../project-images/swarmed_images/swarmed_1.png";
+import Swarmed3 from "../../project-images/swarmed_images/swarmed_2.png";
+import Swarmed4 from "../../project-images/swarmed_images/swarmed_3.png";
+import Swarmed5 from "../../project-images/swarmed_images/swarmed_4.png";
+import Swarmed6 from "../../project-images/swarmed_images/swarmed_5.png";
 
 const useStyles = makeStyles({
   projectCard: {
@@ -74,7 +79,15 @@ const projectList = [
     description: "How long can you last in this minigame?",
     descriptionLong: [""],
     thumbnail: Swarmed1,
-    images: [Swarmed1],
+    images: [
+      Swarmed1,
+      Swarmed2,
+      Swarmed3,
+      Swarmed3,
+      Swarmed4,
+      Swarmed5,
+      Swarmed6,
+    ],
     githubrepo: "https://github.com/BradPeng/Swarmed-Release",
     webdemo: "https://bradpeng.ca/swarmed",
   },
