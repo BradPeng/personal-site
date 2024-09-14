@@ -192,6 +192,9 @@ function WorkHistory() {
 
   return (
     <Container style={{ }}>
+      <Typography variant="h3" component="h1">
+        Work Experience
+      </Typography>
       <Timeline
         sx={
           isSmallScreen

@@ -23,6 +23,10 @@ const darkTheme = createTheme({
 });
 
 function Home() {
+  useEffect(() => {
+    Aos.init({ duration: 1200, delay: 100 });
+  }, []);
+
   const workHistoryRef = useRef(null);
   const projectCardsRef = useRef(null);
   const volunteerWorkRef = useRef(null);
@@ -39,14 +43,14 @@ function Home() {
 
           <div ref={workHistoryRef}>
             <WorkHistory />
-            <Container data-aos="fade">
+            <Container>
               <Avatar
                 src={DownArrow} // Your arrow image
                 onClick={() => scrollToSection(projectCardsRef)}
                 style={{ marginBottom: "250px" }}
                 sx={{
-                  left: "50%",
-                  transform: "translateX(-50%)",
+                  padding: "auto",
+                  margin: "auto",
                   zIndex: 1000,
                   cursor: "pointer",
                   transition: "0.3s", // Smooth transition for hover effect
@@ -67,8 +71,8 @@ function Home() {
                 onClick={() => scrollToSection(volunteerWorkRef)}
                 style={{ marginBottom: "250px" }}
                 sx={{
-                  left: "50%",
-                  transform: "translateX(-50%)",
+                  padding: "auto",
+                  margin: "auto",
                   zIndex: 1000,
                   cursor: "pointer",
                   transition: "0.3s", // Smooth transition for hover effect
