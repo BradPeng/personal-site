@@ -11,7 +11,6 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Link from "@mui/material/Link";
 import { makeStyles } from "@mui/styles";
-
 import Grid2 from "@mui/material/Grid2";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -28,6 +27,8 @@ import BPP1 from "../../project-images/brucepewpewimages/BPP_img_1.png";
 import BPP2 from "../../project-images/brucepewpewimages/BPP_img_2.png";
 import BPP3 from "../../project-images/brucepewpewimages/BPP_img_3.png";
 import Doodlle1 from "../../project-images/doodlle_images/doodlle1.png";
+import Doodlle2 from "../../project-images/doodlle_images/doodlle_2.png"
+import DoodlleDiagram from "../../project-images/doodlle_images/doodlle_diagram.png";
 import GOA1 from "../../project-images/GOA1_images/GOA1_img_1.png";
 import GOA2 from "../../project-images/GOA1_images/GOA1_img_2.png";
 import GOA3 from "../../project-images/GOA1_images/GOA1_img_3.png";
@@ -69,7 +70,7 @@ const projectList = [
     description: "Draw Doodles and guess what other people have drawn!",
     descriptionLong: [""],
     thumbnail: Doodlle1,
-    images: [Doodlle1],
+    images: [Doodlle1, Doodlle2, DoodlleDiagram],
     githubrepo: "",
     webdemo: "https://doodlle.web.app/",
   },
