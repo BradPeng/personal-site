@@ -27,7 +27,7 @@ import BPP1 from "../../project-images/brucepewpewimages/BPP_img_1.png";
 import BPP2 from "../../project-images/brucepewpewimages/BPP_img_2.png";
 import BPP3 from "../../project-images/brucepewpewimages/BPP_img_3.png";
 import Doodlle1 from "../../project-images/doodlle_images/doodlle1.png";
-import Doodlle2 from "../../project-images/doodlle_images/doodlle_2.png"
+import Doodlle2 from "../../project-images/doodlle_images/doodlle_2.png";
 import DoodlleDiagram from "../../project-images/doodlle_images/doodlle_diagram.png";
 import GOA1 from "../../project-images/GOA1_images/GOA1_img_1.png";
 import GOA2 from "../../project-images/GOA1_images/GOA1_img_2.png";
@@ -68,7 +68,11 @@ const projectList = [
     title: "Doodlle (React Web App)",
     subtitle: "Summer 2024",
     description: "Draw Doodles and guess what other people have drawn!",
-    descriptionLong: [""],
+    descriptionLong: [
+      'Doodlle is a React web app inspired by popular "le" games like Wordle. My goal was to create a fun web game to share with friends while learning new technologies. With that in mind, I developed Doodlle, a game where players can draw doodles and try to guess what others have drawn.',
+      "The frontend is built using React and the React Bootstrap component library, while the backend leverages Google Firestore Storage, Firestore DB, and Firebase Hosting.",
+      "One standout feature is the intelligent pathfinding system. The game occasionally employs the A* search algorithm, allowing enemy objects to navigate around obstacles and reach the player. Swarmed is built using sound object-oriented design principles, with nearly all entities following a structured class hierarchy, as outlined in the class diagram available in the repository. Additionally, design patterns like the observer pattern and factory pattern are implemented to enhance flexibility and maintainability.",
+    ],
     thumbnail: Doodlle1,
     images: [Doodlle1, Doodlle2, DoodlleDiagram],
     githubrepo: "",
@@ -78,7 +82,11 @@ const projectList = [
     title: "Swarmed (Game Maker)",
     subtitle: "Summer 2024",
     description: "How long can you last in this minigame?",
-    descriptionLong: [""],
+    descriptionLong: [
+      'Click the "Demo" button at the top right of this card to play the game in the web, or visit the GitHub Repo to download a Windows version of the game!',
+      "Swarmed is a small bullet hell minigame inspired by Swarm. The objective is simple: survive in the arena for as long as possible while collecting gold to purchase upgrades, allowing you to last even longer. The ultimate goal is to survive long enough to face the boss enemy—defeating the boss will lift the curse plaguing the forest.",
+      "One notable feature of the game would be the intelligent path finding that occasionally invokes an A* search to allow enemy objects to get around obstacles to reach the player. The game was also built using sound object oriented design principles. Nearly all of the entities in the game are related, outlined by the class diagram in the repository. Different design patterns, such as the observer pattern and the factory pattern were used as well.",
+    ],
     thumbnail: Swarmed1,
     images: [
       Swarmed1,
@@ -112,6 +120,7 @@ const projectList = [
     description:
       "Jump around, destroy enemies and explore in this 2D platforming RPG!",
     descriptionLong: [
+      'Click the "Demo" button at the top right of this card to play the game in the web, or visit the GitHub Repo to download a Windows version of the game!',
       "This game resulted from my second adventure with Game Maker Studio 2. I've always wanted to make an RPG-style game, and a 2D platforming approach seemed like the perfect way to tackle my ideas, as well as learn some new game development tricks. The most important aspect of a platformer is the player movement. I wanted to have multiple attacks and precise movement, so I had to find a clever way to write maintainable code. That's where the player states come in. Every move the player can make is associated with a so-called player state. In each specific state, the player can only perform certain actions. This way, I isolate the player's movement depending on the state, allowing me to effortlessly code the specific movements I want. I also had the opportunity to play with some simple math functions while coding the enemy AI. For example, I implemented basic parabolas into the spider's arched movements and did some basic trigonometry to make the bat enemy fly toward the player at a constant speed.",
     ],
     thumbnail: ARPG0,
@@ -124,6 +133,7 @@ const projectList = [
     subtitle: "Summer 2021",
     description: "Play a fun arcade-style 2D top-down shooting game!",
     descriptionLong: [
+      'Click the "Demo" button at the top right of this card to play the game in the web, or visit the GitHub Repo to download a Windows version of the game!',
       "Bruce Pew Pew was the first game I developed using the Game Maker Studio 2 Engine. Written in the Game Maker Language (GML), which is similar to JavaScript, the development process of Bruce Pew Pew taught me the fundamentals I needed to know to develop games. Despite being a straightforward game, I learned about various game development techniques, such as handling precise movement and animation tricks done with sprites. This was the first time I had the opportunity to bring my creative ideas to life. I had a lot of fun coming up with enemy types, enemy attacks and powerups. The result, while simple, is an enjoyable game that I enjoyed playing with my friends. This also cemented in me a love for game development, and I plan to pursue more projects in the future.",
     ],
     thumbnail: BPP1,
