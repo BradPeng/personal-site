@@ -92,7 +92,7 @@ const workHistoryList = [
       "My first internship was with the Institute of Applied Design and Technology Education Society, a new non-profit hosting a mobile app development course and competition. I was part of the team responsible for developing and launching the first iOS version of the companion app for students. I contributed to the development of key app views and wrote scripts to manage our Google Firebase backend.",
     bullets: [
       "Created a parallax scrolling method that was applied to most views.",
-      "Brought design mockups to life using XVode's Storyboard functionality",
+      "Brought design mockups to life using Xcode's Storyboard functionality",
       "Ensured layouts functioned on all current iOS devices through software and hardware testing",
       "Wrote scripts that populated and managed our Firestore DB with mock data for development purposes.",
     ],
