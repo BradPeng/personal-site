@@ -70,8 +70,7 @@ const projectList = [
     description: "Draw Doodles and guess what other people have drawn!",
     descriptionLong: [
       'Doodlle is a React web app inspired by popular "le" games like Wordle. My goal was to create a fun web game to share with friends while learning new technologies. With that in mind, I developed Doodlle, a game where players can draw doodles and try to guess what others have drawn.',
-      "The frontend is built using React and the React Bootstrap component library, while the backend leverages Google Firestore Storage, Firestore DB, and Firebase Hosting.",
-      "One standout feature is the intelligent pathfinding system. The game occasionally employs the A* search algorithm, allowing enemy objects to navigate around obstacles and reach the player. Swarmed is built using sound object-oriented design principles, with nearly all entities following a structured class hierarchy, as outlined in the class diagram available in the repository. Additionally, design patterns like the observer pattern and factory pattern are implemented to enhance flexibility and maintainability.",
+      "The frontend is built using React and the React Bootstrap component library, while the backend leverages Google Firestore Storage, Firestore DB, and Firebase Hosting."
     ],
     thumbnail: Doodlle1,
     images: [Doodlle1, Doodlle2, DoodlleDiagram],
