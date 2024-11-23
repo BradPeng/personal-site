@@ -2,10 +2,10 @@ import { Container, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Aos from "aos"; // Import AOS
+import Aos from "aos"; 
 import "aos/dist/aos.css";
 import React, { useEffect, useRef } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import DownArrow from "../../images/downarrow.png";
 import Introduction from "./intro";
 import ProjectCards from "./projectcards";
@@ -35,12 +35,12 @@ function Home() {
     <ThemeProvider theme={darkTheme}>
       <div className="App">
         <Container maxWidth="xl">
-          <Introduction />  
+          <Introduction />
           <div ref={workHistoryRef}>
             <WorkHistory />
             <Container data-aos="fade">
               <Avatar
-                src={DownArrow} // Your arrow image
+                src={DownArrow}
                 onClick={() => scrollToSection(projectCardsRef)}
                 style={{ marginBottom: "250px" }}
                 sx={{
@@ -48,9 +48,9 @@ function Home() {
                   margin: "auto",
                   zIndex: 1000,
                   cursor: "pointer",
-                  transition: "0.3s", // Smooth transition for hover effect
+                  transition: "0.3s",
                   "&:hover": {
-                    backgroundColor: "rgba(255, 255, 255, 0.1)", // Slight white overlay on hover
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
                   },
                 }}
               />
@@ -62,7 +62,7 @@ function Home() {
 
             <Container data-aos="fade">
               <Avatar
-                src={DownArrow} // Your arrow image
+                src={DownArrow}
                 onClick={() => scrollToSection(volunteerWorkRef)}
                 style={{ marginBottom: "250px" }}
                 sx={{
@@ -70,9 +70,9 @@ function Home() {
                   margin: "auto",
                   zIndex: 1000,
                   cursor: "pointer",
-                  transition: "0.3s", // Smooth transition for hover effect
+                  transition: "0.3s",
                   "&:hover": {
-                    backgroundColor: "rgba(255, 255, 255, 0.1)", // Slight white overlay on hover
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
                   },
                 }}
               />

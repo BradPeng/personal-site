@@ -111,8 +111,8 @@ function WorkHistory() {
           <Typography
             sx={{
               display: "inline-block",
-              verticalAlign: "top", // Aligns text to the top of the container
-              lineHeight: "normal", // Adjust line height to avoid space
+              verticalAlign: "top",
+              lineHeight: "normal",
             }}
             variant="h6"
           >
@@ -139,8 +139,8 @@ function WorkHistory() {
             <Typography
               sx={{
                 display: "inline-block",
-                verticalAlign: "top", // Aligns text to the top of the container
-                lineHeight: "normal", // Adjust line height to avoid space
+                verticalAlign: "top",
+                lineHeight: "normal",
               }}
               variant="h6"
               style={{ marginRight: "16px" }}
@@ -191,7 +191,7 @@ function WorkHistory() {
   }, []);
 
   return (
-    <Container style={{ }}>
+    <Container style={{}}>
       <Typography variant="h3" component="h1">
         Work Experience
       </Typography>
@@ -199,16 +199,16 @@ function WorkHistory() {
         sx={
           isSmallScreen
             ? {
-                [`& .${timelineItemClasses.root}:before`]: {
-                  flex: 0,
-                  padding: 0,
-                },
-              }
+              [`& .${timelineItemClasses.root}:before`]: {
+                flex: 0,
+                padding: 0,
+              },
+            }
             : {
-                [`& .${timelineOppositeContentClasses.root}`]: {
-                  flex: 0.2,
-                },
-              }
+              [`& .${timelineOppositeContentClasses.root}`]: {
+                flex: 0.2,
+              },
+            }
         }
       >
         {workHistory}

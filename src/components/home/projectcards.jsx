@@ -74,7 +74,7 @@ const projectList = [
     ],
     thumbnail: Doodlle1,
     images: [Doodlle1, Doodlle2, DoodlleDiagram],
-    githubrepo: "",
+    githubrepo: "https://github.com/BradPeng/doodlle-release",
     webdemo: "https://doodlle.web.app/",
   },
   {
