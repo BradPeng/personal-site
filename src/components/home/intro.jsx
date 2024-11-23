@@ -1,10 +1,10 @@
 import { Container, Grid2, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Link from "@mui/material/Link";
-import Aos from "aos"; // Import AOS
+import Aos from "aos"; 
 import "aos/dist/aos.css";
 import React, { useEffect, useRef, useState } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import DownArrow from "../../images/downarrow.png";
 import GitHubLogo from "../../images/githublogo.png";
 import LinkedInLogo from "../../images/linkedinlogo.png";
@@ -104,8 +104,8 @@ function Introduction() {
         {isVisible && (
           <Container data-aos="fade">
             <Avatar
-              src={DownArrow} // Your arrow image
-              onClick={handleScrollToWorkHistory} // Scroll down to WorkHistory when clicked
+              src={DownArrow} 
+              onClick={handleScrollToWorkHistory} 
               sx={{
                 position: "fixed",
                 bottom: "20px",
@@ -113,9 +113,9 @@ function Introduction() {
                 transform: "translateX(-50%)",
                 zIndex: 1000,
                 cursor: "pointer",
-                transition: "0.3s", // Smooth transition for hover effect
+                transition: "0.3s", 
                 "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.1)", // Slight white overlay on hover
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
                 },
               }}
             />
